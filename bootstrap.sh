@@ -20,17 +20,15 @@ function getExtensionFromSvn {
 	echo "      Done"
 }
 
-
 # ensure fast booting with grub ;)
 
-  cp /etc/default/grub /etc/default/grub.orig
-  sed -i -e 's/GRUB_TIMEOUT=\([0-9]\)\+/GRUB_TIMEOUT=0/' /etc/default/grub
-  update-grub
+cp /etc/default/grub /etc/default/grub.orig
+sed -i -e 's/GRUB_TIMEOUT=\([0-9]\)\+/GRUB_TIMEOUT=0/' /etc/default/grub
+update-grub
 
 # checkout from git ...
 
 cd /var/www/t3-latest/typo3conf/ext/
-
 
 # typo3-themes repositories
 
@@ -57,7 +55,6 @@ getExtensionFromGitHub view                             FluidTYPO3     view
 # Do this to fix a shared folder problem in vms
 
 getExtensionFromGitHub uncache                          NamelessCoder  uncache
-
 
 # other usefull tools, not all needed until now, but interesting
 
