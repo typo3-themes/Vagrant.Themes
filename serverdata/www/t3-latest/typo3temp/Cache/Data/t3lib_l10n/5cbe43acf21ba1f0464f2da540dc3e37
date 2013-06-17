@@ -1,9 +1,0 @@
-a:6:{s:21:"mlang_labels_tablabel";a:1:{i:0;a:2:{s:6:"source";s:13:"Install Tool";s:6:"target";s:13:"Install Tool";}}s:21:"mlang_labels_tabdescr";a:1:{i:0;a:2:{s:6:"source";s:151:"Provides a simple link to the Install Tool. Notice the Install Tool (in typo3/install/) must be enabled.<br /><em>Access for 'admin' users only!</em>";s:6:"target";s:151:"Provides a simple link to the Install Tool. Notice the Install Tool (in typo3/install/) must be enabled.<br /><em>Access for 'admin' users only!</em>";}}s:14:"mlang_tabs_tab";a:1:{i:0;a:2:{s:6:"source";s:7:"Install";s:6:"target";s:7:"Install";}}s:29:"confirmUnlockInstallToolTitle";a:1:{i:0;a:2:{s:6:"source";s:27:"The Install Tool is locked";s:6:"target";s:27:"The Install Tool is locked";}}s:31:"confirmUnlockInstallToolMessage";a:1:{i:0;a:2:{s:6:"source";s:449:"<p>For security reasons the Install Tool is locked by default.</p>
-<p>To unlock the Install Tool, an empty file with the name ENABLE_INSTALL_TOOL must be created in typo3conf/.</p>
-<p>By hitting the button below, this file is created for you and the Install Tool will be unlocked.</p>
-<p>You are recommended to log out from the Install Tool after finishing your work. Otherwise
-TYPO3 will automatically lock the Install Tool after one hour.</p>";s:6:"target";s:449:"<p>For security reasons the Install Tool is locked by default.</p>
-<p>To unlock the Install Tool, an empty file with the name ENABLE_INSTALL_TOOL must be created in typo3conf/.</p>
-<p>By hitting the button below, this file is created for you and the Install Tool will be unlocked.</p>
-<p>You are recommended to log out from the Install Tool after finishing your work. Otherwise
-TYPO3 will automatically lock the Install Tool after one hour.</p>";}}s:30:"confirmUnlockInstallToolButton";a:1:{i:0;a:2:{s:6:"source";s:24:"Unlock the Install Tool";s:6:"target";s:24:"Unlock the Install Tool";}}}1371495045    1892      

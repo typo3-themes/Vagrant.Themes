@@ -54,8 +54,14 @@ getExtensionFromGitHub flux                             FluidTYPO3     flux
 getExtensionFromGitHub vhs                              FluidTYPO3     vhs
 getExtensionFromGitHub view                             FluidTYPO3     view
 
+# Do this to fix a shared folder problem in vms
+
+getExtensionFromGitHub uncache                          NamelessCoder  uncache
+
+
 # other usefull tools, not all needed until now, but interesting
 
+getExtensionFromGitHub beskin                           kaystrobach    TYPO3.beskin
 getExtensionFromGitHub coreupdate                       kaystrobach    TYPO3.coreupdate
 getExtensionFromGitHub dyncss                           kaystrobach    TYPO3.dyncss
 getExtensionFromGitHub dyncss_phpsass                   kaystrobach    TYPO3.dyncss_phpsass
