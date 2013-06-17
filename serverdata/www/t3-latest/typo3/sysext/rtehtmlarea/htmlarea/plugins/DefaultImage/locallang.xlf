@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2011-10-17T20:22:36Z" product-name="rtehtmlarea">
+		<header/>
+		<body>
+			<trans-unit id="Top padding" xml:space="preserve">
+				<source>Top padding</source>
+			</trans-unit>
+			<trans-unit id="Right padding" xml:space="preserve">
+				<source>Right padding</source>
+			</trans-unit>
+			<trans-unit id="Bottom padding" xml:space="preserve">
+				<source>Bottom padding</source>
+			</trans-unit>
+			<trans-unit id="Left padding" xml:space="preserve">
+				<source>Left padding</source>
+			</trans-unit>
+			<trans-unit id="Top:" xml:space="preserve">
+				<source>Top:</source>
+			</trans-unit>
+			<trans-unit id="Right:" xml:space="preserve">
+				<source>Right:</source>
+			</trans-unit>
+			<trans-unit id="Bottom:" xml:space="preserve">
+				<source>Bottom:</source>
+			</trans-unit>
+			<trans-unit id="image_url" xml:space="preserve">
+				<source>Image URL</source>
+			</trans-unit>
+			<trans-unit id="image_url_invalid" xml:space="preserve">
+				<source>The url could not be accessed or is not a valid image.</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

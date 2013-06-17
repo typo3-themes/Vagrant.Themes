@@ -1,0 +1,7 @@
+RELEASE NOTES FOR TYPO3 4.x releases
+****************************
+
+The release notes for TYPO3 4.x releases can be found at:
+http://wiki.typo3.org/Category:ReleaseNotes
+
+-- Michael Stucki <michael@typo3.org>  Fre, 03 Jul 2009 21:24:42 +0100

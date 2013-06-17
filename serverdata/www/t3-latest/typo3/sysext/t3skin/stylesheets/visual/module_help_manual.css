@@ -1,0 +1,30 @@
+/* - - - - - - - - - - - - - - - - - - - - -
+Context Sensitive Help window (EXT:cshmanual)
+
+- - - - - - - - - - - - - - - - - - - - - */
+
+div.typo3-view-help img.c-inlineimg {
+	border: 1px solid #cccccc;
+}
+
+div.typo3-view-help div.c-toc {
+	border: 1px solid #cccccc;
+}
+
+div.typo3-view-help div.c-toc ul li {
+	font-size: 11px;
+	font-weight: bold;
+}
+
+div.typo3-view-help div.c-toc ul li ul li {
+	font-weight: normal;
+	font-size: 12px;
+}
+
+div.typo3-view-help p.c-nav a {
+	font-weight: bold;
+}
+
+div.typo3-view-help a.glossary-term {
+	font-style: italic;
+}

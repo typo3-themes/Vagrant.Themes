@@ -1,0 +1,33 @@
+{namespace em=TYPO3\CMS\Extensionmanager\ViewHelpers}
+
+<td>
+	<em:downloadExtension extension="{extension}" />
+</td>
+<td>
+	<f:link.action action="showAllVersions" arguments="{extensionKey: extension.extensionKey}">
+		{extension.title}
+	</f:link.action>
+	<em:showExtensionVersions extension="{extension}" />
+</td>
+<td>
+	<f:link.action action="showAllVersions" arguments="{extensionKey: extension.extensionKey}">
+		{extension.extensionKey}
+	</f:link.action>
+</td>
+<td>
+	<f:link.action action="showAllVersions" arguments="{extensionKey: extension.extensionKey}">
+		{extension.version}
+	</f:link.action>
+	<em:showExtensionVersions extension="{extension}" />
+</td>
+<td title="{extension.description}">
+	<f:format.crop maxCharacters="50" respectWordBoundaries="true" respectHtml="false">{extension.description}</f:format.crop>
+
+	<div class="author">
+		<div class="author-name">{extension.authorName}</div>
+		<div class="author-email">{extension.authorEmail}</div>
+	</div>
+</td>
+<td class="state {extension.stateString}">
+	{extension.stateString}
+</td>

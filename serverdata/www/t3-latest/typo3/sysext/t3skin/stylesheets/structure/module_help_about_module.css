@@ -1,0 +1,35 @@
+/* - - - - - - - - - - - - - - - - - - - - -
+Help > About modules
+
+- - - - - - - - - - - - - - - - - - - - - */
+
+/** following div#typo3-inner-docbody */
+.typo3-aboutmodules-inner-docbody {
+	width: 600px;
+}
+
+/** TYPO3 logo floating in introduction text */
+.typo3-aboutmodules-inner-docbody p a img {
+	margin-right: 8px;
+	margin-bottom: 2px;
+}
+
+table#typo3-aboutmodules tr td {
+	vertical-align: top;
+}
+
+table#typo3-aboutmodules tr.c-mainitem td {
+	padding-top: 12px;
+}
+
+table#typo3-aboutmodules tr.c-mainitem td img {
+	vertical-align: bottom;
+}
+
+table#typo3-aboutmodules tr.c-subitem-row td {
+	padding: 6px 6px 12px 6px;
+}
+
+table#typo3-aboutmodules tr.c-subitem-row td.module-description {
+	padding-right: 10px;
+}

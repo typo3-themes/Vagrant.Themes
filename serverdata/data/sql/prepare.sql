@@ -1,0 +1,1 @@
+CREATE DATABASE IF NOT EXISTS `t3-latest` CHARACTER SET utf8 COLLATE utf8_general_ci;

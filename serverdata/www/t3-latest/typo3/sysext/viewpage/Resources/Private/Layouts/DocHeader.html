@@ -1,0 +1,33 @@
+<f:be.container loadExtJs="1">
+	<style type="text/css">
+		.typo3-inner-docbody {
+			height: 100%;
+		}
+	</style>
+
+	<div class="typo3-fullDoc">
+		<div id="typo3-docheader">
+			<div class="typo3-docheader-functions">
+			</div>
+			<div class="typo3-docheader-buttons">
+				<div class="left">
+					<f:comment>
+						Uri was added by javascript window.open and not a simple <a href>
+						because f:be.buttons.icon does not support the target parameter.
+					</f:comment>
+					<f:be.buttons.icon uri="javascript:window.open('{url}', '');" icon="actions-document-view" />
+				</div>
+				<div class="right">
+					<f:be.buttons.icon uri="javascript:document.getElementById('tx_viewpage_iframe').contentWindow.location.reload(true);" icon="actions-system-refresh" />
+					<f:be.buttons.shortcut />
+				</div>
+			</div>
+		</div>
+
+		<div id="typo3-docbody">
+			<div id="typo3-inner-docbody" style="height: 100%;">
+				<f:render section="Content" />
+			</div>
+		</div>
+	</div>
+</f:be.container>

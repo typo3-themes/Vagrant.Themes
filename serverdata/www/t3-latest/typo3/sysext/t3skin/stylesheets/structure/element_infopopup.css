@@ -1,0 +1,24 @@
+/* - - - - - - - - - - - - - - - - - - - - -
+Information popup, show_item.php
+
+- - - - - - - - - - - - - - - - - - - - - */
+
+#typo3-show-item-php {
+	width: 100%;
+}
+#typo3-show-item-php > div {
+	padding: 0 10px;
+}
+
+#typo3-show-item-php h3 {
+	margin-top: 0;
+	padding-left: 10px;
+}
+
+table#typo3-showitem {
+	margin: 10px 0;
+}
+
+#typo3-show-item-php div.fileInfoContainer.fileDimensions {
+	margin-left: 18px;
+}

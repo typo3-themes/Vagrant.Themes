@@ -1,0 +1,72 @@
+/* Auto-Generated via TYPO3\CMS\Backend\Sprite\SimpleSpriteHandler */
+
+.t3-icon-extensionmanager-update-script {
+	background-position: 0px 0px !important;
+	background-image: url('../../typo3/sysext/extensionmanager/Resources/Public/Images/Icons/ExtensionUpdateScript.png') !important;
+}
+	
+.t3-icon-workspaces-sendtonextstage {
+	background-position: 0px 0px !important;
+	background-image: url('../../typo3/sysext/workspaces/Resources/Public/Images/version-workspace-sendtonextstage.png') !important;
+}
+	
+.t3-icon-workspaces-sendtoprevstage {
+	background-position: 0px 0px !important;
+	background-image: url('../../typo3/sysext/workspaces/Resources/Public/Images/version-workspace-sendtoprevstage.png') !important;
+}
+	
+.t3-icon-workspaces-generatepreviewlink {
+	background-position: 0px 0px !important;
+	background-image: url('../../typo3/sysext/workspaces/Resources/Public/Images/generate-ws-preview-link.png') !important;
+}
+	
+.t3-icon-sys_filemounts-default {
+	background-position: 0px 0px !important;
+	background-image: url('../../typo3/sysext/t3skin/icons/gfx/i/_icon_ftp_2.gif') !important;
+}
+	
+.t3-icon-sys_file_storage-default {
+	background-position: 0px 0px !important;
+	background-image: url('../../typo3/sysext/t3skin/icons/gfx/i/_icon_ftp.gif') !important;
+}
+	
+.t3-icon-backend_layout-default {
+	background-position: 0px 0px !important;
+	background-image: url('../../typo3/sysext/t3skin/icons/gfx/i/backend_layout.gif') !important;
+}
+	
+.t3-icon-sys_note-default {
+	background-position: 0px 0px !important;
+	background-image: url('../../typo3/sysext/sys_note/ext_icon.gif') !important;
+}
+	
+.t3-icon-tx_rtehtmlarea_acronym-default {
+	background-position: 0px 0px !important;
+	background-image: url('../../typo3/sysext/rtehtmlarea/extensions/Acronym/skin/images/acronym.gif') !important;
+}
+	
+.t3-icon-static_countries-default {
+	background-position: 0px 0px !important;
+	background-image: url('../../typo3conf/ext/static_info_tables/Resources/Public/Images/Icons/icon_static_countries.gif') !important;
+}
+	
+.t3-icon-static_country_zones-default {
+	background-position: 0px 0px !important;
+	background-image: url('../../typo3conf/ext/static_info_tables/Resources/Public/Images/Icons/icon_static_countries.gif') !important;
+}
+	
+.t3-icon-static_currencies-default {
+	background-position: 0px 0px !important;
+	background-image: url('../../typo3conf/ext/static_info_tables/Resources/Public/Images/Icons/icon_static_currencies.gif') !important;
+}
+	
+.t3-icon-static_languages-default {
+	background-position: 0px 0px !important;
+	background-image: url('../../typo3conf/ext/static_info_tables/Resources/Public/Images/Icons/icon_static_languages.gif') !important;
+}
+	
+.t3-icon-static_territories-default {
+	background-position: 0px 0px !important;
+	background-image: url('../../typo3conf/ext/static_info_tables/Resources/Public/Images/Icons/icon_static_territories.gif') !important;
+}
+	

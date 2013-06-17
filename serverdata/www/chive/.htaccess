@@ -1,0 +1,17 @@
+Options +FollowSymLinks
+<IfModule mod_autoindex.c>
+	IndexIgnore */*
+</IfModule>
+DirectoryIndex index.php
+
+<IfModule mod_rewrite.c>
+	RewriteEngine on
+
+	# if a directory or a file exists, use it directly
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteCond %{REQUEST_FILENAME} !-d
+
+	# otherwise forward it to index.php
+	RewriteRule . index.php?__chive_rewrite_on=1&%{QUERY_STRING}
+	RewriteRule ^$ index.php?__chive_rewrite_on=1&%{QUERY_STRING}
+</IfModule>
