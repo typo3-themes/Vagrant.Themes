@@ -30,3 +30,7 @@ doc/
 # IDE junk
 .idea/*
 *.iml
+
+# TYPO3
+typo3conf/ext/*
+typo3temp/
