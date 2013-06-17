@@ -35,7 +35,7 @@ cd /var/www/t3-latest/typo3conf/ext/
 # typo3-themes repositories
 
 getExtensionFromGitHub themes                           typo3-themes   themes
-getExtensionFromGitHub themes_adapter_directory	     typo3-themes   themes_adapter_directory
+getExtensionFromGitHub themes_adapter_directory	        typo3-themes   themes_adapter_directory
 getExtensionFromGitHub themes_adapter_tvframework       typo3-themes   themes_adapter_tvframework
 getExtensionFromGitHub themes_adapter_wordpress         typo3-themes   themes_adapter_wordpress
 getExtensionFromGitHub themes_builder                   typo3-themes   themes_builder
