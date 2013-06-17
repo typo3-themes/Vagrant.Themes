@@ -1,4 +1,4 @@
-DRK.Vagrant
+Themes.Vagrant
 ===========
 
 To use this vagrant maschine you need to install vagrant and virtualbox.
