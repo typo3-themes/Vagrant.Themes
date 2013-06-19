@@ -24,7 +24,7 @@
 ?>
 <html>
 	<head>
-		<title>MoWeS Portable III Ultra</title>
+		<title>EXT:Themes test environment</title>
 		<style type="text/css">
 			body {
 				font-family: Verdana, Arial, "sans serif";
@@ -89,5 +89,15 @@
 				?>
 			</table>
 		</fieldset>
+		<fieldset>
+			<legend>Documentation and Sources</legend>
+			<ul>
+				<li>
+					<a href="https://github.com/typo3-themes/themes/blob/master/Documentation/Index.rst">Documentation</a>
+				</li>
+				<li>
+					<a href="https://github.com/typo3-themes">Repositories</a>
+				</li>
+			</ul>
 	</body>
 </html>
