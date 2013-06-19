@@ -85,3 +85,9 @@ cp /serverdata/data/file/LocalConfiguration.php /var/www/t3-latest/typo3conf/
 # clear cache
 
 rm -R -f /serverdata/www/t3-latest/typo3temp/Cache
+
+echo "======================================================================="
+echo "  Access the vm in your Browser via:"
+echo "      - 192.168.33.16    64bit 1GB Ram    (Vmware Fusion Provider)"
+echo "      - 192.168.34.16    32bit 1GB Ram    (Virtualbox Provider)"
+echo "======================================================================="
