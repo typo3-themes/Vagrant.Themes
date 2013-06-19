@@ -74,13 +74,13 @@ getExtensionFromSvn    static_info_tables               https://svn.typo3.org/TY
 
 # import database
 
-mysql -u root           < /serverData/data/sql/prepare.sql
-mysql -u root t3-latest < /serverData/data/sql/t3-latest.sql
+mysql -u root           < /serverdata/data/sql/prepare.sql
+mysql -u root t3-latest < /serverdata/data/sql/t3-latest.sql
 
 # copy configuration
 
-cp /serverData/data/file/LocalConfiguration.php /var/www/t3-latest/typo3conf/
+cp /serverdata/data/file/LocalConfiguration.php /var/www/t3-latest/typo3conf/
 
 # clear cache
 
-rm -R -f /serverData/www/t3-latest/typo3temp/Cache
+rm -R -f /serverdata/www/t3-latest/typo3temp/Cache
