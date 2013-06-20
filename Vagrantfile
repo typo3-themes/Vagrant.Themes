@@ -18,7 +18,7 @@ Vagrant.configure("2") do |config|
   # config.vm.network :forwarded_port, guest: 80, host: 8080
 
   config.vm.hostname = "themes.dev"
-  config.vm.network :private_network, ip: "192.168.34.16"
+  config.vm.network :private_network, ip: "192.168.33.16"
 
   # Puppet provisioning
 
@@ -44,10 +44,11 @@ Vagrant.configure("2") do |config|
   #   chef.json = { :mysql_password => "foo" }
   # end
 
-  config.vm.provider "virtualbox" do |vm|
+  config.vm.provider "virtualbox" do |vm, override|
     vm.name = "drk-dresden.dev"
     vm.customize ["modifyvm", :id, "--memory",          "1024"]
     vm.customize ["modifyvm", :id, "--cpuexecutioncap",   "80"]
+    override.vm.network :private_network, ip: "192.168.34.16"
   end
   config.vm.provider :vmware_fusion do |vm, override|
     override.vm.box     = "precise64_fusion"
