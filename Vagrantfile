@@ -67,11 +67,11 @@ Vagrant.configure("2") do |config|
     # config.vm.box       = "lxc-raring-amd64-2013-07-12"
     # override.vm.box_url = "http://dl.dropbox.com/u/13510779/lxc-raring-amd64-2013-07-12.box"
 
-    #config.vm.box       = "lxc-raring-amd64-2013-05-08"
-    #override.vm.box_url = "http://dl.dropbox.com/u/13510779/lxc-raring-amd64-2013-05-08.box"
+    config.vm.box       = "lxc-raring-amd64-2013-05-08"
+    override.vm.box_url = "http://dl.dropbox.com/u/13510779/lxc-raring-amd64-2013-05-08.box"
 
-    config.vm.box       = "lxc-quantal-amd64-2013-07-12"
-    override.vm.box_url = "http://dl.dropbox.com/u/13510779/lxc-quantal-amd64-2013-07-12.box"
+    #config.vm.box       = "lxc-quantal-amd64-2013-07-12"
+    #override.vm.box_url = "http://dl.dropbox.com/u/13510779/lxc-quantal-amd64-2013-07-12.box"
   end
 
 end
