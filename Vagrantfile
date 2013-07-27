@@ -61,11 +61,11 @@ Vagrant.configure("2") do |config|
   config.vm.provider :lxc do |lxc, override|
     # Same effect as as 'customize ["modifyvm", :id, "--memory", "1024"]' for VirtualBox
     # lxc.customize 'cgroup.memory.limit_in_bytes', '1024M'
-    # config.vm.box     = "lxc-wheezy-amd64-2013-05-08"
-    # override.vm.box_url = "http://dl.dropbox.com/u/13510779/lxc-wheezy-amd64-2013-05-08.box"
+    config.vm.box     = "lxc-wheezy-amd64-2013-05-08"
+    override.vm.box_url = "http://dl.dropbox.com/u/13510779/lxc-wheezy-amd64-2013-05-08.box"
 
-    config.vm.box       = "lxc-raring-amd64-2013-07-12"
-    override.vm.box_url = "http://dl.dropbox.com/u/13510779/lxc-raring-amd64-2013-07-12.box"
+    # config.vm.box       = "lxc-raring-amd64-2013-07-12"
+    # override.vm.box_url = "http://dl.dropbox.com/u/13510779/lxc-raring-amd64-2013-07-12.box"
   end
 
 end
