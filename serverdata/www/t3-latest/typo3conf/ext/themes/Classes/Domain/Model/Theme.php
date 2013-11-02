@@ -97,9 +97,12 @@ class Theme extends AbstractTheme {
 			'uid' => md5($this->getExtensionName())
 		);
 
-		$themeItem['constants'] .= chr(10) . 'plugin.tx_themes.relPath     = ' . $this->getRelativePath();
-		$themeItem['constants'] .= chr(10) . 'plugin.tx_themes.name        = ' . $this->getExtensionName();
-		$themeItem['constants'] .= chr(10) . 'plugin.tx_themes.templatePid = ' . $params['pid'];
+		// @todo resources Path / private Path
+		$themeItem['constants'] .= chr(10) . 'plugin.tx_themes.resourcesPrivatePath = ' . $this->getRelativePath();
+		$themeItem['constants'] .= chr(10) . 'plugin.tx_themes.resourcesPublicPath  = ' . $this->getRelativePath();
+		$themeItem['constants'] .= chr(10) . 'plugin.tx_themes.relativePath         = ' . $this->getRelativePath();
+		$themeItem['constants'] .= chr(10) . 'plugin.tx_themes.name                 = ' . $this->getExtensionName();
+		$themeItem['constants'] .= chr(10) . 'plugin.tx_themes.templatePageId       = ' . $params['pid'];
 
 		$pObj->processTemplate(
 			$themeItem,
