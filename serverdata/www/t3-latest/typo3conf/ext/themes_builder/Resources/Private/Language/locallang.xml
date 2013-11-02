@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+    <meta type="array">
+        <type>module</type>
+        <description>Language labels for Extension Builder BE Module</description>
+    </meta>
+    <data type="array">
+        <languageKey index="default" type="array">
+            <label index="mlang_tabs_tab">Themes Builder</label>
+            <label index="mlang_labels_tabdescr">Create Themes</label>
+        </languageKey>
+		<languageKey index="de" type="array">
+            <label index="mlang_tabs_tab">Themes Builder</label>
+            <label index="mlang_labels_tabdescr">Dieses Modul erlaubt das erstellen eines Gerüsts für einen Ext:themes Theme.</label>
+        </languageKey>
+    </data>
+</T3locallang>

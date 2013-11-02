@@ -1,0 +1,52 @@
+plugin.tx_fed.fce.themes_fces_fluidcontent_basic {
+	templateRootPath = EXT:themes_fces_fluidcontent_basic/Resources/Private/Templates/
+	partialRootPath  = EXT:flux/Resources/Private/Partials/
+	layoutRootPath   = EXT:fluidcontent/Resources/Private/Layouts/
+}
+
+plugin.tx_fluidpages.collections.themes_fces_fluidcontent_basic {
+	templateRootPath = EXT:themes_fces_fluidcontent_basic/Resources/Private/Templates/
+	partialRootPath  = EXT:themes_fces_fluidcontent_basic/Resources/Private/Partials/
+	layoutRootPath   = EXT:themes_fces_fluidcontent_basic/Resources/Private/Layouts/
+}
+
+#Size settings
+plugin.tx_themes_fces_fluidcontent_basic {
+	settings {
+		# cat = Site Constants/general; type=options[top=0,pills=1,navbar=2]; label= Navigation layout
+		headerLayout = 0
+	}
+	registerHelper {
+		Elements {
+			Accordion {
+				enabled = 1
+				gutter = 20
+			}
+			FluidRow {
+				enabled = 1
+				gutter = 0
+				gutterColumn = 50
+			}
+			ImagePlain {
+				enabled = 1
+				gutter = 0
+			}
+			Module {
+				enabled = 1
+				gutter = 0
+			}
+			Carousel {
+				enabled = 1
+				gutter = 0
+			}
+			Tabs {
+				enabled = 1
+				gutter = 0
+			}
+			WrapperHtml {
+				enabled = 1
+				gutter = 0
+			}
+		}
+	}
+}

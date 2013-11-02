@@ -1,0 +1,31 @@
+@linkColor: yellow;
+#test {
+  color: @linkColor
+}
+
+#tx-coreupdate-menu .toolbar-item {
+	padding-left: 8px;
+	padding-right: 7px;
+}
+#tx-coreupdate-menu .toolbar-item-active {
+	/*background-image: url('toolbar_item_active_bg.png');*/
+}
+#tx-coreupdate-menu .toolbar-item-menu {
+	position: absolute;
+	list-style: none;
+	padding: 2px 0px 0px;
+	margin: 0px;
+	background-color: #f9f9f9;
+	border: 1px solid #abb2bc;
+	border-top: none;
+	width: 360px;
+}
+#tx-coreupdate-menu .toolbar-item-menu-dynamic {
+	padding: 10px;
+}
+#tx-coreupdate-menu .toolbar-item-menu-dynamic table{
+	width: 100%;
+}
+#tx-coreupdate-menu .toolbar-item-menu-dynamic .dimmed{
+	opacity: 0.4;
+}

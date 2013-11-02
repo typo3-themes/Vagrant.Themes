@@ -4,11 +4,12 @@
 Vagrant.configure("2") do |config|
 
   # Every Vagrant virtual environment requires a box to build off of.
-  config.vm.box     = "precise32"
-  config.vm.box_url = "http://files.vagrantup.com/precise32.box"
+  config.vm.box     = "debian-607-x32"
+  config.vm.box_url = "http://dl.dropbox.com/u/40989391/vagrant-boxes/debian-squeeze-i386.box"
 
-  #config.vm.box     = "debian-607-x64"
-  #config.vm.box_url = "http://puppet-vagrant-boxes.puppetlabs.com/debian-607-x64-vbox4210.box"
+	config.vm.box     = "debian-607-x32"
+	config.vm.box_url = "http://dl.dropbox.com/u/40989391/vagrant-boxes/debian-squeeze-i386.box"
+
 
   config.vm.synced_folder "serverdata/", "/serverdata", owner: "www-data"
 
@@ -23,11 +24,11 @@ Vagrant.configure("2") do |config|
   # Puppet provisioning
 
   config.vm.provision :puppet do |puppet|
-     puppet.manifests_path = "manifests"
+     puppet.manifests_path = "provision/manifests"
      puppet.manifest_file  = "default.pp"
   end
 
-  config.vm.provision :shell, :path => "bootstrap.sh"
+  config.vm.provision :shell, :path => "provision/bootstrap.sh"
 
   # Enable provisioning with chef solo, specifying a cookbooks path, roles
   # path, and data_bags path (all relative to this Vagrantfile), and adding
@@ -45,7 +46,7 @@ Vagrant.configure("2") do |config|
   # end
 
   config.vm.provider "virtualbox" do |vm, override|
-    vm.name = "drk-dresden.dev"
+    vm.name = "themes.dev"
     vm.customize ["modifyvm", :id, "--memory",          "1024"]
     vm.customize ["modifyvm", :id, "--cpuexecutioncap",   "80"]
   end
@@ -59,19 +60,9 @@ Vagrant.configure("2") do |config|
 
   end
   config.vm.provider :lxc do |lxc, override|
-    # Same effect as as 'customize ["modifyvm", :id, "--memory", "1024"]' for VirtualBox
-    # lxc.customize 'cgroup.memory.limit_in_bytes', '1024M'
-    # config.vm.box     = "lxc-wheezy-amd64-2013-05-08"
-    # override.vm.box_url = "http://dl.dropbox.com/u/13510779/lxc-wheezy-amd64-2013-05-08.box"
+    config.vm.box     = "debian-607-x32"
+    config.vm.box_url = "http://dl.dropbox.com/u/40989391/vagrant-boxes/debian-squeeze-i386.box"
 
-    # config.vm.box       = "lxc-raring-amd64-2013-07-12"
-    # override.vm.box_url = "http://dl.dropbox.com/u/13510779/lxc-raring-amd64-2013-07-12.box"
-
-    # config.vm.box       = "lxc-raring-amd64-2013-05-08"
-    # override.vm.box_url = "http://dl.dropbox.com/u/13510779/lxc-raring-amd64-2013-05-08.box"
-
-    config.vm.box       = "lxcquantalamd6420130712"
-    override.vm.box_url = "http://dl.dropbox.com/u/13510779/lxc-quantal-amd64-2013-07-12.box"
   end
 
 end

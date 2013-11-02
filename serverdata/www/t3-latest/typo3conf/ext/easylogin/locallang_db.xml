@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>database</type>
+		<description>Language labels for database tables/fields belonging to extension 'oneclicklogin'</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="ext_conf.usersAndPasswords">Add users and passwords here. [user]|[password],[user]|[password],...</label>
+			<label index="ext_conf.use_devIPmask">respect $TYPO3_CONF_VARS[SYS][devIPmask] to hide login data from others</label>
+			<label index="ext_conf.iconPlacement">Position of the icons</label>
+			<label index="ext_conf.toolbarType">Position of the toolbar</label>
+			<label index="ext_conf.showUsername">Show usernames, or icons only</label>
+		</languageKey>
+		<languageKey index="de" type="array">
+			<label index="ext_conf.usersAndPasswords">Füge Nutzer und Passwörter hier ein. [user]|[password],[user]|[password],...</label>
+			<label index="ext_conf.use_devIPmask">Respektiere $TYPO3_CONF_VARS[SYS][devIPmask] um die Nutzerdaten vor anderen zu verstecken</label>
+			<label index="ext_conf.iconPlacement">Position des Icons</label>
+			<label index="ext_conf.toolbarType">Position der Toolbar</label>
+			<label index="ext_conf.showUsername">Zeige Benutzername, oder nur icons</label>
+		</languageKey>
+	</data>
+</T3locallang>

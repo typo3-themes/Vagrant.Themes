@@ -1,0 +1,17 @@
+# cat=templates/basic; type=string; label=LoginTemplate 
+logintemplate = EXT:t3skin/templates/login.html
+
+# cat=templates/basic; type=string; label=Folder where the logos for login image rotation are stored
+loginLogoPath =
+
+# cat=templates/basic; type=string; label=Logo in the Backend after Login
+logo = typo3/gfx/typo3logo_mini.png
+
+# cat=templates/basic; type=string; label=CSS File 
+cssFile  = EXT:beskin/stylesheets/changes.css
+
+# cat=templates/basic; type=options[replace with HTML=htmlOnly,append HTML=append,prepend HTML=prepend,display Logo only=logoOnly]; label=HTML Mode 
+replaceLogo  = append
+
+# cat=templates/basic; type=string; label=HTML to ^^ 
+html       = <h1 style="color:orange;float:right;padding-left:20px;">LOCAL TESTSYSTEM %TYPO3_version%</h1>

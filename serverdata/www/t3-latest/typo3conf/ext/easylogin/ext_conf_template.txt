@@ -1,0 +1,14 @@
+# cat=basic; type=string; label=LLL:EXT:easylogin/locallang_db.xml:ext_conf.usersAndPasswords
+usersAndPasswords = admin|password
+
+# cat=basic; type=boolean; label=LLL:EXT:easylogin/locallang_db.xml:ext_conf.use_devIPmask
+use_devIPmask = 0
+
+# cat=basic; type=options[top=top, bottom=bottom, left=left, right=right]; label=LLL:EXT:easylogin/locallang_db.xml:ext_conf.iconPlacement
+iconPlacement = top
+
+# cat=basic; type=options[top=top, bottom=bottom]; label=LLL:EXT:easylogin/locallang_db.xml:ext_conf.toolbarType
+toolbarType = top
+
+# cat=basic; type=options[both=both, iconOnly=iconOnly]; label=LLL:EXT:easylogin/locallang_db.xml:ext_conf.showUsername
+showUsername = both

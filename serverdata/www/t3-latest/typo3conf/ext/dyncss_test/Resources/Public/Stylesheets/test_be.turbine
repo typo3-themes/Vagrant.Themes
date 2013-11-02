@@ -1,0 +1,9 @@
+@constants
+    color:#C02222
+
+#live-search-box
+    background-color:$color
+    border: 2px solid $color
+
+#live-search-box:focus
+        background-color:white

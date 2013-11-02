@@ -1,0 +1,35 @@
+{namespace v=Tx_Vhs_ViewHelpers}
+{namespace flux=Tx_Flux_ViewHelpers}
+{namespace fb=Tx_ThemesFcesFluidcontentBasic_ViewHelpers}
+
+<f:layout name="Content" />
+
+<div xmlns="http://www.w3.org/1999/xhtml"
+	 xmlns:v="http://fedext.net/ns/vhs/ViewHelpers"
+	 xmlns:flux="http://fedext.net/ns/flux/ViewHelpers"
+	 xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
+
+	<f:section name="Configuration">
+		<flux:flexform wizardTab="Basic FCEs" id="themes-fces-fluidcontent-basic-wrapper-html" label="html wrapper" description="" icon="../typo3conf/ext/themes_fces_fluidcontent_basic/Resources/Public/Images/WrapperHtml.png">
+			<flux:flexform.field.text name="before" label="before html" />
+			<flux:flexform.field.text name="after" label="after html" />
+			<flux:flexform.grid>
+				<flux:flexform.grid.row>
+					<flux:flexform.grid.column>
+						<flux:flexform.content name="content" label="Content" />
+					</flux:flexform.grid.column>
+				</flux:flexform.grid.row>
+			</flux:flexform.grid>
+		</flux:flexform>
+	</f:section>
+
+	<f:section name="Preview">
+		<flux:widget.grid />
+	</f:section>
+
+	<f:section name="Main">
+		<f:format.raw>{before}</f:format.raw>
+		<flux:flexform.renderContent area="content" />
+		<f:format.raw>{after}</f:format.raw>
+	</f:section>
+</div>

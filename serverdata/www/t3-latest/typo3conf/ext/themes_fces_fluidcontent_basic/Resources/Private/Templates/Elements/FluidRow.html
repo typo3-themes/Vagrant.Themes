@@ -1,0 +1,63 @@
+{namespace v=Tx_Vhs_ViewHelpers}
+{namespace flux=Tx_Flux_ViewHelpers}
+{namespace fb=Tx_ThemesFcesFluidcontentBasic_ViewHelpers}
+
+<f:layout name="Content" />
+
+<div xmlns="http://www.w3.org/1999/xhtml"
+     xmlns:v="http://fedext.net/ns/vhs/ViewHelpers"
+     xmlns:flux="http://fedext.net/ns/flux/ViewHelpers"
+     xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
+
+	<f:section name="Configuration">
+		<flux:flexform wizardTab="Basic FCEs" id="themes-fces-fluidcontent-basic-fluid-row" label="Bootstrap: Column Row" description="Adds a wrapper element that lets you define columns of varying widths" icon="../typo3conf/ext/themes_fces_fluidcontent_basic/Resources/Public/Images/FluidRow.png">
+			<flux:flexform.field.checkbox name="basic" label="Basic (non-responsive) row, uses CSS class 'row' instead of 'row-fluid'" />
+			<flux:flexform.section name="columns" label="Columns">
+				<flux:flexform.object name="column" label="Column">
+					<flux:flexform.field.select name="class"  label="Class"  commaSeparatedItems="span1,span2,span3,span4,span5,span6,span7,span8,span9,span10,span11,span12" />
+					<flux:flexform.field.select name="offset" label="Offset" commaSeparatedItems=",offset1,offset2,offset3,offset4,offset5,offset6,offset7,offset8,offset9,offset10,offset11,offset12" />
+					<flux:flexform.field.checkbox name="addWell" label="Add 'Well' inside cell" />
+					<flux:flexform.field.input name="additionalClass" label="Additional class names" />
+				</flux:flexform.object>
+			</flux:flexform.section>
+			<flux:flexform.grid>
+				<flux:flexform.grid.row>
+					<f:for each="{columns}" as="sectionObject" iteration="iteration">
+						<v:var.set name="width" value="{sectionObject.column.class -> v:format.substring(start: 4)}" />
+						<v:var.set name="percent" value="{width  -> v:math.division(b: 12) -> v:math.product(b: 100) -> v:math.round(decimals: 2)}" />
+						<flux:flexform.grid.column style="width: {percent}%">
+							<flux:flexform.content name="column{iteration.cycle}" label="{percent}%" />
+						</flux:flexform.grid.column>
+					</f:for>
+				</flux:flexform.grid.row>
+			</flux:flexform.grid>
+		</flux:flexform>
+	</f:section>
+
+	<f:section name="Main">
+		<div class="row{f:if(condition: basic, else: '-fluid')}">
+			<v:var.set name="maxImageWidthParent" value="{f:cObject(typoscriptObjectPath:'plugin.tx_themes_fces_fluidcontent_basic.registerHelper.Content.maxImageWidth')}"/>
+			<v:var.set name="gutterColumn"        value="{f:cObject(typoscriptObjectPath:'plugin.tx_themes_fces_fluidcontent_basic.registerHelper.Elements.FluidRow.gutterColumn')}"/>
+			<v:var.set name="gutter"              value="{f:cObject(typoscriptObjectPath:'plugin.tx_themes_fces_fluidcontent_basic.registerHelper.Elements.FluidRow.gutter')}"/>
+			<f:for each="{columns}" as="sectionObject" iteration="iteration">
+				<v:var.set name="width"           value="{sectionObject.column.class -> v:format.substring(start: 4)}" />
+				<v:var.set name="percent"         value="{width  -> v:math.division(b: 12) -> v:math.product(b: 100) -> v:math.round(decimals: 2)}" />
+				<v:var.set name="maxImageWidth" value="{fb:maxImageWidth(parentMaxWidth: maxImageWidthParent, percentOfParent: percent, gutterColumn: gutterColumn, gutter:gutter)}" />
+				<div class="{sectionObject.column.class} {sectionObject.column.offset}">
+					<div class="
+						{f:if(condition: sectionObject.column.addWell, then: ' well')}
+						{f:if(condition: sectionObject.column.additionalClass, then: ' {sectionObject.column.additionalClass}')}
+
+					">
+						<flux:flexform.renderContent area="column{iteration.cycle}" loadRegister="{maxImageWidth: maxImageWidth}" />
+					</div>
+				</div>
+			</f:for>
+		</div>
+	</f:section>
+
+	<f:section name="Preview">
+		<flux:widget.grid />
+	</f:section>
+
+</div>

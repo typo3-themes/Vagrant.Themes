@@ -1,0 +1,100 @@
+<f:layout name="Main" />
+
+<f:section name="docHeaderRow1">
+</f:section>
+<f:section name="docHeaderRow2">
+</f:section>
+<f:section name="Content">
+
+	<f:flashMessages renderMode="div" />
+
+
+	<div class="coreupdateContainer">
+		<h2>Information about this installation</h2>
+		<table class="coreupdateTable">
+			<tr>
+				<td>Version installed</td>
+				<td>{versionInformation.installed}</td>
+			</tr>
+			<tr>
+				<td>Version available</td>
+				<td>{versionInformation.latest_installed_branch}</td>
+			</tr>
+			<tr>
+				<td>
+					PATH_site (TYPO3 Document Root)
+				</td>
+				<td>
+					{calculatedPaths.PATH_site}
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Path to the TYPO3 sources directories
+				</td>
+				<td>
+					{calculatedPaths.realSourceLocation}
+				</td>
+			</tr>
+		</table>
+	</div>
+
+	<div class="coreupdateContainer">
+		<h2>Versions available for Installation</h2>
+		<table class="coreupdateTable">
+			<colgroup>
+				<col width="300" />
+				<col width="100" />
+			</colgroup>
+			<f:for each="{availableVersionSources}" as="version" key="number" iteration="itemIteration">
+				<tr>
+					<td>
+						TYPO3 v{version}
+					</td>
+					<td>
+						<f:if condition="{version}=={versionInformation.installed}">
+							<f:then>
+
+							</f:then>
+							<f:else>
+								<f:link.action action="switch" arguments="{version: version}">
+									<span class="t3-icon t3-icon-actions t3-icon-actions-version t3-icon-version-workspace-sendtostage">&nbsp;</span>
+									Switch
+								</f:link.action>
+							</f:else>
+						</f:if>
+					</td>
+				</tr>
+			</f:for>
+		</table>
+	</div>
+
+	<div class="coreupdateContainer">
+
+		<h2>Versions available for Download</h2>
+		<table class="coreupdateTable">
+			<colgroup>
+				<col width="150" />
+				<col width="150" />
+				<col width="100" />
+			</colgroup>
+			<f:for each="{branchDownloads}" as="version" key="number" iteration="itemIteration">
+				<tr class="marker-{version.type}" title="{version.date}">
+					<td>
+						TYPO3 v{version.version}<br>
+					</td>
+					<td>
+						<span class="marker-{version.type}">{version.type}</span>
+					</td>
+					<td>
+						<f:link.action action="import" arguments="{version: version.version}">
+							<span class="t3-icon t3-icon-actions t3-icon-actions-edit t3-icon-edit-add">&nbsp;</span>
+							Get
+						</f:link.action>
+					</td>
+				</tr>
+			</f:for>
+		</table>
+	</div>
+
+</f:section>

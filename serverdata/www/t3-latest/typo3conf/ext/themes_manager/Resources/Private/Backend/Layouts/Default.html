@@ -1,0 +1,34 @@
+<em:be.container pageTitle="Theme Manager" enableJumpToUrl="false" enableClickMenu="false" loadPrototype="false"
+                 loadScriptaculous="false" loadExtJs="false" loadExtJsTheme="true"
+                 addCssFiles="{
+		0:'{f:uri.resource(path:\'StyleSheet/bootstrap.css\')}',
+		1:'{f:uri.resource(path:\'StyleSheet/bootstrap-responsive.css\')}',
+		2:'{f:uri.resource(path:\'StyleSheet/themes-manager.css\')}',
+		3:'{f:uri.resource(path:\'StyleSheet/bootstrap-datatables.css\')}'
+	}"
+                 addJsFiles="{
+		0:'{f:uri.resource(path:\'JavaScript/JQuery/jquery-1.9.1.min.js\')}'
+		}">
+
+
+	<script type="text/javascript">
+
+		// Declare namespace
+		window.ThemesManager = {};
+
+		// Just initialize variable with empty value.
+		ThemesManager.icons = {}
+	</script>
+
+	<f:render section="main"/>
+
+	<m:js name="Bootstrap/bootstrap.min.js"/>
+	<m:js name="Bootstrap/bootbox.min.js"/>
+	<m:js name="Bootstrap/bootstrapx-clickover.js"/>
+
+	<m:js name="ThemesManager.js"/>
+
+</em:be.container>
+{namespace em=TYPO3\CMS\Extensionmanager\ViewHelpers}
+{namespace m=TYPO3\CMS\ThemesManager\ViewHelpers}
+

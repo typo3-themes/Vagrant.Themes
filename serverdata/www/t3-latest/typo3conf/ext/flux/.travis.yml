@@ -1,0 +1,31 @@
+language: php
+php:
+  - 5.3
+  - 5.4
+
+env:
+  - DB=mysql
+
+before_script:
+  - export REPOSITORY="flux"
+  - git clone https://github.com/FluidTYPO3/TYPO3-Travis-Integration.git build-environment
+  - source build-environment/install-utilities.sh
+  - source build-environment/install-preserve-repository.sh
+  - source build-environment/install-helper.sh
+  - source build-environment/install-typo3.sh
+  - source build-environment/install-reintegrate-repository.sh
+  - source build-environment/install-phpunit-setup.sh
+
+script:
+# initial, quick inspection
+  - php build-environment/FluidTYPO3-CodingStandards/commit_message_inspector.php $PWD/typo3conf/ext/$REPOSITORY
+# install extension
+  - php $PWD/typo3/cli_dispatch.phpsh extbase builder:install $REPOSITORY
+# phplint checking on all PHP source files in extension
+  - php $PWD/typo3/cli_dispatch.phpsh extbase builder:phpsyntax --extension $REPOSITORY
+# fluid template syntax checking on all files in extension
+  - php $PWD/typo3/cli_dispatch.phpsh extbase builder:fluidsyntax --extension $REPOSITORY
+# PHPCodeSniffer code inspection with only errors displayed (no warnings)
+  - $PWD/build-environment/CodeSniffer/scripts/phpcs -n --standard=$PWD/build-environment/FluidTYPO3-CodingStandards/ruleset.xml $PWD/typo3conf/ext/$REPOSITORY
+# PHPUnit tests from overridden phpunit tests configuration file
+  - php $PWD/typo3/cli_dispatch.phpsh phpunit -c phpunit.xml

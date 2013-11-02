@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>database</type>
+		<description>Language labels for database tables/fields belonging to extension 'coreupdate'</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="coreupdate_Hooks_Reports_VersionStatusProvider_error">an error occured</label>
+			<label index="coreupdate_Hooks_Reports_VersionStatusProvider_noUpdate">your installation is uptodate</label>
+			<label index="coreupdate_Hooks_Reports_VersionStatusProvider_newMinorUpdate">there is a minor update available for your installation</label>
+			<label index="coreupdate_Hooks_Reports_VersionStatusProvider_newMajorUpdate">there is a major update available for your installation</label>
+			<label index="coreupdate_Hooks_Reports_VersionStatusProvider_newSecurityUpdate">there is an important security update available for your installation</label>
+
+			<label index="coreupdate_Hooks_Reports_VersionStatusProvider_errorTitle">Error</label>
+			<label index="coreupdate_Hooks_Reports_VersionStatusProvider_noUpdateTitle">Uptodate</label>
+			<label index="coreupdate_Hooks_Reports_VersionStatusProvider_newMinorUpdateTitle">Minor Update</label>
+			<label index="coreupdate_Hooks_Reports_VersionStatusProvider_newMajorUpdateTitle">Major Update</label>
+			<label index="coreupdate_Hooks_Reports_VersionStatusProvider_newSecurityUpdateTitle">Security Update</label>
+		</languageKey>
+		<languageKey index="de" type="array">
+			<label index="coreupdate_Hooks_Reports_VersionStatusProvider_error">es ist ein Fehler aufgetreten</label>
+			<label index="coreupdate_Hooks_Reports_VersionStatusProvider_noUpdate">die Installation ist aktuelle</label>
+			<label index="coreupdate_Hooks_Reports_VersionStatusProvider_newMinorUpdate">Es gibt ein Pflegeupdate für die Installation</label>
+			<label index="coreupdate_Hooks_Reports_VersionStatusProvider_newMajorUpdate">Es gibt eine neue Hauptversion</label>
+			<label index="coreupdate_Hooks_Reports_VersionStatusProvider_newSecurityUpdate">Es gibt ein neues Sicherheitsupdate</label>
+
+			<label index="coreupdate_Hooks_Reports_VersionStatusProvider_errorTitle">Fehler</label>
+			<label index="coreupdate_Hooks_Reports_VersionStatusProvider_noUpdateTitle">Aktuell</label>
+			<label index="coreupdate_Hooks_Reports_VersionStatusProvider_newMinorUpdateTitle">Pflegeupdate</label>
+			<label index="coreupdate_Hooks_Reports_VersionStatusProvider_newMajorUpdateTitle">neue Hauptversion</label>
+			<label index="coreupdate_Hooks_Reports_VersionStatusProvider_newSecurityUpdateTitle">neue Sicherheitsupdates</label>
+		</languageKey>
+
+	</data>
+</T3locallang>

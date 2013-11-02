@@ -1,0 +1,24 @@
+plugin.tx_themesmanager {
+	settings {
+		 # cat=plugin.tx_themesmanager/a; type=int+; label=Editor FE Usergroup uid:Enter the uid of the FE Usergroup that should be allowed to edit Blogs and Post in the frontend
+		editorUsergroupUid = 1
+	}
+	view {
+		 # cat=plugin.tx_themesmanager/file; type=string; label=Path to template root (FE)
+		templateRootPath = EXT:themes_manager/Resources/Private/Templates/
+		 # cat=plugin.tx_themesmanager/file; type=string; label=Path to template partials (FE)
+		partialRootPath = EXT:themes_manager/Resources/Private/Partials/
+		 # cat=plugin.tx_themesmanager/file; type=string; label=Path to template layouts (FE)
+		layoutRootPath = EXT:themes_manager/Resources/Private/Layouts/
+	}
+}
+module.tx_themesmanager {
+	view {
+		 # cat=module.tx_themesmanager/file; type=string; label=Path to template root (BE)
+		templateRootPath = EXT:themes_manager/Resources/Private/Backend/Templates/
+		 # cat=module.tx_themesmanager/file; type=string; label=Path to template partials (BE)
+		partialRootPath = EXT:themes_manager/Resources/Private/Partials/
+		 # cat=module.tx_themesmanager/file; type=string; label=Path to template layouts (BE)
+		layoutRootPath = EXT:themes_manager/Resources/Private/Backend/Layouts/
+	}
+}

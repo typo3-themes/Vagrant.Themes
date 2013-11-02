@@ -1,0 +1,11 @@
+2011-02-15 Axel Brand  <info@brandnewmedia.biz>
+
+ * pi based initial version
+
+2012-11-07 Kay Strobach <typo3@kay-strobach.de>
+
+ * Major redesign using pagerenderer hooks
+
+See bugtracker and repository on forge for details of changes:
+
+	http://forge.typo3.org/projects/extension-less/repository

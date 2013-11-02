@@ -1,0 +1,64 @@
+@color: red;
+
+/*@shadow1:   contrast(@color, lighten(@color, 10%),  darken(@color, 10%));
+@shadow2:   contrast(@color, lighten(@color,  5%),  darken(@color,  5%));
+@textColor: contrast(@color,  darken(@color, 40%), lighten(@color, 40%));*/
+
+@shadow1:   hsl(hue(@color), saturation(@color), 20%);
+@shadow2:   hsl(hue(@color), saturation(@color), 30%);
+@shadow3:   hsl(hue(@color), saturation(@color), 90%);
+@textColor: hsl(hue(@color), saturation(@color), 80%);
+
+
+
+#typo3-module-menu,
+.t3-login-box-body,
+.x-panel-body,
+body {
+  background-color: @shadow3!important;
+  background-image: none;
+}
+
+.t3-login-box-body {
+  border: 1px solid @shadow2;
+}
+
+#typo3-logo h1 {
+  color: @textColor!important;
+}
+#typo3-logo img {
+  display: none;
+}
+.x-panel-tbar,
+.typo3-docheader-functions,
+.t3-headline,
+#typo3-docheader-row1 {
+  background-color: @shadow1!important;
+  color: @textColor!important;
+}
+
+div#typo3-docheader-row2,
+.typo3-docheader-buttons,
+.typo3-pagetree-topPanel-item,
+.x-tree-selected,
+.submodule.highlighted a,
+.submodule.x-view-over a,
+.x-tree-node-over,
+#typo3-top-container,
+#typo3-pagetree-topPanel-defaultPanel .x-panel-body{
+  background-color: @shadow2!important;
+  color: @textColor!important;
+  background-image: none;
+}
+
+.x-tree-selected, .x-tree-node-over {
+  background-color:@shadow2!important;
+  a span {
+    color: @textColor!important;
+  }
+}
+body.ext-chrome #typo3-module-menu-xsplit,
+body.ext-chrome #typo3-navigationContainer-xsplit {
+  background-image: none;
+  background-color: @shadow2;
+}

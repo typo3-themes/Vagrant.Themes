@@ -1,0 +1,31 @@
+<link href="{f:uri.resource(path:'Stylesheets/main.css')}" rel="stylesheet" />
+<f:be.container>
+	<div class="typo3-fullDoc">
+		<div id="typo3-docheader">
+			<div id="typo3-docheader-row1">
+				<div class="buttonsleft">
+
+				</div>
+				<div class="buttonsright">
+
+				</div>
+			</div>
+			<div id="typo3-docheader-row2">
+				<div class="docheader-row2-left">
+					<f:be.buttons.csh />
+					<f:be.menus.actionMenu>
+						<f:be.menus.actionMenuItem label="Overview" controller="" action="index" />
+					</f:be.menus.actionMenu>
+				</div>
+				<div class="docheader-row2-right">
+
+				</div>
+			</div>
+		</div>
+		<div id="typo3-docbody">
+			<div id="typo3-inner-docbody">
+				<f:render section="main" />
+			</div>
+		</div>
+	</div>
+</f:be.container>

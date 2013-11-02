@@ -1,0 +1,29 @@
+# Plugin configuration
+plugin.tx_themesmanager {
+	settings {
+	}
+	view {
+		templateRootPath = {$plugin.tx_themesmanager.view.templateRootPath}
+		partialRootPath = {$plugin.tx_themesmanager.view.partialRootPath}
+		layoutRootPath = {$plugin.tx_themesmanager.view.layoutRootPath}
+		defaultPid = auto
+	}
+	# This is an example how to modify the translation
+	_LOCAL_LANG {
+		default {
+			someUnusedKey = foo
+		}
+	}
+}
+
+# Module configuration
+module.tx_themesmanager {
+	settings < plugin.tx_themesmanager.settings
+	view < plugin.tx_themesmanager.view
+	view {
+		templateRootPath = {$module.tx_themesmanager.view.templateRootPath}
+		partialRootPath = {$module.tx_themesmanager.view.partialRootPath}
+		layoutRootPath = {$module.tx_themesmanager.view.layoutRootPath}
+	}
+}
+

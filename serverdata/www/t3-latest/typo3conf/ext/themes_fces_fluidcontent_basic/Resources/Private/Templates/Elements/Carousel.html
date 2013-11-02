@@ -1,0 +1,74 @@
+{namespace v=Tx_Vhs_ViewHelpers}
+{namespace flux=Tx_Flux_ViewHelpers}
+{namespace fb=Tx_ThemesFcesFluidcontentBasic_ViewHelpers}
+
+<f:layout name="Content" />
+
+<div xmlns="http://www.w3.org/1999/xhtml"
+	 xmlns:v="http://fedext.net/ns/vhs/ViewHelpers"
+	 xmlns:flux="http://fedext.net/ns/flux/ViewHelpers"
+	 xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
+
+	<f:section name="Configuration">
+		<flux:flexform wizardTab="Basic FCEs" id="themes-fces-fluidcontent-basic-carousel" label="Carousel" description="Slide Content" icon="../typo3conf/ext/themes_fces_fluidcontent_basic/Resources/Public/Images/Slider.png">
+			<flux:flexform.sheet name="display" label="Display">
+				<flux:flexform.field.input name="carouselHeight" label="height of the carousel" />
+				<flux:flexform.field.input name="animationInterval" label="animation interval in ms" />
+				<flux:flexform.field.input name="containerHeight" label="height of the container" />
+			</flux:flexform.sheet>
+			<flux:flexform.sheet name="panels" label="Panels">
+				<flux:flexform.section name="panels" label="Panels">
+					<flux:flexform.object name="panel" label="Panel">
+						<flux:flexform.field.input name="title" label="Panel title" />
+						<flux:flexform.field.text  name="description" label="panel description" />
+						<flux:flexform.field.file name="background" label="background image of the container" />
+						<flux:flexform.field.input name="class" label="Additional class names" />
+					</flux:flexform.object>
+				</flux:flexform.section>
+			</flux:flexform.sheet>
+			<flux:flexform.grid>
+				<flux:flexform.grid.row>
+					<f:for each="{panels}" as="panel" iteration="iteration">
+						<flux:flexform.grid.column>
+							<flux:flexform.content name="content.{iteration.index}" label="{f:if(condition: panel.panel.title, then: panel.panel.title, else: 'Content, panel {iteration.cycle}')}" />
+						</flux:flexform.grid.column>
+					</f:for>
+				</flux:flexform.grid.row>
+			</flux:flexform.grid>
+		</flux:flexform>
+	</f:section>
+
+	<f:section name="Preview">
+		<flux:widget.grid />
+	</f:section>
+
+	<f:section name="Main">
+		<v:var.set name="maxImageWidthParent" value="{f:cObject(typoscriptObjectPath:'plugin.tx_themes_fces_fluidcontent_basic.registerHelper.Content.maxImageWidth')}"/>
+		<v:var.set name="gutter"              value="{f:cObject(typoscriptObjectPath:'plugin.tx_themes_fces_fluidcontent_basic.registerHelper.Elements.Carousel.gutter')}"/>
+		<v:var.set name="maxImageWidth"       value="{fb:maxImageWidth(parentMaxWidth: maxImageWidthParent, gutter:gutter)}" />
+
+		<div class="carousel slide" id="carousel-{record.uid}" data-interval="{animationInterval}">
+			<ol class="carousel-indicators">
+				<f:for each="{panels}" as="panel" iteration="iteration">
+					<li data-target="#carousel-{record.uid}" data-slide-to="{iteration.index}" class="{f:if(condition: iteration.index, then:'', else:'active')}"></li>
+				</f:for>
+			</ol>
+			<div class="carousel-inner" style="{f:if(condition: containerHeight, then:'height:{containerHeight}px', else:'')}">
+				<f:for each="{panels}" as="panel" iteration="iteration">
+					<div class="{f:if(condition: iteration.index, then:'', else:'active')} item" style="{f:if(condition: panel.panel.background, then:'background-image:url({panel.panel.background});', else:'')} {f:if(condition: containerHeight, then:'height:{containerHeight}px', else:'')}">
+						<flux:flexform.renderContent area="content.{iteration.index}" loadRegister="{maxImageWidth: maxImageWidth}"/>
+						<f:if condition="{panel.panel.title}">
+							<div class="carousel-caption">
+								<h4>{panel.panel.title}</h4>
+								<p>{panel.panel.description}</p>
+							</div>
+						</f:if>
+					</div>
+				</f:for>
+				<a class="carousel-control left"  href="#carousel-{record.uid}" data-slide="prev">&lsaquo;</a>
+				<a class="carousel-control right" href="#carousel-{record.uid}" data-slide="next">&rsaquo;</a>
+			</div>
+		</div>
+	</f:section>
+
+</div>

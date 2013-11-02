@@ -1,0 +1,13 @@
+<f:layout name="Default" />
+<f:section name="main">
+	<h2 class="be_header">Themes builder</h2>
+
+	<f:if condition="{errorMsg}">
+		<f:then>
+			<strong>{errorMsg}</strong>
+		</f:then>
+		<f:else>
+			<f:flashMessages renderMode="div" />
+		</f:else>
+	</f:if>
+</f:section>

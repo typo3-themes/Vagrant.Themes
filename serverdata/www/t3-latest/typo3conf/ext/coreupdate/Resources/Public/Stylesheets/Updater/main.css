@@ -1,0 +1,30 @@
+.marker-development {
+	color: silver;
+}
+.marker-security {
+	color: red;
+}
+.marker-release {
+	color: green;
+}
+.marker-regular {
+	color: green;
+}
+
+.coreupdateTable {
+	width: 400px;
+	border-collapse: collapse;
+}
+.coreupdateTable tr:hover {
+	background-color: #d1d1d1;
+}
+.coreupdateTable td {
+	padding: 8px;
+}
+h2 {
+	margin-top: 20px;
+}
+
+.coreupdateContainer {
+	float: left;
+}

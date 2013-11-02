@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>database</type>
+		<description>Language labels for Page Tempolates and FCEs in Busy Noggin Quicksite</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="templavoila_framework.constants.siteTitle">Site Name: The overall name of the site.  This will appear on every page.</label>
+			<label index="templavoila_framework.constants.siteURL">Site URL: The domain for the site with the trailing slash included.(ex. http://www.mysite.com/)</label>
+			<label index="templavoila_framework.constants.siteLogo">Site Logo: The path to the logo for your site which will appear in the header of every page (ex. fileadmin/images/mylogo.jpg). This setting is optional and may not be used by all skins.</label>
+			<label index="templavoila_framework.constants.copyright">Copyright: Copyright for the site. The current year will automatically be added before this value.</label>
+			<label index="templavoila_framework.constants.dateFormat">Date Format.</label>
+			<label index="templavoila_framework.constants.timeFormat">Time Format.</label>
+			<label index="templavoila_framework.constants.dateTimeFormat">Date/Time Format.</label>
+			<label index="templavoila_framework.constants.generatedContent-1.source">Generated Content 1: Page ID of the primary SysFolder for generated content. This SysFolder can contain menus, advertisements, and other content that appears on many pages throughout your site.</label>
+			<label index="templavoila_framework.constants.generatedContent-2.source">Generated Content 2: Page ID of the secondary SysFolder for generated content. This SysFolder can contain menus, advertisements, and other content that appears on many pages throughout your site.</label>
+		</languageKey>
+		<languageKey index="de" type="array">
+			<label index="templavoila_framework.constants.siteTitle">Name der Seite: Name der ganzen Seite. Wird auf jeder Seite erscheinen.</label>
+			<label index="templavoila_framework.constants.siteURL">URL der Seite: Url der Seite mit slash '/' am Ende.(ex. http://www.mysite.com/)</label>
+			<label index="templavoila_framework.constants.siteLogo">Logo der Seite: Pfad zu der Datei, die als Logo verwendet wird. (ex. fileadmin/images/mylogo.jpg). Die Einstellung ist optional und wird nicht von allen Skins verwendet.</label>
+			<label index="templavoila_framework.constants.copyright">Copyright: Copyrighthinweis für die Seite. Das Jahr wird automatisch vor diesem Wert eingefügt.</label>
+			<label index="templavoila_framework.constants.dateFormat">Datums Format</label>
+			<label index="templavoila_framework.constants.timeFormat">Zeit Format</label>
+			<label index="templavoila_framework.constants.dateTimeFormat">Datum/Zeit Format</label>
+			<label index="templavoila_framework.constants.generatedContent-1.source">Erzeugter Inhalt 1: Page ID des primären SysFolders für automatisch erzeugten Inhalt. Der SysFolder kann Menüs, Anzeigen, und andere Inhalte enthalten, der auf vielen Seiten erscheint.</label>
+			<label index="templavoila_framework.constants.generatedContent-2.source">Erzeugter Inhalt 2: Page ID des primären SysFolders für automatisch erzeugten Inhalt. Der SysFolder kann Menüs, Anzeigen, und andere Inhalte enthalten, der auf vielen Seiten erscheint.</label>
+		</languageKey>
+	</data>
+</T3locallang>

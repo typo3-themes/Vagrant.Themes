@@ -1,0 +1,32 @@
+<f:be.container
+		pageTitle="foo"
+		enableJumpToUrl="false"
+		enableClickMenu="false"
+		loadPrototype="false"
+		loadScriptaculous="false"
+		loadExtJs="true"
+		loadExtJsTheme="true"
+		extJsAdapter="jQuery"
+		enableExtJsDebug="false"
+		addCssFile="{f:uri.resource(path:'Stylesheets/Updater/main.css')}">
+
+
+	<div class="typo3-fullDoc">
+
+		<div id="typo3-docheader">
+			<div id="typo3-docheader-row1">
+					<f:render section="docHeaderRow2" />
+			</div>
+			<div id="typo3-docheader-row2">
+				<f:render section="docHeaderRow1" />
+			</div>
+		</div>
+		<div id="typo3-docbody">
+			<div id="typo3-inner-docbody" class="typo3-extension-coreupdate">
+				<div class="contentWrapper">
+					<f:render section="Content" />
+				</div>
+			</div>
+		</div>
+	</div>
+</f:be.container>

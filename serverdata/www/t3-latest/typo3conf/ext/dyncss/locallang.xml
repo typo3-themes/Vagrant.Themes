@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<description>language labels for less</description>
+		<type>module</type>
+		<csh_table></csh_table>
+		<fileId>EXT:less/locallang.xml</fileId>
+		<labelContext type="array">
+			<label index="pi_title"></label>
+			<label index="pi_plus_wiz_description"></label>
+		</labelContext>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="extmng.version">Version</label>						
+		</languageKey>
+	</data>
+</T3locallang>

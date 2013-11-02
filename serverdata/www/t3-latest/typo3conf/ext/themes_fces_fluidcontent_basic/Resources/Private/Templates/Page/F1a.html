@@ -1,0 +1,101 @@
+{namespace v=Tx_Vhs_ViewHelpers}
+{namespace flux=Tx_Flux_ViewHelpers}
+<f:layout name="FrontPage" />
+<div xmlns="http://www.w3.org/1999/xhtml" lang="en"
+	 xmlns:v="http://fedext.net/ns/vhs/ViewHelpers"
+	 xmlns:flux="http://fedext.net/ns/flux/ViewHelpers"
+	 xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
+
+	<f:section name="Configuration">
+		<flux:flexform id="f1a" label="F1a">
+			<flux:flexform.field.select name="settings.showHeaderInContent" items="{0:'default', 1:'on', 2:'off'}" label="Page Title as Content Headline" />
+			<flux:flexform.field.select name="settings.bleed"               items="{0:'default', 1:'on', 2:'off'}" label="Bleed Feature Content" />
+			<flux:flexform.field.select name="settings.navigations"         items="{0: 'static top', 1: 'marketing speak', 2:'marketing stuff'}"                   label="foo" default="1" />
+			<flux:flexform.grid>
+				<flux:flexform.grid.row>
+					<flux:flexform.grid.column colPos="1" name="Feature" />
+				</flux:flexform.grid.row>
+				<flux:flexform.grid.row>
+					<flux:flexform.grid.column colPos="0" name="Main Content" />
+				</flux:flexform.grid.row>
+			</flux:flexform.grid>
+		</flux:flexform>
+	</f:section>
+
+	<f:section name="Content">
+		<v:var.set name="headerLayout" value="{f:cObject(typoscriptObjectPath:'plugin.tx_themes_fces_fluidcontent_basic.settings.headerLayout')}"/>
+
+		<f:if condition="{headerLayout} == 0">
+			<div id="navbar" class="navbar navbar-inverse navbar-static-top">
+				<div class="navbar-inner">
+					<div class="container navbar-static-top">
+						<f:if condition="{settings.enableSearch}">
+							<form class="navbar-search pull-right" method="get" action="{f:uri.page(pageUid: settings.searchPageUid)}">
+								<div class="input-append">
+									<input id="main-search-field" type="text" name="{settings.searchFieldName}" class="input-nav" tabindex="2" placeholder="Search" /><button tabindex="3" type="submit" class="btn btn-inverse"><i class="icon-search"></i></button>
+								</div>
+							</form>
+						</f:if>
+						<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</a>
+						<a class="brand" href="{v:site.url()}"><v:site.name /></a>
+						<v:page.menu entryLevel="1" useShortcutData="TRUE">
+							<div class="nav-collapse collapse">
+								<ul class="nav">
+									<f:for each="{menu}" as="mainPage" iteration="iteration">
+										<li class="{mainPage.class}"><a tabindex="{iteration.cycle -> v:math.sum(b: 100)}" href="{mainPage.link}" class="{mainPage.class}">{mainPage.title}</a></li>
+									</f:for>
+								</ul>
+							</div>
+						</v:page.menu>
+					</div>
+				</div>
+			</div>
+		</f:if>
+
+		<f:if condition="{headerLayout} == 1">
+			<div class="container">
+				<div class="masthead">
+					<v:page.menu entryLevel="1" useShortcutData="TRUE">
+						<ul class="nav nav-pills pull-right">
+							<f:for each="{menu}" as="mainPage" iteration="iteration">
+								<li class="{mainPage.class}"><a tabindex="{iteration.cycle -> v:math.sum(b: 100)}" href="{mainPage.link}" class="{mainPage.class}">{mainPage.title}</a></li>
+							</f:for>
+						</ul>
+					</v:page.menu>
+					<h3 class="muted"><v:site.name /></h3>
+				</div>
+				<hr />
+			</div>
+		</f:if>
+
+		<f:if condition="{headerLayout} == 2">
+			<div class="container">
+				<h3 class="muted"><v:site.name /></h3>
+
+				<div class="navbar">
+					<div class="navbar-inner">
+						<v:page.menu entryLevel="1" useShortcutData="TRUE">
+							<ul class="nav">
+								<f:for each="{menu}" as="mainPage" iteration="iteration">
+									<li class="{mainPage.class}"><a tabindex="{iteration.cycle -> v:math.sum(b: 100)}" href="{mainPage.link}" class="{mainPage.class}">{mainPage.title}</a></li>
+								</f:for>
+							</ul>
+						</v:page.menu>
+					</div>
+				</div>
+			</div>
+		</f:if>
+
+		<div class="container">
+
+			<!-- main content output - default rendering -->
+			<v:page.content.render column="0" />
+
+		</div>
+	</f:section>
+
+</div>

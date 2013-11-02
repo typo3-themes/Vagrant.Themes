@@ -1,0 +1,123 @@
+<f:layout name="Default" />
+<f:section name="main">
+	<h2 class="be_header">Themes builder</h2>
+
+	<f:form action="create" enctype="multipart/form-data">
+		<ul class="errors">
+			<f:form.errors>
+				<li>{error.code}: {error.message}</li>
+			</f:form.errors>
+		</ul>
+
+
+		<fieldset>
+			<legend>
+				Theme Information
+			</legend>
+			<table class="theme-form-table">
+				<colgroup>
+					<col width="300">
+					<col width="300">
+				</colgroup>
+
+				<tr>
+					<td>
+						theme key
+					</td>
+					<td>
+						<f:form.textfield name="themeKey" value="" />
+					</td>
+				</tr>
+
+				<tr>
+					<td>
+						theme title
+					</td>
+					<td>
+						<f:form.textfield name="information[title]" value="" />
+					</td>
+				</tr>
+
+
+				<tr>
+					<td>
+						theme Description
+					</td>
+					<td>
+						<f:form.textfield name="information[description]" value="" />
+					</td>
+				</tr>
+
+				<tr>
+					<td>
+						author
+					</td>
+					<td>
+						<f:form.textfield name="information[author]" value="" />
+					</td>
+				</tr>
+
+				<tr>
+					<td>
+						author Email
+					</td>
+					<td>
+						<f:form.textfield name="information[authorEmail]" value="" />
+					</td>
+				</tr>
+
+				<tr>
+					<td>
+						author Company
+					</td>
+					<td>
+						<f:form.textfield name="information[authorCompany]" value="" />
+					</td>
+				</tr>
+			</table>
+		</fieldset>
+
+		<fieldset>
+			<legend>
+				Depencies
+			</legend>
+			<table class="theme-form-table">
+				<colgroup>
+					<col width="300">
+					<col width="300">
+				</colgroup>
+				<tr>
+					<td>
+						include "Include Static TS", if ext:themes was not loaded, this removes the depency to ext:themes
+					</td>
+					<td>
+						<f:form.hidden name="options[includeStatic]" value="0" />
+						<f:form.checkbox name="options[includeStatic]" value="1" />
+					</td>
+				</tr>
+
+				<tr>
+					<td>
+						depencies
+					</td>
+					<td>
+						<f:form.select name="options[depencies]" options="{extensionDepencies}" multiple="true" size="{extensionDepencies -> f:count()}" />
+					</td>
+				</tr>
+
+				<tr>
+					<td>
+
+					</td>
+					<td>
+						<f:form.submit name="mySubmit" value="createTheme"><button>create Theme</button></f:form.submit>
+					</td>
+				</tr>
+			</table>
+		</fieldset>
+
+
+
+	</f:form>
+
+</f:section>

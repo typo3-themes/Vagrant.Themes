@@ -1,0 +1,20 @@
+# Name of the theme (required)
+title: {###title###}
+
+# Keywords (optional)
+keywords:
+  - html5boilerplate
+  - responsive design
+
+# Name of the authors (optional)
+author: {###author###} <{###authorEmail###}>
+
+# Possible license if applicable (optional)
+# Pick on from http://creativecommons.org/choose/
+license: CC BY 3.0
+
+# Possible license URL if license is defined (optional)
+licenseUrl: http://creativecommons.org/licenses/by/3.0/
+
+# Whether a live demo is available (optional)
+demoUrl: about:blank

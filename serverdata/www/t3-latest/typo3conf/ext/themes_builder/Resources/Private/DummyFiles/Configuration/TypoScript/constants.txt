@@ -1,0 +1,1 @@
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:{###extKey###}/Configuration/Theme/constants.ts">
