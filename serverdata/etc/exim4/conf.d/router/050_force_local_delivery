@@ -1,0 +1,6 @@
+catch_all_outgoing:
+  debug_print = "R: forced for $local_part@$domain"
+  driver = redirect
+  allow_fail
+  allow_defer
+  data = vagrant
