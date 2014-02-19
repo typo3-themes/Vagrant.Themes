@@ -74,6 +74,7 @@ if [ ! -d "/var/www/typo3conf" ]; then
 	getExtensionFromGitHub themes_settings                  typo3-themes   themes_settings
 
 	getExtensionFromGitHub theme_bootstrap                  typo3-themes   theme_bootstrap
+	getExtensionFromGitHub basictemplate                    kaystrobach    TYPO3.basictemplate
 
 	# independent repositories fedext
 
@@ -90,7 +91,6 @@ if [ ! -d "/var/www/typo3conf" ]; then
 	# other usefull tools, not all needed until now, but interesting
 
 	getExtensionFromGitHub beskin                           kaystrobach    TYPO3.beskin
-	getExtensionFromGitHub coreupdate                       kaystrobach    TYPO3.coreupdate
 	getExtensionFromGitHub dyncss                           kaystrobach    TYPO3.dyncss
 	getExtensionFromGitHub dyncss_phpsass                   kaystrobach    TYPO3.dyncss_phpsass
 	getExtensionFromGitHub dyncss_less                      kaystrobach    TYPO3.dyncss_less
