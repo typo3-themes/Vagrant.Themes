@@ -3,34 +3,17 @@ Themes.Vagrant
 
 To use this vagrant maschine you need to install vagrant and virtualbox.
 
-Downloads
----------
+Needed Software
+---------------
 
-You may find virtualbox here:
-- https://www.virtualbox.org/
+Please download and install the following software
+- virtualbox https://www.virtualbox.org/
+- vagrant http://downloads.vagrantup.com/ (pick the latest version for your operating system)
+- git (windows: https://code.google.com/p/msysgit/)
 
-You may find vagrant here:
-- http://downloads.vagrantup.com/ (pick the latest version for your operating system)
-
-You may find git for Windows here:
-- https://code.google.com/p/msysgit/
-
-As visual Desktop client i think sourcetree is the best choice, but you may also use tortoisegit on winows.
+As visual git Desktop client i think sourcetree is the best choice, but you may also use tortoisegit on winows.
 - http://www.sourcetreeapp.com/
 - https://code.google.com/p/tortoisegit/
-
-Installation
-------------
-
-- Install Git 
-- Install virtualbox first
-- Install vagrant
-- Install SourceTree if you like
-
-Checkout
---------
-
-clone the repository by creating a new repo and adding this repository origin to the remotes
 
 First Startup
 --------
