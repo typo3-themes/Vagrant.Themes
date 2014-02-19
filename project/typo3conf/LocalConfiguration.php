@@ -92,6 +92,7 @@ return array(
 			'themes_builder' => 'a:0:{}',
 			'themes_fces_basic' => 'a:0:{}',
 			'themes_fces_fluidcontent_basic' => 'a:0:{}',
+			'themes_manager' => 'a:0:{}',
 			'themes_settings' => 'a:2:{s:16:"categoriesToShow";s:40:"site constants, site colors, site layout";s:15:"constantsToHide";s:36:"dateFormat,timeFormat,dateTimeFormat";}',
 			'tinymce_rte' => 'a:2:{s:10:"loadConfig";s:34:"EXT:tinymce_rte/static/standard.ts";s:18:"pageLoadConfigFile";s:34:"EXT:tinymce_rte/static/pageLoad.ts";}',
 			'tt_address' => 'a:2:{s:24:"disableCombinedNameField";s:1:"0";s:21:"backwardsCompatFormat";s:9:"%1$s %3$s";}',
@@ -185,6 +186,8 @@ return array(
 		'wizardDone' => array(
 			'TYPO3\CMS\Install\CoreUpdates\InstallSysExtsUpdate' => '["info","perm","func","filelist","about","cshmanual","feedit","opendocs","recycler","t3editor","reports","scheduler","simulatestatic"]',
 			'TYPO3\CMS\Install\Updates\FileIdentifierHashUpdate' => 1,
+			'TYPO3\CMS\Install\Updates\InstallSysExtsUpdate' => '["info","perm","func","filelist","about","cshmanual","feedit","opendocs","recycler","t3editor","reports","scheduler","simulatestatic","documentation","rsaauth"]',
+			'TYPO3\CMS\Install\Updates\MigrateWorkspacesUpdate' => 1,
 			'TYPO3\CMS\Install\Updates\TceformsUpdateWizard' => 'tt_content:image,pages:media,pages_language_overlay:media',
 			'TYPO3\CMS\Install\Updates\TruncateSysFileProcessedFileTable' => 1,
 		),

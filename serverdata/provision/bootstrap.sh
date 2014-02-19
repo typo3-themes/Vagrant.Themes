@@ -110,15 +110,18 @@ if [ ! -d "/var/www/typo3conf" ]; then
 	mysql -u root t3-latest < /serverdata/serverdata/data/sql/t3-latest.sql
 
 	# copy configuration
-
-	cp /serverdata/project/typo3conf/ext/LocalConfiguration.php /var/www/typo3conf/
-
-	# clear cache
-
-	rm -R -f /serverdata/www/t3-latest/typo3temp/Cache
-
-	chmod 777 -R /var/www/
+	cp /serverdata/project/typo3conf/LocalConfiguration.php /var/www/typo3conf/
+	cp /serverdata/project/typo3conf/PackageStates.php /var/www/typo3conf/
 fi
+
+
+
+# clear cache
+
+rm -R -f /serverdata/www/t3-latest/typo3temp/Cache
+
+chmod 777 -R /var/www/
+
 
 echo "======================================================================="
 echo "  Access the vm in your Browser via:"
