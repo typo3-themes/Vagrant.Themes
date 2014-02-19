@@ -17,6 +17,9 @@ class ThemeSelector {
 	 * @return	string
 	 */
 	public function display($PA, $pObj) {
+		/**
+		 * @var Tx_Themes_Domain_Repository_ThemeRepository $repository
+		 */
 		$repository = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('Tx_Themes_Domain_Repository_ThemeRepository');
 
 		$view = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('Tx_Fluid_View_StandaloneView');
@@ -28,8 +31,8 @@ class ThemeSelector {
 				'table' => $PA['table'],
 				'row'   => $PA['row'],
 			),
-			'selectedSkin' => $repository->findByUid($PA['row']['tx_themes_skin']),
-			'selectableSkins' => $repository->findAll(),
+			'selectedTheme' => $repository->findByUid($PA['row']['tx_themes_skin']),
+			'selectableThemes' => $repository->findAll(),
 		));
 		return $view->render();
 	}

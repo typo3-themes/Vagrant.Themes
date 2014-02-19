@@ -4,14 +4,10 @@
 Vagrant.configure("2") do |config|
 
   # Every Vagrant virtual environment requires a box to build off of.
-  config.vm.box     = "debian-607-x32"
-  config.vm.box_url = "http://dl.dropbox.com/u/40989391/vagrant-boxes/debian-squeeze-i386.box"
+  config.vm.box     = "debian-720-x32"
+  config.vm.box_url = "http://puppet-vagrant-boxes.puppetlabs.com/debian-73-i386-virtualbox-puppet.box"
 
-	config.vm.box     = "debian-607-x32"
-	config.vm.box_url = "http://dl.dropbox.com/u/40989391/vagrant-boxes/debian-squeeze-i386.box"
-
-
-  config.vm.synced_folder "serverdata/", "/serverdata", owner: "www-data"
+  config.vm.synced_folder ".", "/serverdata", owner: "www-data"
 
   # Create a forwarded port mapping which allows access to a specific port
   # within the machine from a port on the host machine. In the example below,
@@ -21,14 +17,16 @@ Vagrant.configure("2") do |config|
   config.vm.hostname = "themes.dev"
   config.vm.network :private_network, ip: "192.168.34.16"
 
+  config.vm.provision :shell, :path => "serverdata/provision/prepare.sh"
+
   # Puppet provisioning
 
   config.vm.provision :puppet do |puppet|
-     puppet.manifests_path = "provision/manifests"
+     puppet.manifests_path = "serverdata/provision/manifests"
      puppet.manifest_file  = "default.pp"
   end
 
-  config.vm.provision :shell, :path => "provision/bootstrap.sh"
+  config.vm.provision :shell, :path => "serverdata/provision/bootstrap.sh"
 
   # Enable provisioning with chef solo, specifying a cookbooks path, roles
   # path, and data_bags path (all relative to this Vagrantfile), and adding
@@ -59,10 +57,9 @@ Vagrant.configure("2") do |config|
     vm.vmx["memsize"] = "1024"
 
   end
-  config.vm.provider :lxc do |lxc, override|
-    config.vm.box     = "debian-607-x32"
-    config.vm.box_url = "http://dl.dropbox.com/u/40989391/vagrant-boxes/debian-squeeze-i386.box"
-
-  end
+  #config.vm.provider :lxc do |lxc, override|
+  #  config.vm.box     = "debian-607-x32"
+  #  config.vm.box_url = "http://dl.dropbox.com/u/40989391/vagrant-boxes/debian-squeeze-i386.box"
+  #end
 
 end

@@ -88,10 +88,10 @@ class Theme extends AbstractTheme {
 	 */
 	public function addTypoScriptForFe(&$params, &$pObj) {
 		$themeItem = array(
-			'constants'=>	@is_file($this->getTypoScriptConstantsAbsPath()) ? GeneralUtility::getUrl($this->getTypoScriptConstantsAbsPath()) : '',
-			'config'=>		@is_file($this->getTypoScriptAbsPath())          ? GeneralUtility::getUrl($this->getTypoScriptAbsPath()) : '',
-			'editorcfg'=>	'',
-			'include_static'=>	'',
+			'constants'          => @is_file($this->getTypoScriptConstantsAbsPath()) ? GeneralUtility::getUrl($this->getTypoScriptConstantsAbsPath()) : '',
+			'config'             => @is_file($this->getTypoScriptAbsPath())          ? GeneralUtility::getUrl($this->getTypoScriptAbsPath()) : '',
+			'editorcfg'          => '',
+			'include_static'     => '',
 			'include_static_file'=>	'',
 			'title' =>	'themes:' . $this->getExtensionName(),
 			'uid' => md5($this->getExtensionName())

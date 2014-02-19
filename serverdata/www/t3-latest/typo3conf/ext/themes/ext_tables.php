@@ -1,6 +1,7 @@
 <?php
 use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
+use TYPO3\CMS\Extbase\Utility\ExtensionUtility;
 
 if (!defined ('TYPO3_MODE')) 	die ('Access denied.');
 
@@ -16,6 +17,24 @@ $tempColumn = array(
 		)
 	),
 );
+
+if (TYPO3_MODE === 'BE') {
+	ExtensionUtility::registerModule(
+		'KayStrobach.' . $_EXTKEY,
+		'web',          // Main area
+		'mod1',         // Name of the module
+		'',             // Position of the module
+		array(          // Allowed controller action combinations
+			'Editor' => 'index,show,new,create,delete,deleteAll,edit,update,populate',
+		),
+		array(          // Additional configuration
+			'access'    => 'user,group',
+			'icon'      => 'EXT:themes/ext_icon.png',
+			'labels'    => 'LLL:EXT:' . $_EXTKEY . '/Resources/Private/Language/locallang.xml',
+		)
+	);
+}
+
 
 // Add the skin selector for backend users.
 GeneralUtility::loadTCA('sys_template');

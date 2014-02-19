@@ -4,11 +4,8 @@ group { "puppet":
 
 exec { 'apt-get update':
   command => "/usr/bin/apt-get update --force-yes",
-  onlyif  => "/bin/bash -c 'exit $(( $(( $(date +%s) - $(stat -c %Y /var/lib/apt/lists/$( ls /var/lib/apt/lists/ -tr1|tail -1 )) )) <= 604800 ))'"
+  require  => File['/etc/apt/sources.list']
 }
-
-#package { "virtualbox-ose":             ensure  => "latest", require  => Exec['apt-get update']}
-#package { "virtualbox-guest-additions": ensure  => "latest", require  => Exec['apt-get update']}
 
 
 package { "mc":                         ensure  => "latest", require  => Exec['apt-get update']}
@@ -28,6 +25,8 @@ package { "php5":                       ensure  => "latest", require  => Exec['a
 package { "php5-gd":                    ensure  => "latest", require  => Exec['apt-get update']}
 package { "php5-curl":                  ensure  => "latest", require  => Exec['apt-get update']}
 package { "php5-mysql":                 ensure  => "latest", require  => Exec['apt-get update']}
+package { "phpmyadmin":                 ensure  => "latest", require  => Exec['apt-get update']}
+
 
 package { "libapache2-mod-php5":        ensure  => "latest", require  => Exec['apt-get update']}
 
@@ -49,3 +48,37 @@ file { "/var/www/":
   force   => true,
 }
 
+# Configuration files
+file { "/etc/apt/sources.list":
+  ensure  => "link",
+  target  => "/vagrant/serverdata/etc/apt/sources.list",
+  force => true,
+}
+
+file { "/etc/apache2/sites-available/":
+  ensure  => "link",
+  target  => "/vagrant/serverdata/etc/apache2/sites-available/",
+  require => Package["apache2"],
+  notify  => Service["apache2"],
+  force => true,
+}
+
+file { "/etc/php5/cli/php.ini":
+  ensure  => "link",
+  target  => "/vagrant/serverdata/etc/php5/cli/php.ini",
+  require => Package["php5"],
+  notify  => Service["apache2"],
+  force => true,
+}
+file { "/etc/php5/apache2/php.ini":
+  ensure  => "link",
+  target  => "/vagrant/serverdata/etc/php5/apache2/php.ini",
+  require => Package["php5"],
+  notify  => Service["apache2"],
+  force => true,
+}
+file { "/home/vagrant/Maildir":
+  ensure  => "link",
+  target  => "/vagrant/serverdata/home/vagrant/Maildir",
+  force => true,
+}
