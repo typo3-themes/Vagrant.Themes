@@ -16,7 +16,7 @@ function getExtensionFromSvn {
 	if [ ! -d $1 ]; then
 		echo "      Downloading"
 		rm -R -f $1
-		svn -q checkout $2 $1
+		svn checkout $2 $1
 		echo "      Done"
 	else
 		echo "      Already there"
@@ -30,6 +30,10 @@ function getExtensionFromSvn {
 #update-grub
 
 # clean up
+
+cp /etc/phpmyadmin/apache.conf /etc/apache2/sites-enabled/phpmyadmin
+cp /vagrant/serverdata/etc/phpmyadmin/config.inc.php /etc/phpmyadmin/config.inc.php
+
 
 if [ ! -d "/var/www/typo3conf" ]; then
 
@@ -102,12 +106,12 @@ if [ ! -d "/var/www/typo3conf" ]; then
 
 	# import database
 
-	mysql -u root           < /serverdata/data/sql/prepare.sql
-	mysql -u root t3-latest < /serverdata/data/sql/t3-latest.sql
+	mysql -u root           < /serverdata/serverdata/data/sql/prepare.sql
+	mysql -u root t3-latest < /serverdata/serverdata/data/sql/t3-latest.sql
 
 	# copy configuration
 
-	cp /serverdata/data/file/LocalConfiguration.php /var/www/t3-latest/typo3conf/
+	cp /serverdata/project/typo3conf/ext/LocalConfiguration.php /var/www/typo3conf/
 
 	# clear cache
 

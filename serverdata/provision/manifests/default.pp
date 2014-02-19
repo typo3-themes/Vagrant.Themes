@@ -21,6 +21,7 @@ package { "mysql-server":               ensure  => "latest", require  => Exec['a
 package { "mysql-client":               ensure  => "latest", require  => Exec['apt-get update']}
 
 package { "apache2":                    ensure  => "latest", require  => Exec['apt-get update']}
+package { "libapache2-mod-php5":        ensure  => "latest", require  => Exec['apt-get update']}
 package { "php5":                       ensure  => "latest", require  => Exec['apt-get update']}
 package { "php5-gd":                    ensure  => "latest", require  => Exec['apt-get update']}
 package { "php5-curl":                  ensure  => "latest", require  => Exec['apt-get update']}
@@ -28,7 +29,6 @@ package { "php5-mysql":                 ensure  => "latest", require  => Exec['a
 package { "phpmyadmin":                 ensure  => "latest", require  => Exec['apt-get update']}
 
 
-package { "libapache2-mod-php5":        ensure  => "latest", require  => Exec['apt-get update']}
 
 service { "apache2":
   ensure  => "running",
@@ -67,13 +67,12 @@ file { "/etc/php5/cli/php.ini":
   ensure  => "link",
   target  => "/vagrant/serverdata/etc/php5/cli/php.ini",
   require => Package["php5"],
-  notify  => Service["apache2"],
   force => true,
 }
 file { "/etc/php5/apache2/php.ini":
   ensure  => "link",
   target  => "/vagrant/serverdata/etc/php5/apache2/php.ini",
-  require => Package["php5"],
+  require => Package["apache2"],
   notify  => Service["apache2"],
   force => true,
 }
