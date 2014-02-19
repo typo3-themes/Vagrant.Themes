@@ -3,13 +3,8 @@
 function getExtensionFromGitHub {
 	echo "TYPO3 Extension $1 from $2/$3"
 	if [ ! -d $1 ]; then
-		echo "      Downloading"
 		rm -R -f $1
-		wget -q https://github.com/$2/$3/archive/master.zip -O temp.zip
-		echo "      Unzip"
-		unzip -qq -f temp.zip
-		rm temp.zip
-		mv 	$3-master $1
+		git clone https://github.com/$2/$3.git $1
 		echo "      Done"
 	else
 		echo "      Already there"
@@ -47,8 +42,8 @@ if [ ! -d "/var/www/typo3conf" ]; then
 	tar xzf latestSource.tar.gz
 	rm latestSource.tar.gz
 	typo3sourceDir=$(find . -mindepth 1 -maxdepth 1 -type d)
-	ln -s $typo3sourceDir typo3_source
-	ln -s typo3_source/index.php index.php
+	ln -s $typo3sourceDir typo3_src
+	ln -s typo3_src/index.php index.php
 	ln -s typo3_src/typo3 typo3
 
 	ln -s /serverdata/project/fileadmin fileadmin
