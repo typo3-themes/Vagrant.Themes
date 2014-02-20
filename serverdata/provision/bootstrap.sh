@@ -8,6 +8,9 @@ function getExtensionFromGitHub {
 		echo "      Done"
 	else
 		echo "      Already there"
+		cd $1
+		git pull
+		cd ..
 	fi
 }
 
@@ -20,6 +23,9 @@ function getExtensionFromSvn {
 		echo "      Done"
 	else
 		echo "      Already there"
+		cd $1
+		svn update
+		cd ..
 	fi
 }
 
@@ -61,50 +67,6 @@ if [ ! -d "/var/www/typo3conf" ]; then
 
 	cd /var/www/typo3conf/ext/
 
-	# typo3-themes repositories
-
-	getExtensionFromGitHub themes                           typo3-themes   themes
-	getExtensionFromGitHub themes_gridelements              typo3-themes   themes_gridelements
-	getExtensionFromGitHub themes_builder                   typo3-themes   themes_builder
-	getExtensionFromGitHub themes_library                   typo3-themes   themes_library
-	getExtensionFromGitHub themes_manager                   typo3-themes   themes_manager
-	getExtensionFromGitHub themes_settings                  typo3-themes   themes_settings
-
-	getExtensionFromGitHub themes_adapter_directory	        typo3-themes   themes_adapter_directory
-	getExtensionFromGitHub themes_adapter_tvframework       typo3-themes   themes_adapter_tvframework
-	getExtensionFromGitHub themes_adapter_wordpress         typo3-themes   themes_adapter_wordpress
-
-	getExtensionFromGitHub theme_bootstrap                  typo3-themes   theme_bootstrap
-	getExtensionFromGitHub basictemplate                    kaystrobach    TYPO3.basictemplate
-
-	# independent repositories fedext
-
-	getExtensionFromGitHub flux                             FluidTYPO3     flux
-	getExtensionFromGitHub vhs                              FluidTYPO3     vhs
-	getExtensionFromGitHub view                             FluidTYPO3     view
-
-	# Do this to fix a shared folder problem in vms
-
-	getExtensionFromGitHub uncache                          NamelessCoder  uncache
-
-	# other usefull tools, not all needed until now, but interesting
-
-	getExtensionFromGitHub beskin                           kaystrobach    TYPO3.beskin
-	getExtensionFromGitHub dyncss                           kaystrobach    TYPO3.dyncss
-	getExtensionFromGitHub dyncss_phpsass                   kaystrobach    TYPO3.dyncss_phpsass
-	getExtensionFromGitHub dyncss_less                      kaystrobach    TYPO3.dyncss_less
-	getExtensionFromGitHub dyncss_scss                      kaystrobach    TYPO3.dyncss_scss
-	getExtensionFromGitHub dyncss_test                      kaystrobach    TYPO3.dyncss_test
-	getExtensionFromGitHub dyncss_turbine                   kaystrobach    TYPO3.dyncss_turbine
-	getExtensionFromGitHub easylogin                        kaystrobach    TYPO3.easylogin
-
-	# get svn extensions from forge :D
-
-	getExtensionFromSvn    static_info_tables               https://svn.typo3.org/TYPO3v4/Extensions/static_info_tables/tags/Version-6-0-3/
-	getExtensionFromSvn    t3jquery                         https://svn.typo3.org/TYPO3v4/Extensions/t3jquery/trunk/
-
-	# import database
-
 	mysql -u root           < /serverdata/serverdata/data/sql/prepare.sql
 	mysql -u root t3-latest < /serverdata/serverdata/data/sql/t3-latest.sql
 
@@ -112,6 +74,50 @@ if [ ! -d "/var/www/typo3conf" ]; then
 	cp /serverdata/project/typo3conf/LocalConfiguration.php /var/www/typo3conf/
 	cp /serverdata/project/typo3conf/PackageStates.php /var/www/typo3conf/
 fi
+
+# typo3-themes repositories
+
+getExtensionFromGitHub themes                           typo3-themes   themes
+getExtensionFromGitHub themes_gridelements              typo3-themes   themes_gridelements
+getExtensionFromGitHub themes_builder                   typo3-themes   themes_builder
+getExtensionFromGitHub themes_library                   typo3-themes   themes_library
+getExtensionFromGitHub themes_manager                   typo3-themes   themes_manager
+getExtensionFromGitHub themes_settings                  typo3-themes   themes_settings
+
+getExtensionFromGitHub themes_adapter_directory	        typo3-themes   themes_adapter_directory
+getExtensionFromGitHub themes_adapter_tvframework       typo3-themes   themes_adapter_tvframework
+getExtensionFromGitHub themes_adapter_wordpress         typo3-themes   themes_adapter_wordpress
+
+getExtensionFromGitHub theme_bootstrap                  typo3-themes   theme_bootstrap
+getExtensionFromGitHub basictemplate                    kaystrobach    TYPO3.basictemplate
+
+# independent repositories fedext
+
+getExtensionFromGitHub flux                             FluidTYPO3     flux
+getExtensionFromGitHub vhs                              FluidTYPO3     vhs
+getExtensionFromGitHub view                             FluidTYPO3     view
+
+# Do this to fix a shared folder problem in vms
+
+getExtensionFromGitHub uncache                          NamelessCoder  uncache
+
+# other usefull tools, not all needed until now, but interesting
+
+getExtensionFromGitHub beskin                           kaystrobach    TYPO3.beskin
+getExtensionFromGitHub dyncss                           kaystrobach    TYPO3.dyncss
+getExtensionFromGitHub dyncss_phpsass                   kaystrobach    TYPO3.dyncss_phpsass
+getExtensionFromGitHub dyncss_less                      kaystrobach    TYPO3.dyncss_less
+getExtensionFromGitHub dyncss_scss                      kaystrobach    TYPO3.dyncss_scss
+getExtensionFromGitHub dyncss_test                      kaystrobach    TYPO3.dyncss_test
+getExtensionFromGitHub dyncss_turbine                   kaystrobach    TYPO3.dyncss_turbine
+getExtensionFromGitHub easylogin                        kaystrobach    TYPO3.easylogin
+
+# get svn extensions from forge :D
+
+getExtensionFromSvn    static_info_tables               https://svn.typo3.org/TYPO3v4/Extensions/static_info_tables/tags/Version-6-0-3/
+getExtensionFromSvn    t3jquery                         https://svn.typo3.org/TYPO3v4/Extensions/t3jquery/trunk/
+
+# import database
 
 
 
