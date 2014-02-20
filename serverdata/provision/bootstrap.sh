@@ -64,22 +64,21 @@ if [ ! -d "/var/www/typo3conf" ]; then
 	# typo3-themes repositories
 
 	getExtensionFromGitHub themes                           typo3-themes   themes
-	getExtensionFromGitHub themes_adapter_directory	        typo3-themes   themes_adapter_directory
-	getExtensionFromGitHub themes_adapter_tvframework       typo3-themes   themes_adapter_tvframework
-	getExtensionFromGitHub themes_adapter_wordpress         typo3-themes   themes_adapter_wordpress
+	getExtensionFromGitHub themes_gridelements              typo3-themes   themes_gridelements
 	getExtensionFromGitHub themes_builder                   typo3-themes   themes_builder
-	getExtensionFromGitHub themes_fces_fluidcontent_basic   typo3-themes   themes_fces_fluidcontent_basic
 	getExtensionFromGitHub themes_library                   typo3-themes   themes_library
 	getExtensionFromGitHub themes_manager                   typo3-themes   themes_manager
 	getExtensionFromGitHub themes_settings                  typo3-themes   themes_settings
+
+	getExtensionFromGitHub themes_adapter_directory	        typo3-themes   themes_adapter_directory
+	getExtensionFromGitHub themes_adapter_tvframework       typo3-themes   themes_adapter_tvframework
+	getExtensionFromGitHub themes_adapter_wordpress         typo3-themes   themes_adapter_wordpress
 
 	getExtensionFromGitHub theme_bootstrap                  typo3-themes   theme_bootstrap
 	getExtensionFromGitHub basictemplate                    kaystrobach    TYPO3.basictemplate
 
 	# independent repositories fedext
 
-	getExtensionFromGitHub fluidcontent                     FluidTYPO3     fluidcontent
-	getExtensionFromGitHub fluidpages                       FluidTYPO3     fluidpages
 	getExtensionFromGitHub flux                             FluidTYPO3     flux
 	getExtensionFromGitHub vhs                              FluidTYPO3     vhs
 	getExtensionFromGitHub view                             FluidTYPO3     view
