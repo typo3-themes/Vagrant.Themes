@@ -29,6 +29,20 @@ function getExtensionFromSvn {
 	fi
 }
 
+function getExtensionFromGit {
+	echo "TYPO3 Extension from $1 from $2"
+	if [ ! -d $1 ]; then
+		echo "      Downloading"
+		rm -R -f $1
+		git clone $2 $1
+		echo "      Done"
+	else
+		echo "      Already there"
+		cd $1
+		git pull
+		cd ..
+	fi
+}
 # ensure fast booting with grub ;)
 
 #cp /etc/default/grub /etc/default/grub.orig
@@ -75,6 +89,7 @@ if [ ! -d "/var/www/typo3conf" ]; then
 	cp /serverdata/project/typo3conf/PackageStates.php /var/www/typo3conf/
 fi
 
+getExtensionFromGit    gridelements                     http://git.typo3.org/TYPO3CMS/Extensions/gridelements.git
 # typo3-themes repositories
 
 getExtensionFromGitHub themes                           typo3-themes   themes
