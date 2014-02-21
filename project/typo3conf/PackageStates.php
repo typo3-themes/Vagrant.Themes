@@ -428,36 +428,16 @@ return array (
       'packagePath' => 'typo3/sysext/context_help/',
       'classesPath' => 'Classes/',
     ),
-    'vhs' => 
+    'themes_gridelements' => 
     array (
-      'manifestPath' => '',
-      'composerName' => 'fluidtypo3/vhs',
       'state' => 'active',
-      'packagePath' => 'typo3conf/ext/vhs/',
+      'packagePath' => 'typo3conf/ext/themes_gridelements/',
       'classesPath' => 'Classes/',
     ),
-    'easylogin' => 
+    'themes_manager' => 
     array (
       'state' => 'active',
-      'packagePath' => 'typo3conf/ext/easylogin/',
-      'classesPath' => 'Classes/',
-    ),
-    'basictemplate' => 
-    array (
-      'state' => 'active',
-      'packagePath' => 'typo3conf/ext/basictemplate/',
-      'classesPath' => 'Classes/',
-    ),
-    'themes' => 
-    array (
-      'state' => 'active',
-      'packagePath' => 'typo3conf/ext/themes/',
-      'classesPath' => 'Classes/',
-    ),
-    'beskin' => 
-    array (
-      'state' => 'active',
-      'packagePath' => 'typo3conf/ext/beskin/',
+      'packagePath' => 'typo3conf/ext/themes_manager/',
       'classesPath' => 'Classes/',
     ),
     'dyncss' => 
@@ -472,16 +452,66 @@ return array (
       'packagePath' => 'typo3conf/ext/dyncss_less/',
       'classesPath' => 'Classes/',
     ),
+    'beskin' => 
+    array (
+      'state' => 'active',
+      'packagePath' => 'typo3conf/ext/beskin/',
+      'classesPath' => 'Classes/',
+    ),
+    'basictemplate' => 
+    array (
+      'state' => 'active',
+      'packagePath' => 'typo3conf/ext/basictemplate/',
+      'classesPath' => 'Classes/',
+    ),
+    'easylogin' => 
+    array (
+      'state' => 'active',
+      'packagePath' => 'typo3conf/ext/easylogin/',
+      'classesPath' => 'Classes/',
+    ),
+    'vhs' => 
+    array (
+      'manifestPath' => '',
+      'composerName' => 'fluidtypo3/vhs',
+      'state' => 'active',
+      'packagePath' => 'typo3conf/ext/vhs/',
+      'classesPath' => 'Classes/',
+    ),
+    'themes_builder' => 
+    array (
+      'state' => 'active',
+      'packagePath' => 'typo3conf/ext/themes_builder/',
+      'classesPath' => 'Classes/',
+    ),
+    'themes' => 
+    array (
+      'state' => 'active',
+      'packagePath' => 'typo3conf/ext/themes/',
+      'classesPath' => 'Classes/',
+    ),
     't3jquery' => 
     array (
       'state' => 'active',
       'packagePath' => 'typo3conf/ext/t3jquery/',
       'classesPath' => 'Classes/',
     ),
-    'themes_manager' => 
+    'themes_adapter_directory' => 
     array (
       'state' => 'active',
-      'packagePath' => 'typo3conf/ext/themes_manager/',
+      'packagePath' => 'typo3conf/ext/themes_adapter_directory/',
+      'classesPath' => 'Classes/',
+    ),
+    'gridelements' => 
+    array (
+      'state' => 'active',
+      'packagePath' => 'typo3conf/ext/gridelements/',
+      'classesPath' => 'Classes/',
+    ),
+    'themes_settings' => 
+    array (
+      'state' => 'inactive',
+      'packagePath' => 'typo3conf/ext/themes_settings/',
       'classesPath' => 'Classes/',
     ),
     'indexed_search_mysql' => 
@@ -490,12 +520,6 @@ return array (
       'composerName' => 'typo3/cms/indexed-search-mysql',
       'state' => 'inactive',
       'packagePath' => 'typo3/sysext/indexed_search_mysql/',
-      'classesPath' => 'Classes/',
-    ),
-    'themes_builder' => 
-    array (
-      'state' => 'inactive',
-      'packagePath' => 'typo3conf/ext/themes_builder/',
       'classesPath' => 'Classes/',
     ),
     'dyncss_phpsass' => 
@@ -522,18 +546,6 @@ return array (
       'packagePath' => 'typo3conf/ext/dyncss_turbine/',
       'classesPath' => 'Classes/',
     ),
-    'fluidcontent' => 
-    array (
-      'state' => 'inactive',
-      'packagePath' => 'typo3conf/ext/fluidcontent/',
-      'classesPath' => 'Classes/',
-    ),
-    'fluidpages' => 
-    array (
-      'state' => 'inactive',
-      'packagePath' => 'typo3conf/ext/fluidpages/',
-      'classesPath' => 'Classes/',
-    ),
     'flux' => 
     array (
       'state' => 'inactive',
@@ -552,12 +564,6 @@ return array (
       'packagePath' => 'typo3conf/ext/theme_bootstrap/',
       'classesPath' => 'Classes/',
     ),
-    'themes_adapter_directory' => 
-    array (
-      'state' => 'inactive',
-      'packagePath' => 'typo3conf/ext/themes_adapter_directory/',
-      'classesPath' => 'Classes/',
-    ),
     'themes_adapter_tvframework' => 
     array (
       'state' => 'inactive',
@@ -568,18 +574,6 @@ return array (
     array (
       'state' => 'inactive',
       'packagePath' => 'typo3conf/ext/themes_adapter_wordpress/',
-      'classesPath' => 'Classes/',
-    ),
-    'themes_fces_fluidcontent_basic' => 
-    array (
-      'state' => 'inactive',
-      'packagePath' => 'typo3conf/ext/themes_fces_fluidcontent_basic/',
-      'classesPath' => 'Classes/',
-    ),
-    'themes_settings' => 
-    array (
-      'state' => 'inactive',
-      'packagePath' => 'typo3conf/ext/themes_settings/',
       'classesPath' => 'Classes/',
     ),
     'uncache' => 
