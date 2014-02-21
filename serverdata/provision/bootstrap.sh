@@ -89,6 +89,8 @@ if [ ! -d "/var/www/typo3conf" ]; then
 	cp /serverdata/project/typo3conf/PackageStates.php /var/www/typo3conf/
 fi
 
+cd /var/www/typo3conf/ext/
+
 getExtensionFromGit    gridelements                     http://git.typo3.org/TYPO3CMS/Extensions/gridelements.git
 # typo3-themes repositories
 
@@ -138,7 +140,7 @@ getExtensionFromSvn    t3jquery                         https://svn.typo3.org/TY
 
 # clear cache
 
-rm -R -f /serverdata/www/t3-latest/typo3temp/Cache
+rm -R -f /serverdata/www/typo3temp/Cache
 
 chmod 777 -R /var/www/
 
