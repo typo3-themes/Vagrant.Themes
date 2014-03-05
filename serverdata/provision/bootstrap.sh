@@ -91,10 +91,11 @@ fi
 
 cd /var/www/typo3conf/ext/
 
+#base extensions
 getExtensionFromGit    gridelements                     http://git.typo3.org/TYPO3CMS/Extensions/gridelements.git
 getExtensionFromGitHub belayout_fileprovider            georgringer    belayout_fileprovider
-# typo3-themes repositories
 
+# typo3-themes repositories
 getExtensionFromGitHub themes                           typo3-themes   themes
 getExtensionFromGitHub themes_gridelements              typo3-themes   themes_gridelements
 getExtensionFromGitHub themes_builder                   typo3-themes   themes_builder
@@ -110,17 +111,14 @@ getExtensionFromGitHub theme_bootstrap                  typo3-themes   theme_boo
 getExtensionFromGitHub basictemplate                    kaystrobach    TYPO3.basictemplate
 
 # independent repositories fedext
-
 getExtensionFromGitHub flux                             FluidTYPO3     flux
 getExtensionFromGitHub vhs                              FluidTYPO3     vhs
 getExtensionFromGitHub view                             FluidTYPO3     view
 
 # Do this to fix a shared folder problem in vms
-
 getExtensionFromGitHub uncache                          NamelessCoder  uncache
 
 # other usefull tools, not all needed until now, but interesting
-
 getExtensionFromGitHub beskin                           kaystrobach    TYPO3.beskin
 getExtensionFromGitHub dyncss                           kaystrobach    TYPO3.dyncss
 getExtensionFromGitHub dyncss_phpsass                   kaystrobach    TYPO3.dyncss_phpsass
@@ -148,6 +146,5 @@ chmod 777 -R /var/www/
 
 echo "======================================================================="
 echo "  Access the vm in your Browser via:"
-echo "      - 192.168.33.16    64bit 1GB Ram    (Vmware Fusion Provider)"
 echo "      - 192.168.34.16    32bit 1GB Ram    (Virtualbox Provider)"
 echo "======================================================================="
