@@ -19,6 +19,7 @@ return array(
 		'extConf' => array(
 			'basictemplate' => 'a:1:{s:9:"addPageTS";s:1:"1";}',
 			'be_acl' => 'a:2:{s:26:"disableOldPermissionSystem";s:1:"0";s:20:"enableFilterSelector";s:1:"1";}',
+			'belayout_fileprovider' => 'a:0:{}',
 			'beskin' => 'a:6:{s:13:"logintemplate";s:31:"EXT:t3skin/templates/login.html";s:13:"loginLogoPath";s:0:"";s:4:"logo";s:28:"typo3/gfx/typo3logo_mini.png";s:7:"cssFile";s:34:"EXT:beskin/stylesheets/changes.css";s:11:"replaceLogo";s:6:"append";s:4:"html";s:93:"<h1 style="color:orange;float:right;padding-left:20px;">LOCAL TESTSYSTEM %TYPO3_version%</h1>";}',
 			'browser' => 'a:13:{s:13:"browserEngine";s:31:"Engine 4.x (alpha): recommended";s:22:"browserEngineIndicator";s:17:"Off (recommended)";s:17:"external_links_01";s:1:"0";s:8:"LLstatic";s:7:"English";s:17:"external_links_02";s:1:"0";s:8:"drs_mode";s:18:"Don\'t log anything";s:17:"external_links_03";s:1:"0";s:10:"checked_3.";a:1:{s:2:"9.";a:1:{i:14;s:36:"I didn\'t (frontend label is visible)";}}s:12:"updateWizard";s:1:"0";s:18:"updateWizardEnable";s:1:"0";s:9:"currentIP";s:1:"0";s:22:"updateWizardAllowedIPs";s:20:"127.0.0.1, 127.0.0.2";s:17:"external_links_04";s:1:"0";}',
 			'browser_manual_en' => 'a:0:{}',
