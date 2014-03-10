@@ -80,14 +80,16 @@ if [ ! -d "/var/www/typo3conf" ]; then
 	# checkout from git ...
 
 	cd /var/www/typo3conf/ext/
-
-	mysql -u root           < /serverdata/serverdata/data/sql/prepare.sql
-	mysql -u root t3-latest < /serverdata/serverdata/data/sql/t3-latest.sql
 fi
 
 # copy configuration
 cp /serverdata/project/typo3conf/LocalConfiguration.php /var/www/typo3conf/
 cp /serverdata/project/typo3conf/PackageStates.php /var/www/typo3conf/
+
+# import db
+mysql -u root           < /serverdata/serverdata/data/sql/prepare.sql
+mysql -u root t3-latest < /serverdata/serverdata/data/sql/t3-latest.sql
+
 
 # ensure extdir exists
 if [ ! -d "/serverdata/project/typo3conf/ext" ]; then
