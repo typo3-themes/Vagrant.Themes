@@ -74,9 +74,6 @@ if [ ! -d "/var/www/typo3conf" ]; then
 	ln -s /serverdata/project/uploads uploads
 	mkdir typo3conf
 	cd typo3conf
-	if [ ! -d "/serverdata/project/typo3conf/ext" ]; then
-		mkdir /serverdata/project/typo3conf/ext
-	fi
 	ln -s /serverdata/project/typo3conf/ext ext
 
 
@@ -90,6 +87,10 @@ if [ ! -d "/var/www/typo3conf" ]; then
 	# copy configuration
 	cp /serverdata/project/typo3conf/LocalConfiguration.php /var/www/typo3conf/
 	cp /serverdata/project/typo3conf/PackageStates.php /var/www/typo3conf/
+fi
+
+if [ ! -d "/serverdata/project/typo3conf/ext" ]; then
+	mkdir /serverdata/project/typo3conf/ext
 fi
 
 cd /var/www/typo3conf/ext/
