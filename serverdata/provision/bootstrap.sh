@@ -74,6 +74,9 @@ if [ ! -d "/var/www/typo3conf" ]; then
 	ln -s /serverdata/project/uploads uploads
 	mkdir typo3conf
 	cd typo3conf
+	if [ ! -d "/serverdata/project/typo3conf/ext" ]; then
+		mkdir /serverdata/project/typo3conf/ext
+	fi
 	ln -s /serverdata/project/typo3conf/ext ext
 
 
