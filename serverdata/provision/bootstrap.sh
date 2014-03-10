@@ -83,12 +83,13 @@ if [ ! -d "/var/www/typo3conf" ]; then
 
 	mysql -u root           < /serverdata/serverdata/data/sql/prepare.sql
 	mysql -u root t3-latest < /serverdata/serverdata/data/sql/t3-latest.sql
-
-	# copy configuration
-	cp /serverdata/project/typo3conf/LocalConfiguration.php /var/www/typo3conf/
-	cp /serverdata/project/typo3conf/PackageStates.php /var/www/typo3conf/
 fi
 
+# copy configuration
+cp /serverdata/project/typo3conf/LocalConfiguration.php /var/www/typo3conf/
+cp /serverdata/project/typo3conf/PackageStates.php /var/www/typo3conf/
+
+# ensure extdir exists
 if [ ! -d "/serverdata/project/typo3conf/ext" ]; then
 	mkdir /serverdata/project/typo3conf/ext
 fi
