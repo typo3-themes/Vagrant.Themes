@@ -19,12 +19,12 @@ function getExtensionFromSvn {
 	if [ ! -d $1 ]; then
 		echo "      Downloading"
 		rm -R -f $1
-		svn checkout $2 $1
+		svn checkout $2 $1 --quiet
 		echo "      Done"
 	else
 		echo "      Already there"
 		cd $1
-		svn update
+		svn update --quiet
 		cd ..
 	fi
 }
