@@ -1,3 +1,0 @@
-# cat=basic; type=string; label=path to folder containing additional stylesheets
-additionalStylesheet =
-

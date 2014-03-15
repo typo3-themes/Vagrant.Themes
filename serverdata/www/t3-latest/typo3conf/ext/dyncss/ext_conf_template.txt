@@ -1,5 +1,0 @@
-# cat=basic; type=user[tx_Dyncss_ExtMgm_Statefield->main]; label= Current state of installed DynCss extensions
-state =
-
-# cat=basic; type=boolean; label= Enable Debugmode (e.g. for firesass or similar), if the used parser is able to do that
-enableDebugMode =

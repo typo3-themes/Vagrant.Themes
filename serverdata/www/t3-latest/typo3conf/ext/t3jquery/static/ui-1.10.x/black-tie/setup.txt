@@ -1,4 +1,0 @@
-
-page.includeCSS {
-	t3jquery-ui-black-tie = {$plugin.tx_t3jquery.file.UI-Black-Tie}
-}

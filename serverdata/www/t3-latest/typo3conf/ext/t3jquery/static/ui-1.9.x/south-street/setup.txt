@@ -1,4 +1,0 @@
-
-page.includeCSS {
-	t3jquery-ui-south-street = {$plugin.tx_t3jquery.file.UI-South-Street}
-}
