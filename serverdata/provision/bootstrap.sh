@@ -132,7 +132,6 @@ getExtensionFromGitHub dyncss_phpsass                   kaystrobach    TYPO3.dyn
 getExtensionFromGitHub dyncss_less                      kaystrobach    TYPO3.dyncss_less
 getExtensionFromGitHub dyncss_scss                      kaystrobach    TYPO3.dyncss_scss
 getExtensionFromGitHub dyncss_test                      kaystrobach    TYPO3.dyncss_test
-getExtensionFromGitHub dyncss_turbine                   kaystrobach    TYPO3.dyncss_turbine
 getExtensionFromGitHub easylogin                        kaystrobach    TYPO3.easylogin
 
 # get svn extensions from forge :D
