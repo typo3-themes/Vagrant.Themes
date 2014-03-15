@@ -1,7 +1,0 @@
-page {
-	includeCSS {
-		file20 = EXT:dyncss_test/Resources/Public/Stylesheets/test_fe.scss
-		file21 = EXT:dyncss_test/Resources/Public/Stylesheets/test_fe.sass
-		file22 = typo3conf/ext/dyncss_test/Resources/Public/Stylesheets/test_fe_rel.sass
-	}
-}

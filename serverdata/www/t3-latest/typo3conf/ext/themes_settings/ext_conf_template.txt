@@ -1,4 +1,0 @@
-# cat=templates/basic; type=string; label=Categories which should be shown
-categoriesToShow = site constants, site colors, site layout
-# cat=templates/basic; type=string; label=constants to hide
-constantsToHide = dateFormat,timeFormat,dateTimeFormat

@@ -1,4 +1,0 @@
-
-page.includeCSS {
-	t3jquery-ui-typo3 = {$plugin.tx_t3jquery.file.UI-Typo3}
-}

@@ -32,6 +32,7 @@ return array(
 			'dyncss' => 'a:2:{s:5:"state";s:0:"";s:15:"enableDebugMode";s:1:"1";}',
 			'dyncss_less' => 'a:0:{}',
 			'dyncss_phpsass' => 'a:0:{}',
+			'dyncss_scss' => 'a:0:{}',
 			'dyncss_test' => 'a:1:{s:9:"baseColor";s:7:"#0ff000";}',
 			'easylogin' => 'a:5:{s:17:"usersAndPasswords";s:14:"admin|password";s:13:"use_devIPmask";s:1:"0";s:13:"iconPlacement";s:3:"top";s:11:"toolbarType";s:3:"top";s:12:"showUsername";s:4:"both";}',
 			'extbase' => 'a:0:{}',
@@ -189,8 +190,6 @@ return array(
 		'wizardDone' => array(
 			'TYPO3\CMS\Install\CoreUpdates\InstallSysExtsUpdate' => '["info","perm","func","filelist","about","cshmanual","feedit","opendocs","recycler","t3editor","reports","scheduler","simulatestatic"]',
 			'TYPO3\CMS\Install\Updates\FileIdentifierHashUpdate' => 1,
-			'TYPO3\CMS\Install\Updates\InstallSysExtsUpdate' => '["info","perm","func","filelist","about","cshmanual","feedit","opendocs","recycler","t3editor","reports","scheduler","simulatestatic","documentation","rsaauth"]',
-			'TYPO3\CMS\Install\Updates\MigrateWorkspacesUpdate' => 1,
 			'TYPO3\CMS\Install\Updates\TceformsUpdateWizard' => 'tt_content:image,pages:media,pages_language_overlay:media',
 			'TYPO3\CMS\Install\Updates\TruncateSysFileProcessedFileTable' => 1,
 		),

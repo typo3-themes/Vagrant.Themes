@@ -1,4 +1,0 @@
-
-page.includeCSS {
-	t3jquery-ui-swanky-purse = {$plugin.tx_t3jquery.file.UI-Swanky-Purse}
-}

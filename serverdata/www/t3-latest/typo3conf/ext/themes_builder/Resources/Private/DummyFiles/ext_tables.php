@@ -1,7 +1,0 @@
-<?php
-
-/**
- *
- * Configuration of {###extKey###}
- *
- */

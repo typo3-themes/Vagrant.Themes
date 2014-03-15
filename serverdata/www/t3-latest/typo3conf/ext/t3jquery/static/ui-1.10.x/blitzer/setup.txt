@@ -1,4 +1,0 @@
-
-page.includeCSS {
-	t3jquery-ui-blitzer = {$plugin.tx_t3jquery.file.UI-Blitzer}
-}

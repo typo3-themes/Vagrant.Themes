@@ -19,12 +19,12 @@ function getExtensionFromSvn {
 	if [ ! -d $1 ]; then
 		echo "      Downloading"
 		rm -R -f $1
-		svn checkout $2 $1
+		svn checkout $2 $1 --quiet
 		echo "      Done"
 	else
 		echo "      Already there"
 		cd $1
-		svn update
+		svn update --quiet
 		cd ..
 	fi
 }
@@ -108,7 +108,6 @@ getExtensionFromGitHub themes_gridelements              typo3-themes   themes_gr
 getExtensionFromGitHub themes_builder                   typo3-themes   themes_builder
 getExtensionFromGitHub themes_library                   typo3-themes   themes_library
 getExtensionFromGitHub themes_manager                   typo3-themes   themes_manager
-getExtensionFromGitHub themes_settings                  typo3-themes   themes_settings
 
 getExtensionFromGitHub themes_adapter_directory	        typo3-themes   themes_adapter_directory
 getExtensionFromGitHub themes_adapter_tvframework       typo3-themes   themes_adapter_tvframework
@@ -132,12 +131,10 @@ getExtensionFromGitHub dyncss_phpsass                   kaystrobach    TYPO3.dyn
 getExtensionFromGitHub dyncss_less                      kaystrobach    TYPO3.dyncss_less
 getExtensionFromGitHub dyncss_scss                      kaystrobach    TYPO3.dyncss_scss
 getExtensionFromGitHub dyncss_test                      kaystrobach    TYPO3.dyncss_test
-getExtensionFromGitHub dyncss_turbine                   kaystrobach    TYPO3.dyncss_turbine
 getExtensionFromGitHub easylogin                        kaystrobach    TYPO3.easylogin
 
 # get svn extensions from forge :D
 
-getExtensionFromSvn    static_info_tables               https://svn.typo3.org/TYPO3v4/Extensions/static_info_tables/tags/Version-6-0-3/
 getExtensionFromSvn    t3jquery                         https://svn.typo3.org/TYPO3v4/Extensions/t3jquery/trunk/
 
 # import database
