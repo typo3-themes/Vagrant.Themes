@@ -108,7 +108,6 @@ getExtensionFromGitHub themes_gridelements              typo3-themes   themes_gr
 getExtensionFromGitHub themes_builder                   typo3-themes   themes_builder
 getExtensionFromGitHub themes_library                   typo3-themes   themes_library
 getExtensionFromGitHub themes_manager                   typo3-themes   themes_manager
-getExtensionFromGitHub themes_settings                  typo3-themes   themes_settings
 
 getExtensionFromGitHub themes_adapter_directory	        typo3-themes   themes_adapter_directory
 getExtensionFromGitHub themes_adapter_tvframework       typo3-themes   themes_adapter_tvframework

@@ -428,16 +428,16 @@ return array (
       'packagePath' => 'typo3/sysext/context_help/',
       'classesPath' => 'Classes/',
     ),
-    'themes' => 
+    'dyncss' => 
     array (
       'state' => 'active',
-      'packagePath' => 'typo3conf/ext/themes/',
+      'packagePath' => 'typo3conf/ext/dyncss/',
       'classesPath' => 'Classes/',
     ),
-    'themes_settings' => 
+    'dyncss_phpsass' => 
     array (
       'state' => 'active',
-      'packagePath' => 'typo3conf/ext/themes_settings/',
+      'packagePath' => 'typo3conf/ext/dyncss_phpsass/',
       'classesPath' => 'Classes/',
     ),
     'belayout_fileprovider' => 
@@ -450,6 +450,12 @@ return array (
     array (
       'state' => 'active',
       'packagePath' => 'typo3conf/ext/gridelements/',
+      'classesPath' => 'Classes/',
+    ),
+    'themes' => 
+    array (
+      'state' => 'active',
+      'packagePath' => 'typo3conf/ext/themes/',
       'classesPath' => 'Classes/',
     ),
     't3jquery' => 
@@ -496,12 +502,6 @@ return array (
       'packagePath' => 'typo3conf/ext/beskin/',
       'classesPath' => 'Classes/',
     ),
-    'dyncss' => 
-    array (
-      'state' => 'active',
-      'packagePath' => 'typo3conf/ext/dyncss/',
-      'classesPath' => 'Classes/',
-    ),
     'dyncss_less' => 
     array (
       'state' => 'active',
@@ -534,30 +534,24 @@ return array (
       'packagePath' => 'typo3conf/ext/uncache/',
       'classesPath' => 'Classes/',
     ),
+    'dyncss_test' => 
+    array (
+      'state' => 'active',
+      'packagePath' => 'typo3conf/ext/dyncss_test/',
+      'classesPath' => 'Classes/',
+    ),
+    'dyncss_scss' => 
+    array (
+      'state' => 'active',
+      'packagePath' => 'typo3conf/ext/dyncss_scss/',
+      'classesPath' => 'Classes/',
+    ),
     'indexed_search_mysql' => 
     array (
       'manifestPath' => '',
       'composerName' => 'typo3/cms-indexed-search-mysql',
       'state' => 'inactive',
       'packagePath' => 'typo3/sysext/indexed_search_mysql/',
-      'classesPath' => 'Classes/',
-    ),
-    'dyncss_phpsass' => 
-    array (
-      'state' => 'inactive',
-      'packagePath' => 'typo3conf/ext/dyncss_phpsass/',
-      'classesPath' => 'Classes/',
-    ),
-    'dyncss_scss' => 
-    array (
-      'state' => 'inactive',
-      'packagePath' => 'typo3conf/ext/dyncss_scss/',
-      'classesPath' => 'Classes/',
-    ),
-    'dyncss_test' => 
-    array (
-      'state' => 'inactive',
-      'packagePath' => 'typo3conf/ext/dyncss_test/',
       'classesPath' => 'Classes/',
     ),
     'dyncss_turbine' => 
