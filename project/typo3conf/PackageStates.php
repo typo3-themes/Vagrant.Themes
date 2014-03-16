@@ -124,14 +124,6 @@ return array (
       'packagePath' => 'typo3/sysext/recordlist/',
       'classesPath' => 'Classes/',
     ),
-    'documentation' => 
-    array (
-      'manifestPath' => '',
-      'composerName' => 'typo3/cms-documentation',
-      'state' => 'active',
-      'packagePath' => 'typo3/sysext/documentation/',
-      'classesPath' => 'Classes/',
-    ),
     'impexp' => 
     array (
       'manifestPath' => '',
@@ -526,24 +518,16 @@ return array (
       'packagePath' => 'typo3conf/ext/theme_bootstrap/',
       'classesPath' => 'Classes/',
     ),
-    'uncache' => 
-    array (
-      'manifestPath' => '',
-      'composerName' => 'ft3/uncache',
-      'state' => 'active',
-      'packagePath' => 'typo3conf/ext/uncache/',
-      'classesPath' => 'Classes/',
-    ),
-    'dyncss_test' => 
-    array (
-      'state' => 'active',
-      'packagePath' => 'typo3conf/ext/dyncss_test/',
-      'classesPath' => 'Classes/',
-    ),
     'dyncss_scss' => 
     array (
       'state' => 'active',
       'packagePath' => 'typo3conf/ext/dyncss_scss/',
+      'classesPath' => 'Classes/',
+    ),
+    'dyncss_test' => 
+    array (
+      'state' => 'inactive',
+      'packagePath' => 'typo3conf/ext/dyncss_test/',
       'classesPath' => 'Classes/',
     ),
     'indexed_search_mysql' => 
@@ -622,6 +606,28 @@ return array (
       'composerName' => 'typo3/cms-dbal',
       'state' => 'inactive',
       'packagePath' => 'typo3/sysext/dbal/',
+      'classesPath' => 'Classes/',
+    ),
+    'themes_settings' => 
+    array (
+      'state' => 'inactive',
+      'packagePath' => 'typo3conf/ext/themes_settings/',
+      'classesPath' => 'Classes/',
+    ),
+    'uncache' => 
+    array (
+      'manifestPath' => '',
+      'composerName' => 'ft3/uncache',
+      'state' => 'inactive',
+      'packagePath' => 'typo3conf/ext/uncache/',
+      'classesPath' => 'Classes/',
+    ),
+    'documentation' => 
+    array (
+      'manifestPath' => '',
+      'composerName' => 'typo3/cms-documentation',
+      'state' => 'inactive',
+      'packagePath' => 'typo3/sysext/documentation/',
       'classesPath' => 'Classes/',
     ),
   ),
