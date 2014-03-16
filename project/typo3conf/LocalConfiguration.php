@@ -34,7 +34,7 @@ return array(
 			'dyncss_phpsass' => 'a:0:{}',
 			'dyncss_scss' => 'a:0:{}',
 			'dyncss_test' => 'a:1:{s:9:"baseColor";s:7:"#e20074";}',
-			'easylogin' => 'a:5:{s:17:"usersAndPasswords";s:14:"admin|password";s:13:"use_devIPmask";s:1:"0";s:13:"iconPlacement";s:3:"top";s:11:"toolbarType";s:3:"top";s:12:"showUsername";s:4:"both";}',
+			'easylogin' => 'a:5:{s:17:"usersAndPasswords";s:14:"admin|password";s:13:"use_devIPmask";s:1:"0";s:13:"iconPlacement";s:3:"top";s:11:"toolbarType";s:6:"inline";s:12:"showUsername";s:4:"both";}',
 			'extbase' => 'a:0:{}',
 			'extdeveval' => 'a:0:{}',
 			'extension_builder' => 'a:3:{s:15:"enableRoundtrip";s:0:"";s:15:"backupExtension";s:1:"1";s:9:"backupDir";s:35:"uploads/tx_extensionbuilder/backups";}',
