@@ -62,7 +62,7 @@ if [ ! -d "/var/www/typo3conf" ]; then
 	# checkout TYPO3 from Github
 
 	cd /var/www
-	curl -L -o latestSource.tar.gz http://get.typo3.org/dev
+	curl -L -o latestSource.tar.gz http://get.typo3.org/6.2
 	tar xzf latestSource.tar.gz
 	rm latestSource.tar.gz
 	typo3sourceDir=$(find . -mindepth 1 -maxdepth 1 -type d)
