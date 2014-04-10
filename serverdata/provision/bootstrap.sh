@@ -100,7 +100,7 @@ cd /var/www/typo3conf/ext/
 
 #base extensions
 getExtensionFromGit    gridelements                     git://git.typo3.org/TYPO3CMS/Extensions/gridelements.git
-getExtensionFromGitHub belayout_fileprovider            georgringer    belayout_fileprovider
+getExtensionFromGitHub belayout_tsprovider              kaystrobach    TYPO3.belayout_tsprovider
 
 # typo3-themes repositories
 getExtensionFromGitHub themes                           typo3-themes   themes
