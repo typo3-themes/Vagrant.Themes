@@ -150,5 +150,5 @@ chmod 777 -R /var/www/
 
 echo "======================================================================="
 echo "  Access the vm in your Browser via:"
-echo "      - 192.168.34.16    32bit 1GB Ram    (Virtualbox Provider)"
+echo "      - 192.168.31.16    32bit 1GB Ram    (Virtualbox Provider)"
 echo "======================================================================="

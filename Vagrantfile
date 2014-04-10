@@ -15,7 +15,7 @@ Vagrant.configure("2") do |config|
   # config.vm.network :forwarded_port, guest: 80, host: 8080
 
   config.vm.hostname = "themes.dev"
-  config.vm.network :private_network, ip: "192.168.34.16"
+  config.vm.network :private_network, ip: "192.168.31.16"
 
   config.vm.provision :shell, :path => "serverdata/provision/prepare.sh"
 
@@ -51,7 +51,7 @@ Vagrant.configure("2") do |config|
   config.vm.provider :vmware_fusion do |vm, override|
     override.vm.box     = "precise64_fusion"
     override.vm.box_url = "http://files.vagrantup.com/precise64_vmware.box"
-    override.vm.network :private_network, ip: "192.168.33.16"
+    override.vm.network :private_network, ip: "192.168.35.16"
 
     # v.gui = true
     vm.vmx["memsize"] = "1024"
