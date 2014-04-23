@@ -103,6 +103,7 @@ getExtensionFromGit    gridelements                     git://git.typo3.org/TYPO
 getExtensionFromGitHub belayout_tsprovider              kaystrobach    TYPO3.belayout_tsprovider
 
 # typo3-themes repositories
+getExtensionFromGitHub themes_distribution              typo3-themes   themes_distribution
 getExtensionFromGitHub themes                           typo3-themes   themes
 getExtensionFromGitHub themes_gridelements              typo3-themes   themes_gridelements
 getExtensionFromGitHub themes_builder                   typo3-themes   themes_builder
