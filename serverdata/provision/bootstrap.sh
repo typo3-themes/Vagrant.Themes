@@ -137,6 +137,7 @@ getExtensionFromGitHub easylogin                        kaystrobach    TYPO3.eas
 # get svn extensions from forge :D
 
 getExtensionFromSvn    t3jquery                         https://svn.typo3.org/TYPO3v4/Extensions/t3jquery/trunk/
+getExtensionFromSvn    static_info_tables               https://svn.typo3.org/TYPO3v4/Extensions/static_info_tables/trunk/
 
 # import database
 
