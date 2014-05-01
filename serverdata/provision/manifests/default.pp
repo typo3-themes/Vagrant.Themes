@@ -56,26 +56,35 @@ file { "/etc/apt/sources.list":
 }
 
 file { "/etc/apache2/sites-available/":
-  ensure  => "link",
-  target  => "/vagrant/serverdata/etc/apache2/sites-available/",
-  require => Package["apache2"],
-  notify  => Service["apache2"],
-  force => true,
-}
+    ensure  => "directory",
+    source  => "/vagrant/serverdata/etc/apache2/sites-available/",
+    require => Package["apache2-mpm-prefork"],
+    notify  => Service["apache2"],
+    force   => true,
+    recurse => true,
+  }
 
-file { "/etc/php5/cli/php.ini":
-  ensure  => "link",
-  target  => "/vagrant/serverdata/etc/php5/cli/php.ini",
-  require => Package["php5"],
-  force => true,
-}
-file { "/etc/php5/apache2/php.ini":
-  ensure  => "link",
-  target  => "/vagrant/serverdata/etc/php5/apache2/php.ini",
-  require => Package["php5"],
-  notify  => Service["apache2"],
-  force => true,
-}
+ file { "/etc/php5/cli/php.ini":
+    ensure  => "file",
+    source  => "/vagrant/serverdata/etc/php5/cli/php.ini",
+    require => Package["php5"],
+    notify  => Service["apache2"],
+    force => true,
+  }
+  file { "/etc/php5/apache2/php.ini":
+    ensure  => "file",
+    source  => "/vagrant/serverdata/etc/php5/apache2/php.ini",
+    require => Package["php5"],
+    notify  => Service["apache2"],
+    force => true,
+  }
+  file { "/etc/apache2/mods-enabled/rewrite.load":
+    ensure  => "link",
+    target  => "/etc/apache2/mods-available/rewrite.load",
+    require => Package["php5"],
+    notify  => Service["apache2"],
+    force => true,
+  }
 file { "/home/vagrant/Maildir":
   ensure  => "link",
   target  => "/vagrant/serverdata/home/vagrant/Maildir",
