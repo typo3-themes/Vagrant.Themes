@@ -10,5 +10,5 @@ deb-src http://ftp2.de.debian.org/debian/  wheezy-updates main
 
 #See more at: http://www.sysadminslife.com/linux/php-5-4-installation-unter-debian-squeeze-und-upgrade-von-php-5-3/#sthash.oA9iX3t3.dpuf
 
-#deb http://packages.dotdeb.org wheezy-php55 all
-#deb-src http://packages.dotdeb.org wheezy-php55 all
+deb http://packages.dotdeb.org wheezy-php55 all
+deb-src http://packages.dotdeb.org wheezy-php55 all

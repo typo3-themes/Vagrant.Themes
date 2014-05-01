@@ -20,9 +20,9 @@ package { "graphicsmagick":             ensure  => "latest", require  => Exec['a
 package { "mysql-server":               ensure  => "latest", require  => Exec['apt-get update']}
 package { "mysql-client":               ensure  => "latest", require  => Exec['apt-get update']}
 
-package { "apache2":                    ensure  => "latest", require  => Exec['apt-get update']}
-package { "libapache2-mod-php5":        ensure  => "latest", require  => Package['php5']}
-package { "php5":                       ensure  => "latest", require  => Package['apache2']}
+package { "apache2-mpm-prefork":        ensure  => "latest", require  => Exec['apt-get update']}
+package { "libapache2-mod-php5":        ensure  => "latest", require  => Exec['apt-get update']}
+package { "php5":                       ensure  => "latest", require  => Exec['apt-get update']}
 package { "php5-gd":                    ensure  => "latest", require  => Package['php5']}
 package { "php5-curl":                  ensure  => "latest", require  => Package['php5']}
 package { "php5-mysql":                 ensure  => "latest", require  => Package['php5']}
@@ -32,7 +32,7 @@ package { "phpmyadmin":                 ensure  => "latest", require  => Package
 
 service { "apache2":
   ensure  => "running",
-  require => Package["apache2"],
+  require => Package["apache2-mpm-prefork"],
 }
 
 service { "mysql":
@@ -43,7 +43,7 @@ service { "mysql":
 
 file { "/var/www/":
   ensure  => "directory",
-  require => Package["apache2"],
+  require => Package["apache2-mpm-prefork"],
   notify  => Service["apache2"],
   force   => true,
 }
