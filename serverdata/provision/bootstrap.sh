@@ -115,6 +115,8 @@ getExtensionFromGitHub themes_adapter_tvframework       typo3-themes   themes_ad
 getExtensionFromGitHub themes_adapter_wordpress         typo3-themes   themes_adapter_wordpress
 
 getExtensionFromGitHub theme_bootstrap                  typo3-themes   theme_bootstrap
+getExtensionFromGitHub theme_bootstrap_slate            typo3-themes   theme_bootstrap_slate
+
 getExtensionFromGitHub basictemplate                    kaystrobach    TYPO3.basictemplate
 
 # independent repositories fedext
