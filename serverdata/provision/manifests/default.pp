@@ -12,6 +12,7 @@ package { "mc":                         ensure  => "latest", require  => Exec['a
 package { "vim":                        ensure  => "latest", require  => Exec['apt-get update']}
 
 package { "git":                        ensure  => "latest", require  => Exec['apt-get update']}
+package { "git-svn":                    ensure  => "latest", require  => Exec['apt-get update']}
 package { "subversion":                 ensure  => "latest", require  => Exec['apt-get update']}
 
 
