@@ -86,8 +86,22 @@ file { "/etc/apache2/sites-available/":
     notify  => Service["apache2"],
     force => true,
   }
-file { "/home/vagrant/Maildir":
-  ensure  => "link",
-  target  => "/vagrant/serverdata/home/vagrant/Maildir",
-  force => true,
-}
+  file { "/etc/apache2/mods-enabled/php5.load":
+    ensure  => "link",
+    target  => "/etc/apache2/mods-available/php5.load",
+    require => Package["php5"],
+    notify  => Service["apache2"],
+    force => true,
+  }
+  file { "/etc/apache2/mods-enabled/php5.conf":
+    ensure  => "link",
+    target  => "/etc/apache2/mods-available/php5.conf",
+    require => Package["php5"],
+    notify  => Service["apache2"],
+    force => true,
+  }
+  file { "/home/vagrant/Maildir":
+    ensure  => "link",
+    target  => "/vagrant/serverdata/home/vagrant/Maildir",
+    force => true,
+  }
