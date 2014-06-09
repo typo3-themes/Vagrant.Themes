@@ -2,6 +2,9 @@
 
 function getExtensionFromGitHub {
 	echo "TYPO3 Extension $1 from $2/$3"
+	if [ ! -d $1/.git ]; then
+		rm -R -f $1
+	fi
 	if [ ! -d $1 ]; then
 		rm -R -f $1
 		git clone https://github.com/$2/$3.git $1
@@ -135,11 +138,11 @@ getExtensionFromGitHub dyncss_less                      kaystrobach    TYPO3.dyn
 getExtensionFromGitHub dyncss_scss                      kaystrobach    TYPO3.dyncss_scss
 getExtensionFromGitHub dyncss_test                      kaystrobach    TYPO3.dyncss_test
 getExtensionFromGitHub easylogin                        kaystrobach    TYPO3.easylogin
+getExtensionFromGitHub bootstrap_package                benjaminkott   bootstrap_package
 
 # get svn extensions from forge :D
-
-getExtensionFromSvn    t3jquery                         https://svn.typo3.org/TYPO3v4/Extensions/t3jquery/trunk/
-getExtensionFromSvn    static_info_tables               https://svn.typo3.org/TYPO3v4/Extensions/static_info_tables/trunk/
+getExtensionFromGitHub t3jquery                         TYPO3-svn-archive t3jquery
+getExtensionFromGitHub static_info_tables               TYPO3-svn-archive static_info_tables
 
 # import database
 
