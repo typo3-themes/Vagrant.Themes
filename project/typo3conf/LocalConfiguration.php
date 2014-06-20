@@ -80,7 +80,7 @@ return array(
 			'skin_sbs_cd_redsys' => 'a:0:{}',
 			'sphinx' => 'a:1:{s:7:"version";s:5:"1.2b1";}',
 			'static_info_tables' => 'a:3:{s:13:"enableManager";s:1:"1";s:5:"dummy";s:1:"0";s:7:"charset";s:5:"utf-8";}',
-			't3jquery' => 'a:14:{s:15:"alwaysIntegrate";s:1:"0";s:17:"integrateToFooter";s:1:"0";s:17:"enableStyleStatic";s:1:"0";s:18:"dontIntegrateOnUID";s:0:"";s:23:"dontIntegrateInRootline";s:0:"";s:13:"jqLibFilename";s:23:"jquery-###VERSION###.js";s:9:"configDir";s:19:"uploads/tx_t3jquery";s:13:"jQueryVersion";s:5:"1.8.x";s:15:"jQueryUiVersion";s:5:"1.9.x";s:18:"jQueryTOOLSVersion";s:5:"1.2.x";s:22:"jQueryBootstrapVersion";s:5:"2.3.x";s:16:"integrateFromCDN";s:1:"0";s:11:"locationCDN";s:6:"jquery";s:13:"updateMessage";s:1:"0";}',
+			't3jquery' => 'a:14:{s:15:"alwaysIntegrate";s:1:"0";s:17:"integrateToFooter";s:1:"0";s:17:"enableStyleStatic";s:1:"0";s:18:"dontIntegrateOnUID";s:0:"";s:23:"dontIntegrateInRootline";s:0:"";s:13:"jqLibFilename";s:23:"jquery-###VERSION###.js";s:9:"configDir";s:19:"uploads/tx_t3jquery";s:13:"jQueryVersion";s:5:"1.8.x";s:15:"jQueryUiVersion";s:5:"1.9.x";s:18:"jQueryTOOLSVersion";s:5:"1.2.x";s:22:"jQueryBootstrapVersion";s:5:"2.3.x";s:16:"integrateFromCDN";s:1:"1";s:11:"locationCDN";s:6:"jquery";s:13:"updateMessage";s:1:"0";}',
 			't3m_cumulus_tagcloud' => 'a:0:{}',
 			'templavoila' => 'a:3:{s:7:"enable.";a:3:{s:13:"oldPageModule";s:1:"0";s:19:"selectDataStructure";s:1:"0";s:15:"renderFCEHeader";s:1:"0";}s:9:"staticDS.";a:3:{s:6:"enable";s:1:"0";s:8:"path_fce";s:27:"fileadmin/templates/ds/fce/";s:9:"path_page";s:28:"fileadmin/templates/ds/page/";}s:13:"updateMessage";s:1:"0";}',
 			'templavoila_framework' => 'a:2:{s:14:"customSkinPath";s:26:"fileadmin/templates/skins/";s:17:"templateObjectPID";s:1:"5";}',
