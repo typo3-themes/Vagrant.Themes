@@ -211,6 +211,7 @@ return array(
 				'extbase_object' => array(),
 			),
 		),
+		'clearCacheSystem' => TRUE,
 		'compat_version' => '6.2',
 		'curlUse' => '1',
 		'devIPmask' => '*',
