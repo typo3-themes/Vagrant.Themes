@@ -46,6 +46,24 @@ function getExtensionFromGit {
 		cd ..
 	fi
 }
+
+function getTypo3FromGit {
+	echo "TYPO3"
+	cd /var/www/
+
+
+	if [ ! -d typo3_src/.git ]; then
+		echo "      Downloading"
+		rm -R -f typo3_src
+		git clone -b TYPO3_6-2 git://git.typo3.org/Packages/TYPO3.CMS.git typo3_src
+		echo "      Done"
+	else
+		echo "      Already there"
+		cd $1
+		git pull
+		cd ..
+	fi
+}
 # ensure fast booting with grub ;)
 
 #cp /etc/default/grub /etc/default/grub.orig
@@ -57,6 +75,7 @@ function getExtensionFromGit {
 cp /etc/phpmyadmin/apache.conf /etc/apache2/sites-enabled/phpmyadmin
 cp /vagrant/serverdata/etc/phpmyadmin/config.inc.php /etc/phpmyadmin/config.inc.php
 
+getTypo3FromGit
 
 if [ ! -d "/var/www/typo3conf" ]; then
 
@@ -65,10 +84,10 @@ if [ ! -d "/var/www/typo3conf" ]; then
 	# checkout TYPO3 from Github
 
 	cd /var/www
-	curl -L -o latestSource.tar.gz http://get.typo3.org/6.2
-	tar xzf latestSource.tar.gz
-	rm latestSource.tar.gz
-	typo3sourceDir=$(find . -mindepth 1 -maxdepth 1 -type d)
+	#curl -L -o latestSource.tar.gz http://get.typo3.org/6.2
+	#tar xzf latestSource.tar.gz
+	#rm latestSource.tar.gz
+	#typo3sourceDir=$(find . -mindepth 1 -maxdepth 1 -type d)
 	ln -s $typo3sourceDir typo3_src
 	ln -s typo3_src/index.php index.php
 	ln -s typo3_src/typo3 typo3
@@ -151,9 +170,11 @@ getExtensionFromGitHub coreapi                          TYPO3-coreapi     ext-co
 
 # clear cache
 
-rm -R -f /serverdata/www/typo3temp/Cache
 
 chmod 777 -R /var/www/
+
+rm -R -f /serverdata/www/typo3temp/Cache
+sudo service apache2 restart
 
 
 echo "======================================================================="
