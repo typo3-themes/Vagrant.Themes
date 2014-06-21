@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 
 function getExtensionFromGitHub {
-	echo "TYPO3 Extension $1 from $2/$3"
+	echo " "
+	echo "TYPO3 Extension $1"
+	echo "  From $2/$3"
 	if [ ! -d $1/.git ]; then
 		rm -R -f $1
 	fi
@@ -15,10 +17,13 @@ function getExtensionFromGitHub {
 		git pull
 		cd ..
 	fi
+	echo "--------------------------------------------------"
 }
 
 function getExtensionFromSvn {
-	echo "TYPO3 Extension $1 from $2"
+	echo " "
+	echo "TYPO3 Extension $1"
+	echo "  From $2"
 	if [ ! -d $1 ]; then
 		echo "      Downloading"
 		rm -R -f $1
@@ -30,21 +35,27 @@ function getExtensionFromSvn {
 		git svn fetch
 		cd ..
 	fi
+	echo "--------------------------------------------------"
 }
 
 function getExtensionFromGit {
-	echo "TYPO3 Extension from $1 from $2"
+	echo " "
+	echo "TYPO3 Extension from $1"
+	echo "  From $2"
 	if [ ! -d $1 ]; then
 		echo "      Downloading"
 		rm -R -f $1
 		git clone $2 $1
+		git log -3 --date-order --oneline
 		echo "      Done"
 	else
 		echo "      Already there"
 		cd $1
 		git pull
+		git log -3 --date-order --oneline
 		cd ..
 	fi
+	echo "--------------------------------------------------"
 }
 
 function getTypo3FromGit {
@@ -55,14 +66,18 @@ function getTypo3FromGit {
 	if [ ! -d typo3_src/.git ]; then
 		echo "      Downloading"
 		rm -R -f typo3_src
-		git clone -b TYPO3_6-2 git://git.typo3.org/Packages/TYPO3.CMS.git typo3_src
+		git clone --branch TYPO3_6-2 --depth 50 git://git.typo3.org/Packages/TYPO3.CMS.git typo3_src
+		cd typo3_src
 		echo "      Done"
+		git log -10 --date-order --oneline
 	else
 		echo "      Already there"
-		cd $1
+		cd typo3_src
 		git pull
+		git log -10 --date-order --oneline
 		cd ..
 	fi
+	echo "--------------------------------------------------"
 }
 # ensure fast booting with grub ;)
 
