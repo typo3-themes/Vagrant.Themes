@@ -183,7 +183,7 @@ getExtensionFromGitHub static_info_tables               TYPO3-svn-archive static
 
 chmod 777 -R /var/www/
 
-rm -R -f /serverdata/www/typo3temp/Cache
+sudo rm -rf /serverdata/www/typo3temp/Cache
 sudo service apache2 restart
 
 
