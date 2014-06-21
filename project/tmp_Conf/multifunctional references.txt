@@ -1,0 +1,85 @@
+lib.accordionImages = TEXT
+lib.accordionImages {
+  field = image
+  split.token = ,
+  split.cObjNum = 1
+  split.1 {
+    10 = IMAGE
+    10.file {
+      import = uploads/pics/
+      import.current = 1
+      width = 770c
+      height = 385c
+    }
+    10.altText {
+      field = altText
+      listNum.data = register:SPLIT_COUNT
+      listNum.splitChar = 13
+    }
+    10.titleText < .altText
+    10.titleText.field = titleText
+    10.wrap = <div class="item">|</div>
+  }
+}
+lib.gridelements {
+  11 < .defaultGridSetup
+  11 {
+    prepend = TEXT
+    prepend.dataWrap = <h3>{field:header}</h3>
+    wrap = <div class="multifunctional-container">|</div>
+    columns {
+      default {
+        dataWrap (
+<div id="portfolioCarousel_{field:uid}" class="carousel slide">
+      <div class="carousel-inner">|</div>
+      <a class="carousel-control left" href="#portfolioCarousel_{field:uid}" data-slide="prev">&lsaquo;</a>
+      <a class="carousel-control right" href="#portfolioCarousel_{field:uid}" data-slide="next">&rsaquo;</a>
+</div>
+)
+        renderObj.20 < tt_content.shortcut
+        renderObj.20.20.0.conf {
+          tt_content < lib.accordionImages
+          pages.20.renderObj < .tt_content
+        }
+      }
+      1 < .default
+      1 {
+        renderObj.20 < tt_content.shortcut
+        renderObj.20.20.0.conf {
+          tt_content = COA
+          tt_content {
+            10 = TEXT
+            10.dataWrap = <h4>{field:header}</h4>
+            20 = COA
+            20.10 < tt_content.textpic.20
+            20.10.text.10 >
+            20.wrap = <div class="pane">|</div>
+          }
+          pages.20.renderObj < .tt_content
+        }
+        dataWrap = <div class="tabs-active">|</div>
+      }
+      2 < .1
+      2 {
+        renderObj.20.20.0.conf.tt_content.20.10.text.20 >
+        renderObj.20.20.0.conf.pages.renderObj.20.10.text.20 >
+        dataWrap = <div class="span4 accordion miniaccordion">|</div>
+      }
+    }
+    cObject = COA
+    cObject {
+      wrap = <div class="row">|</div>
+      10 = COA
+      10 {
+        wrap = <div class="span8">|</div>
+        10 = TEXT
+        10.field = tx_gridelements_view_column_0
+        20 = TEXT
+        20.field = tx_gridelements_view_column_1
+      }
+      20 = TEXT
+      20.field = tx_gridelements_view_column_2
+    }
+  } 
+}
+tt_content.gridelements_pi1.20.10.setup.11 < lib.gridelements.11

@@ -1,0 +1,72 @@
+tt_content {
+  menu.20 {
+    1 {
+      stdWrap.outerWrap = <ol class="csc-menu csc-menu-1">|</ol>
+      1 {
+        NO {
+          stdWrap.override.dataWrap = {field:title} {field:subtitle}
+          wrapItemAndSub = <li><h3>|</h3></li>
+        }      
+      }
+    }
+    6 >
+    6 = COA
+    6 {
+      wrap = <ul class="csc-menu-6">|</ul>
+      10 = HMENU
+      10 {
+        special = browse
+        special {
+          items = prev
+          items.prevnextToSection = 1
+          prev.fields.title = <i class="icon-backward"></i>&nbsp;previous
+          prev.fields.nav_title = <i class="icon-backward"></i>&nbsp;previous
+        }
+        1 = TMENU
+        1 {
+          NO {
+            wrapItemAndSub = <li class="pull-left">|</li>
+          }
+        }
+      }
+      20 < .10
+      20 {
+        special {
+          items = next
+          next.fields.title = next&nbsp;<i class="icon-forward"></i>
+          next.fields.nav_title = next&nbsp;<i class="icon-forward"></i>
+        }
+        1 {
+          NO {
+            wrapItemAndSub = <li class="pull-right">|</li>
+          }
+        }
+      }
+    }
+  }
+  bullets {
+    stdWrap {
+      outerWrap = <div class="widget">|</div>
+      append = TEXT
+      append.typolink.parameter.field = header_link
+      append.typolink.ATagParams = class="btn btn-primary pull-right"
+    }
+    10 >
+    10 = TEXT
+    10.dataWrap = <h4>{field:header}</h4>
+    20 {
+      wrap = <ul>|</ul>
+      dataWrap >
+      split {
+        1 {
+          wrap = <li class="odd"><i class="icon-ok"></i>|</li>
+        }
+        2 {
+          wrap = <li class="even"><i class="icon-ok"></i>|</li>
+        }
+      }
+    }
+  }
+}
+plugin.tx_felogin_pi1.email_from = info@cybercraft.de
+plugin.tx_felogin_pi1.email_fromName = Manual Examples by Cybercraft

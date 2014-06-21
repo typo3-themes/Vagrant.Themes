@@ -1,0 +1,22 @@
+lib.gridelements {
+  8 < .defaultGridSetup
+  8 {
+    wrap = <div class="well well-large">|</div><hr />
+    columns {
+      1 < .default
+      1 {
+        wrap = <div class="code-accordion">|</div>
+        renderObj.20 >
+        renderObj.20 = CASE
+        renderObj.20 {
+          key.field = CType
+          list < tt_content.list
+          list.10 >
+          list.10 = TEXT
+          list.10.dataWrap = <h4><i class="icon-caret-right"></i><i class="icon-caret-down"></i> {field:header}</h4>
+        }
+      }
+    }
+  }
+}
+tt_content.gridelements_pi1.20.10.setup.8 < lib.gridelements.8

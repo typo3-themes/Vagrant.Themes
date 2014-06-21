@@ -1,0 +1,28 @@
+lib.gridelements {
+  7 < .defaultGridSetup
+  7 {
+    wrap = <div class="row description">|</div><hr />
+    columns {
+      default {
+        wrap = <div class="span9">|</div>
+        prepend = RECORDS
+        prepend.tables = tt_content
+        prepend.source = 160
+        renderObj.20.stdWrap {
+          setCurrent.cObject = LOAD_REGISTER
+          setCurrent.cObject {
+            maxImageWidth = 870
+            maxImageWidthInText = 870
+          }          
+        }
+        append = RESTORE_REGISTER
+      }
+      1 < .default
+      1 {
+        prepend >
+        wrap = <div class="span3">|</div>
+      }
+    }
+  }
+}
+tt_content.gridelements_pi1.20.10.setup.7 < lib.gridelements.7

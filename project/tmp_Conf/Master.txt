@@ -1,0 +1,191 @@
+config {
+  simulateStaticDocuments = 0
+  baseURL = http://manuals.cmsbox.de/
+  tx_realurl_enable = 1
+  doctype = html5
+  xhtmlDoctype = xhtml_trans
+  noPageTitle = 1
+  locale_all = en_EN@euro
+  language = en
+  typolinkLinkAccessRestrictedPages = 13
+}
+
+page = PAGE
+page {
+  10 = TEMPLATE
+  10 {
+    template = CASE
+    template {
+      key.data = levelfield:-1, backend_layout_next_level, slide
+      key.override.field = backend_layout
+      default = FILE
+      default.file = fileadmin/theme/index.html 
+      2 = FILE
+      2.file = fileadmin/theme/contact.html
+      3 = FILE
+      3.file = fileadmin/theme/portfolio-inner.html
+      4 = FILE
+      4.file = fileadmin/theme/pricing.html
+    }
+    workOnSubpart = DOCUMENT_BODY
+    subparts {
+      MAIN_NAVI < lib.mainNavi
+      TOP_VISUAL < styles.content.get
+      TOP_VISUAL.select.where = colPos=4
+      MAIN_CONTENT < styles.content.get
+      RIGHT_CONTENT < styles.content.getRight
+      FOOTER < styles.content.getBorder
+      FOOTER.slide = -1
+    }
+    marks {
+      MAIN_TITLE = TEXT
+      MAIN_TITLE.field = title
+      SUB_TITLE = TEXT
+      SUB_TITLE.field = subtitle
+      DESCRIPTION = TEXT
+      DESCRIPTION.field = abstract
+    }
+  }
+  headerData {
+    10 = TEXT
+    10.dataWrap (    
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="{field:description}" />
+    <meta name="author" content="{field:author}" />
+    <meta name="keywords" content="{field:keywords}, {field:tx_pmkautokeywords_autokeywords}" />
+    <title>{field:title} - {field:subtitle} - Example pages for manuals - Cybercraft Media Manufactory</title>
+
+<!-- Stylesheets-->
+<link rel="stylesheet" href="fileadmin/theme/css/font-awesome.min.css">
+<!--CSS Stylesheets-->
+<link href="fileadmin/theme/css/app.css" rel="stylesheet" type="text/css">
+<link href="fileadmin/theme/css/responsive.css" rel="stylesheet" type="text/css">
+<!--LESS Stylesheets-->
+<!--<link href="fileadmin/theme/less/app.less" rel="stylesheet/less">
+<link href="fileadmin/theme/less/responsive.less" rel="stylesheet/less">-
+<script src="fileadmin/theme/js/less-1.3.3.min.js"></script>-->
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<script type="text/javascript" src="fileadmin/theme/js/modernizr.custom.79639.js"></script>
+
+<!-- Fav icon -->
+<link rel="shortcut icon" href="fileadmin/theme/ico/favicon.png">
+
+<!-- Fonts -->
+<link href='http://fonts.googleapis.com/css?family=Lato:900,700,400italic,300,400' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Rokkitt:400,700' rel='stylesheet' type='text/css'>
+)
+  }
+  footerData {
+    10 = HTML
+    10.value (
+    <script src="fileadmin/theme/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="fileadmin/theme/js/jquery.ba-cond.min.js"></script> 
+<script type="text/javascript" src="fileadmin/theme/js/jquery.slitslider.js"></script>
+<script type="text/javascript">
+  $(document).ready(
+    function() {
+      $('div.carousel-inner').each(function() {
+        $(this).find('.item:first').addClass('active');
+      });
+      $('div.code-accordion').accordion({
+        active: false,
+        collapsible: true,
+      });
+      $('div.accordion').accordion({
+        active: true,
+        collapsible: true
+      });
+        //Initialising Tabs
+    $(".tabs-active").tabs(".pane", {
+        tabs: '> h4',
+        effect: 'fade',
+        initialIndex: 0
+    });
+        //Initialising Accordion
+    $(".nestable-accordion").tabs(".pane", {
+        tabs: '> h4',
+        effect: 'slide',
+        initialIndex: null
+    });
+        //Initialising First-Open
+    $(".nestable-accordion.first-open").tabs(".pane", {
+        tabs: '> h4',
+        effect: 'slide',
+        initialIndex: 0
+    });
+        //Initialising All-Open
+    $(".nestable-accordion.all-open > .pane").each(function(){
+    	if(!$(this).prev().hasClass("current")){
+            $(this).slideDown();
+            $(this).prev().addClass("current");
+    	}
+    });
+    	//The click to hide function
+    $(".nestable-accordion > h4").click(function() {
+        if ($(this).hasClass("current") && $(this).next().queue().length === 0) {
+            $(this).next().slideUp();
+            $(this).removeClass("current");
+        } else if (!$(this).hasClass("current") && $(this).next().queue().length === 0) {
+            $(this).next().slideDown();
+            $(this).addClass("current");
+        }
+    });
+    	//The show/hide all function
+    $(".nestable-accordion-first-level > h3 .icon-toggle, .nestable-accordion > h4 .icon-toggle").click(function() {
+    	if($(this).hasClass("icon-plus-sign")) {
+	    	$(this).parent().next().find(".nestable-accordion > .pane").each(function(){
+		    	if(!$(this).prev().hasClass("current")){
+        		    $(this).slideDown();
+	        	    $(this).prev().addClass("current");
+		    	}
+	    	});
+	}
+    	if($(this).hasClass("icon-minus-sign")) { 
+	    	$(this).parent().next().find(".nestable-accordion > .pane").each(function(){
+		    	if($(this).prev().hasClass("current")){
+        		    $(this).slideUp();
+	        	    $(this).prev().removeClass("current");
+		    	}
+	    	});
+	}
+	$(this).toggleClass("icon-plus-sign");
+	$(this).toggleClass("icon-minus-sign");
+	return false;
+    });
+  });
+  $(function() {
+    var Page = (function() {
+      var $nav = $( '#nav-dots > span' ),
+        slitslider = $( '#slider' ).slitslider( {
+          onBeforeChange : function( slide, pos ) {
+            $nav.removeClass( 'nav-dot-current' );
+            $nav.eq( pos ).addClass( 'nav-dot-current' );
+          }
+        } ),
+        init = function() {
+          initEvents();
+        },
+        initEvents = function() {
+          $nav.each( function( i ) {
+            $( this ).on( 'click', function( event ) {
+              var $dot = $( this );
+              if( !slitslider.isActive() ) {
+                $nav.removeClass( 'nav-dot-current' );
+                $dot.addClass( 'nav-dot-current' );
+              }
+              slitslider.jump( i + 1 );
+              return false;
+            } );
+          } );
+        };
+        return { init : init };
+    })();
+    Page.init();
+  });
+</script>
+)
+  }
+}

@@ -1,0 +1,17 @@
+tt_content.gridelements_pi1.20.10.setup {
+  3 < lib.gridelements.defaultGridSetup
+  3 {
+    columns.1 < .columns.default
+    columns.1.wrap = <div class="span3">|</div>
+    columns.2 < .columns.default
+    columns.2 {
+      cObject = COA_INT
+      cObject.10 = RECORDS
+      cObject.10.tables = tt_content
+      cObject.10.source = 155
+    }
+    columns.2.cObject.wrap = <div class="span5">|</div>
+    columns.3 < .columns.default
+    columns.3.wrap = <div class="span4">|</div>
+  }
+}

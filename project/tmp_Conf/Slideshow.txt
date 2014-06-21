@@ -1,0 +1,58 @@
+lib.slideShowWrapper (
+<div id="portfolioCarousel_{field:uid}" class="carousel slide">
+      <div class="carousel-inner">|</div>
+      <a class="carousel-control left" href="#portfolioCarousel_{field:uid}" data-slide="prev">&lsaquo;</a>
+      <a class="carousel-control right" href="#portfolioCarousel_{field:uid}" data-slide="next">&rsaquo;</a>
+</div>
+)
+
+lib.gridelements {
+  1 < lib.gridelements.defaultGridSetup
+  1 {
+    wrap = <div class="row">|</div>
+    columns {
+      default {
+        dataWrap < lib.slideShowWrapper
+        dataWrap.wrap = <div class="span8">|</div>
+        dataWrap.if.isFalse.field = flexform_separate
+        outerWrap = <div class="span12"><h3>{field:header}</h3>|</div>
+        outerWrap.insertData = 1
+        renderObj.20 >
+        renderObj.20 = COA
+        renderObj.20 {
+          stdWrap.dataWrap < lib.slideShowWrapper
+          stdWrap.dataWrap {
+            wrap = <div class="span5"><h4>{field:header}</h4>|</div>
+            if.isTrue.field = parentgrid_flexform_separate
+          }
+          10 = TEXT
+          10.field = image
+          10.split {
+            token = ,
+            cObjNum = 1
+            1 {
+              10 = IMAGE
+              10 {
+                file {
+                  import = uploads/pics/
+                  import.current = 1
+                  width = 770c
+                  height = 385c
+                }
+                altText {
+                  field = altText
+                  listNum.data = register:SPLIT_COUNT
+                  listNum.splitChar = 13
+                }
+                titleText < .altText
+                titleText.field = titleText
+                wrap = <div class="item">|</div>
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+tt_content.gridelements_pi1.20.10.setup.1 < lib.gridelements.1

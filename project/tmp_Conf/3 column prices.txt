@@ -1,0 +1,34 @@
+tt_content.gridelements_pi1.20.10.setup {
+  5 < lib.gridelements.defaultGridSetup
+  5 {
+    wrap = <div class="row">|</div>
+    columns.default.renderObj.20.bullets {
+      stdWrap {
+        outerWrap = <ul class="pricing-table featured">|</ul>
+        append.wrap = <li>|</li>
+      }
+      wrap = | 
+      10 >
+      10 = TEXT
+      10.dataWrap = <li><h4>{field:header}</h4></li><li><i class="icon-star icon-2x"></i><i class="icon-star icon-2x"></i><i class="icon-star icon-2x"></i></li>
+      20 {
+        dataWrap >
+        split {
+          cObjNum = 1||2|*||*|
+          1 {
+            wrap = <li><strong>|</strong></li>
+          }
+          2 {
+            wrap = <li>|</li>
+          }
+        }
+      }
+    }
+    columns.1 < .columns.default
+    columns.1.wrap = <div class="span4">|</div>
+    columns.2 < .columns.default
+    columns.2.wrap = <div class="span4">|</div>
+    columns.3 < .columns.default
+    columns.3.wrap = <div class="span4">|</div>
+  }
+}

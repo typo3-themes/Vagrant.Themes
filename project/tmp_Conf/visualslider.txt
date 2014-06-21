@@ -1,0 +1,52 @@
+tt_content.gridelements_pi1.20.10.setup {
+  2 < lib.gridelements.defaultGridSetup
+  2 {
+    stdWrap.dataWrap (
+<div id="slider" class="sl-slider-wrapper">
+      <div class="sl-slider">|</div>
+      <nav id="nav-dots" class="nav-dots visible-desktop">{register:nav_dots}</nav>
+</div>
+)
+    columns.default.renderObj.20 >
+    columns.default.renderObj.20 = COA
+    columns.default.renderObj.20 {
+      10 = COA
+      10 {
+        wrap (
+<div class="sl-slide sl-slide-vertical" data-orientation="vertical" data-slice1-rotation="25" data-slice2-rotation="-25" data-slice1-scale="2" data-slice2-scale="2">
+  <div class="sl-slide-inner">
+  |
+  </div>
+</div>
+)
+        10 = COA
+        10 {
+    stdWrap.dataWrap = <div class="bg-img bg-img-{cObj:parentRecordNumber}" style="background-image: url(|);"></div>
+    10 = IMG_RESOURCE
+    10 {
+            file {
+              import = uploads/pics/
+              import.field = image
+              import.listNum = 0
+              width = 1920c
+              height = 450c-20
+            }
+    }
+        }
+  20 = TEXT
+  20.dataWrap = <h2>{field:header}</h2>
+  30 = TEXT
+  30.dataWrap = <p>{field:bodytext}</p>
+  40 = LOAD_REGISTER
+  40 {
+    nav_dots {
+      data = register:nav_dots
+      ifEmpty = <span class="nav-dot-current"></span>
+      wrap = |<span></span>
+      wrap.if.isTrue.data = register:nav_dots
+    }
+  }      
+      }
+    }
+  }
+}

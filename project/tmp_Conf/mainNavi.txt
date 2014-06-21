@@ -1,0 +1,82 @@
+lib.mainNavi = COA
+lib.mainNavi {
+  entryLevel = 0
+  wrap = <ul class="nav">|</ul>
+  10 = HMENU
+  10 {
+    special = list
+    special.value = 1
+    1 = TMENU
+    1 {
+      NO = 1
+      NO {
+        allWrap = <li>|</li>
+      }
+      CUR = 1
+      CUR {
+        allWrap = <li class="active">|</li>
+      }
+    } 
+  }
+  20 = HMENU
+  20 {
+    entryLevel = 0
+    1 = TMENU
+    1 {
+      expAll = 1
+      NO = 1
+      NO {
+        stdWrap.listNum = 0 |*| 0 |*| 0      
+        stdWrap.listNum.splitChar = /        
+        wrapItemAndSub = <li>|</li>
+      }
+      ACT < .NO
+      ACT {
+        wrapItemAndSub = <li class="active">|</li>
+      }
+      IFSUB < .NO
+      IFSUB {
+        wrapItemAndSub = <li class="dropdown">|</li>      
+        stdWrap.wrap = <a href="#" class="dropdown-toggle" data-toggle="dropdown">|<b class="caret"></b></a>
+        doNotLinkIt = 1
+      }
+      ACTIFSUB < .IFSUB
+      ACTIFSUB {
+        wrapItemAndSub = <li class="dropdown active">|</li>
+      }
+    }
+    2 = TMENU
+    2 {
+      wrap = <ul class="dropdown-menu">|</ul>
+      NO = 1
+      NO {
+        wrapItemAndSub = <li>|</li>      
+      }
+      ACT < .NO
+      ACT {
+        wrapItemAndSub = <li class="active">|</li>      
+      }
+    }
+  }
+}
+
+[loginUser = *]
+lib.mainNavi.20.1 {
+  NO {
+    stdWrap.listNum = 0 |*| 0 |*| 1
+    additionalParams = |*||*|&logintype=logout
+  }
+  ACT {
+    stdWrap.listNum = 0 |*| 0 |*| 1
+    additionalParams = |*||*|&logintype=logout
+  }
+  IFSUB {
+    stdWrap.listNum = 0 |*| 0 |*| 1
+    additionalParams = |*||*|&logintype=logout
+  }
+  ACTIFSUB {
+    stdWrap.listNum = 0 |*| 0 |*| 1
+    additionalParams = |*||*|&logintype=logout
+  }
+}
+[global]

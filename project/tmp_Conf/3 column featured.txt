@@ -1,0 +1,52 @@
+tt_content.gridelements_pi1.20.10.setup {
+  4 < lib.gridelements.defaultGridSetup
+  4 {
+    wrap = <div class="row">|</div>
+    columns.default.renderObj.20 >
+    columns.default.renderObj.20 = COA
+    columns.default.renderObj.20 {
+      10 = IMAGE
+      10.file {
+        import = uploads/pics/
+        import.field = image
+        import.listNum = 0
+        width = 370c
+        height = 185c
+      }
+      20 = TEXT
+      20.field = header
+      20.append = TEXT
+      20.append {
+        fieldRequired = header_link
+        value = More ...
+        typolink.parameter.field = header_link
+        typolink.ATagParams = class="btn btn-primary pull-right"
+      }     
+      20.outerWrap = <h2><i class="icon-star"></i>|</h2>
+      30 = TEXT
+      30.field = bodytext
+      30.wrap = <p>|</p>
+      30.parseFunc {
+        makelinks = 1
+        makelinks.http.keep = path
+        makelinks.http.extTarget = _blank
+        makelinks.mailto.keep = path
+        tags {
+          link = TEXT
+          link {
+            current = 1
+            typolink.extTarget = _blank
+            typolink.target = _self
+            typolink.parameter.data = parameters : allParams
+          }
+        }
+      }
+    }
+    columns.1 < .columns.default
+    columns.1.wrap = <div class="span4 featured">|</div>
+    columns.2 < .columns.default
+    columns.2.wrap = <div class="span4 featured">|</div>
+    columns.3 < .columns.default
+    columns.3.wrap = <div class="span4 featured">|</div>
+  }
+}
