@@ -90,8 +90,6 @@ function getTypo3FromGit {
 cp /etc/phpmyadmin/apache.conf /etc/apache2/sites-enabled/phpmyadmin
 cp /vagrant/serverdata/etc/phpmyadmin/config.inc.php /etc/phpmyadmin/config.inc.php
 
-getTypo3FromGit
-
 if [ ! -d "/var/www/typo3conf" ]; then
 
 	rm -rf /var/www/*
@@ -99,11 +97,9 @@ if [ ! -d "/var/www/typo3conf" ]; then
 	# checkout TYPO3 from Github
 
 	cd /var/www
-	#curl -L -o latestSource.tar.gz http://get.typo3.org/6.2
-	#tar xzf latestSource.tar.gz
-	#rm latestSource.tar.gz
-	#typo3sourceDir=$(find . -mindepth 1 -maxdepth 1 -type d)
-	ln -s $typo3sourceDir typo3_src
+
+	getTypo3FromGit
+
 	ln -s typo3_src/index.php index.php
 	ln -s typo3_src/typo3 typo3
 
@@ -117,6 +113,9 @@ if [ ! -d "/var/www/typo3conf" ]; then
 	# checkout from git ...
 
 	cd /var/www/typo3conf/ext/
+else
+	# just update TYPO3 from git here
+	getTypo3FromGit
 fi
 
 # copy configuration
