@@ -96,10 +96,10 @@ if [ ! -d "/var/www/typo3conf" ]; then
 
 	# checkout TYPO3 from Github
 
-	cd /var/www
 
 	getTypo3FromGit
 
+	cd /var/www
 	ln -s typo3_src/index.php index.php
 	ln -s typo3_src/typo3 typo3
 
