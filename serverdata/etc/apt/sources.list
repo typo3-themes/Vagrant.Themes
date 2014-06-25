@@ -1,12 +1,12 @@
-deb http://cdn.debian.org/debian/  wheezy main
-deb-src http://cdn.debian.org/debian/  wheezy main
+deb http://cdn.debian.net/debian/  wheezy main
+deb-src http://cdn.debian.net/debian/  wheezy main
 
 deb http://security.debian.org/ squeeze/updates main
 deb-src http://security.debian.org/  wheezy/updates main
 
 # squeeze-updates, previously known as 'volatile'
-deb http://cdn.debian.org/debian/  wheezy-updates main
-deb-src http://cdn.debian.org/debian/  wheezy-updates main
+deb http://cdn.debian.net/debian/  wheezy-updates main
+deb-src http://cdn.debian.net/debian/  wheezy-updates main
 
 #See more at: http://www.sysadminslife.com/linux/php-5-4-installation-unter-debian-squeeze-und-upgrade-von-php-5-3/#sthash.oA9iX3t3.dpuf
 
