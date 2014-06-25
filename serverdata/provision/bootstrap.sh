@@ -185,6 +185,12 @@ chmod 777 -R /var/www/
 sudo rm -rf /serverdata/www/typo3temp/Cache
 sudo service apache2 restart
 
+echo "get languages defined in the system"
+cd /var/www
+php typo3/cli_dispatch.phpsh extbase language:update
+
+echo "run scheduler once"
+php typo3/cli_dispatch.phpsh scheduler
 
 echo "======================================================================="
 echo "  Access the vm in your Browser via:"
