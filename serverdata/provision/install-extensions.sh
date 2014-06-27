@@ -1,40 +1,7 @@
 #!/usr/bin/env bash
 function getExtensionFromGitHub {
-	echo " "
-	echo "TYPO3 Extension $1"
-	echo "  From $2/$3"
-	if [ ! -d $1/.git ]; then
-		rm -R -f $1
-	fi
-	if [ ! -d $1 ]; then
-		rm -R -f $1
-		git clone https://github.com/$2/$3.git $1
-		echo "      Done"
-	else
-		echo "      Already there"
-		cd $1
-		git pull
-		cd ..
-	fi
-	echo "--------------------------------------------------"
-}
-
-function getExtensionFromSvn {
-	echo " "
-	echo "TYPO3 Extension $1"
-	echo "  From $2"
-	if [ ! -d $1 ]; then
-		echo "      Downloading"
-		rm -R -f $1
-		git svn clone $2 $1 --quiet
-		echo "      Done"
-	else
-		echo "      Already there"
-		cd $1
-		git svn fetch
-		cd ..
-	fi
-	echo "--------------------------------------------------"
+	#getExtensionFromGit $1 https://github.com/$2/$3.git
+	getExtensionFromGit $1 git://github.com:$2/$3.git
 }
 
 function getExtensionFromGit {
