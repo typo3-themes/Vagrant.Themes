@@ -343,17 +343,6 @@ return array (
       array (
       ),
     ),
-    'version' => 
-    array (
-      'manifestPath' => '',
-      'composerName' => 'typo3/cms-version',
-      'state' => 'active',
-      'packagePath' => 'typo3/sysext/version/',
-      'classesPath' => 'Classes/',
-      'suggestions' => 
-      array (
-      ),
-    ),
     'felogin' => 
     array (
       'manifestPath' => '',
@@ -587,6 +576,17 @@ return array (
     array (
       'state' => 'active',
       'packagePath' => 'typo3conf/ext/dyncss_phpsass/',
+      'classesPath' => 'Classes/',
+      'suggestions' => 
+      array (
+      ),
+    ),
+    'version' => 
+    array (
+      'manifestPath' => '',
+      'composerName' => 'typo3/cms-version',
+      'state' => 'active',
+      'packagePath' => 'typo3/sysext/version/',
       'classesPath' => 'Classes/',
       'suggestions' => 
       array (
