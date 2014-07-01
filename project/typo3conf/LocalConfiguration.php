@@ -58,7 +58,7 @@ return array(
 			'news' => 'a:11:{s:29:"removeListActionFromFlexforms";s:1:"2";s:20:"pageModuleFieldsNews";s:313:"LLL:EXT:news/Resources/Private/Language/locallang_be.xml:pagemodule_simple=title,datetime;LLL:EXT:news/Resources/Private/Language/locallang_be.xml:pagemodule_advanced=title,datetime,teaser,category;LLL:EXT:news/Resources/Private/Language/locallang_be.xml:pagemodule_complex=title,datetime,teaser,category,archive;";s:24:"pageModuleFieldsCategory";s:17:"title,description";s:6:"tagPid";s:1:"1";s:13:"prependAtCopy";s:1:"1";s:19:"categoryRestriction";s:4:"none";s:22:"contentElementRelation";s:1:"1";s:13:"manualSorting";s:1:"0";s:11:"archiveDate";s:4:"date";s:12:"showImporter";s:1:"0";s:24:"showAdministrationModule";s:1:"1";}',
 			'opendocs' => 'a:0:{}',
 			'phpstorm' => 'a:0:{}',
-			'phpunit' => 'a:6:{s:17:"excludeextensions";s:8:"lib, div";s:10:"phpunitlib";s:0:"";s:13:"selenium_host";s:9:"localhost";s:13:"selenium_port";s:4:"4444";s:16:"selenium_browser";s:8:"*firefox";s:19:"selenium_browserurl";s:0:"";}',
+			'phpunit' => 'a:7:{s:17:"excludeextensions";s:8:"lib, div";s:12:"composerpath";s:0:"";s:13:"selenium_host";s:9:"localhost";s:13:"selenium_port";s:4:"4444";s:16:"selenium_browser";s:8:"*firefox";s:19:"selenium_browserurl";s:0:"";s:10:"phpunitlib";s:0:"";}',
 			'piwik' => 'a:1:{s:20:"showFaultyConfigHelp";s:1:"1";}',
 			'piwikintegration' => 'a:6:{s:12:"emMakeHeader";s:0:"";s:19:"databaseTablePrefix";s:0:"";s:21:"enableIndependentMode";s:1:"0";s:19:"enableSchedulerTask";s:1:"0";s:21:"enableSchedulerLoging";s:1:"0";s:19:"piwikDownloadSource";s:0:"";}',
 			'plupload' => 'a:0:{}',

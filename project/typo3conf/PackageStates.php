@@ -574,6 +574,15 @@ return array (
       array (
       ),
     ),
+    'phpunit' => 
+    array (
+      'state' => 'active',
+      'packagePath' => 'typo3conf/ext/phpunit/',
+      'classesPath' => 'Classes/',
+      'suggestions' => 
+      array (
+      ),
+    ),
     'dyncss' => 
     array (
       'state' => 'active',
@@ -927,6 +936,7 @@ return array (
       'classesPath' => 'Classes/',
       'suggestions' => 
       array (
+        0 => 'phpunit',
       ),
     ),
     'flat' => 
