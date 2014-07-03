@@ -1,7 +1,11 @@
 #!/usr/bin/env bash
 function getExtensionFromGitHub {
 	#getExtensionFromGit $1 https://github.com/$2/$3.git
-	getExtensionFromGit $1 git://github.com:$2/$3.git
+	if [ "$GITTYPE" = "HTTP" ]; then
+		getExtensionFromGit $1 http://github.com/$2/$3.git
+	else
+		getExtensionFromGit $1 git@github.com:$2/$3.git
+	fi
 }
 
 function getExtensionFromGit {
