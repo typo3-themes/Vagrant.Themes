@@ -31,6 +31,7 @@ function getExtensionFromGit {
 #base extensions
 getExtensionFromGit    gridelements                     git://git.typo3.org/TYPO3CMS/Extensions/gridelements.git
 getExtensionFromGit    phpunit                          git://git.typo3.org/TYPO3CMS/Extensions/phpunit.git
+getExtensionFromGit    realurl                          git://git.typo3.org/TYPO3CMS/Extensions/realurl.git
 
 getExtensionFromGitHub belayout_tsprovider              kaystrobach    TYPO3.belayout_tsprovider
 
