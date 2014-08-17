@@ -52,7 +52,7 @@ getExtensionFromGitHub theme_bootstrap_slate            typo3-themes   theme_boo
 
 getExtensionFromGitHub basictemplate                    kaystrobach    TYPO3.basictemplate
 
-# independent repositories fedext
+# independent repositories  fedext
 getExtensionFromGitHub flux                             FluidTYPO3     flux
 getExtensionFromGitHub vhs                              FluidTYPO3     vhs
 
