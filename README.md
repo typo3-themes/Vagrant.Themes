@@ -32,10 +32,29 @@ This will download and initialise the basic image
 
 Other important commands
 ```bash
-vagrant suspend
-vagrant status
-vagrant halt
-vagrant destroy
+vagrant suspend - suspend the CM
+vagrant status  - show status of the virtual maschine
+vagrant halt    - shutdown the virtual maschine
+vagrant destroy - destroy the virtual maschine (drop virtual drives, ...)
+```
+
+You can get more information about vagrant from the vagrant documentation:
+http://docs.vagrantup.com/v2/
+
+Some important commands
+--------
+
+```bash
+
+Access the VM via SSH:
+vagrant ssh
+
+Easily gain root rights:
+sudo su -
+
+Access the apache error logs on the fly (auto refresh):
+sudo tail -f /var/log/apache2/error.log
+
 ```
 
 Have fun!
