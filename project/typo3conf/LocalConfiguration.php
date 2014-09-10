@@ -90,7 +90,7 @@ return array(
 			'theme_bootstrap_flatly' => 'a:0:{}',
 			'theme_bootstrap_readable' => 'a:0:{}',
 			'theme_bootstrap_slate' => 'a:0:{}',
-			'themes' => 'a:2:{s:16:"categoriesToShow";s:113:"theme,siteConstants,site colors,site layout,colors,language,font,meta,metaDefaults,page,container,slider,lightbox";s:15:"constantsToHide";s:36:"dateFormat,timeFormat,dateTimeFormat";}',
+			'themes' => 'a:3:{s:17:"themesIndependent";s:1:"1";s:16:"categoriesToShow";s:125:"theme,siteConstants,site colors,site layout,colors,language,font,meta,metaDefaults,page,container,slider,lightbox,socialmedia";s:15:"constantsToHide";s:36:"dateFormat,timeFormat,dateTimeFormat";}',
 			'themes_adapter_directory' => 'a:0:{}',
 			'themes_adapter_templavoilaframework' => 'a:0:{}',
 			'themes_adapter_tvframework' => 'a:0:{}',
@@ -175,7 +175,7 @@ return array(
 	'FE' => array(
 		'debug' => TRUE,
 		'loginSecurityLevel' => 'rsa',
-		'pageNotFound_handling' => 'user_tet',
+		'pageNotFound_handling' => '',
 	),
 	'GFX' => array(
 		'colorspace' => 'RGB',
