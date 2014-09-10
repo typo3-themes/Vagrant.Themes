@@ -70,3 +70,4 @@ getExtensionFromGitHub bootstrap_package                benjaminkott   bootstrap
 # get svn extensions from forge :D
 getExtensionFromGitHub t3jquery                         TYPO3-svn-archive t3jquery
 getExtensionFromGitHub static_info_tables               TYPO3-svn-archive static_info_tables
+getExtensionFromGitHub coreapi                          nxpthx            typo3-upgradereport
