@@ -655,15 +655,6 @@ return array (
       array (
       ),
     ),
-    'theme_bootstrap' => 
-    array (
-      'state' => 'active',
-      'packagePath' => 'typo3conf/ext/theme_bootstrap/',
-      'classesPath' => 'Classes/',
-      'suggestions' => 
-      array (
-      ),
-    ),
     'phpunit' => 
     array (
       'state' => 'active',
@@ -727,34 +718,21 @@ return array (
       array (
       ),
     ),
-    'coreapi' => 
-    array (
-      'manifestPath' => '',
-      'composerName' => 'etobi/coreapi',
-      'state' => 'active',
-      'packagePath' => 'typo3conf/ext/coreapi/',
-      'classesPath' => 'Classes/',
-      'suggestions' => 
-      array (
-      ),
-    ),
     'beskin' => 
     array (
       'state' => 'active',
       'packagePath' => 'typo3conf/ext/beskin/',
       'classesPath' => 'Classes/',
-      'suggestions' => 
-      array (
-      ),
+      'suggestions' => NULL,
+      'dependencies' => NULL,
     ),
     'basictemplate' => 
     array (
       'state' => 'active',
       'packagePath' => 'typo3conf/ext/basictemplate/',
       'classesPath' => 'Classes/',
-      'suggestions' => 
-      array (
-      ),
+      'suggestions' => NULL,
+      'dependencies' => NULL,
     ),
     'vhs' => 
     array (
@@ -763,18 +741,16 @@ return array (
       'state' => 'inactive',
       'packagePath' => 'typo3conf/ext/vhs/',
       'classesPath' => 'Classes/',
-      'suggestions' => 
-      array (
-      ),
+      'suggestions' => NULL,
+      'dependencies' => NULL,
     ),
     'dyncss_test' => 
     array (
       'state' => 'inactive',
       'packagePath' => 'typo3conf/ext/dyncss_test/',
       'classesPath' => 'Classes/',
-      'suggestions' => 
-      array (
-      ),
+      'suggestions' => NULL,
+      'dependencies' => NULL,
     ),
     'indexed_search_mysql' => 
     array (
@@ -783,18 +759,16 @@ return array (
       'state' => 'inactive',
       'packagePath' => 'typo3/sysext/indexed_search_mysql/',
       'classesPath' => 'Classes/',
-      'suggestions' => 
-      array (
-      ),
+      'suggestions' => NULL,
+      'dependencies' => NULL,
     ),
     'dyncss_turbine' => 
     array (
       'state' => 'inactive',
       'packagePath' => 'typo3conf/ext/dyncss_turbine/',
       'classesPath' => 'Classes/',
-      'suggestions' => 
-      array (
-      ),
+      'suggestions' => NULL,
+      'dependencies' => NULL,
     ),
     'flux' => 
     array (
@@ -803,27 +777,24 @@ return array (
       'classesPath' => 'Classes/',
       'manifestPath' => '',
       'composerName' => 'fluidtypo3/flux',
-      'suggestions' => 
-      array (
-      ),
+      'suggestions' => NULL,
+      'dependencies' => NULL,
     ),
     'themes_adapter_tvframework' => 
     array (
       'state' => 'inactive',
       'packagePath' => 'typo3conf/ext/themes_adapter_tvframework/',
       'classesPath' => 'Classes/',
-      'suggestions' => 
-      array (
-      ),
+      'suggestions' => NULL,
+      'dependencies' => NULL,
     ),
     'themes_adapter_wordpress' => 
     array (
       'state' => 'inactive',
       'packagePath' => 'typo3conf/ext/themes_adapter_wordpress/',
       'classesPath' => 'Classes/',
-      'suggestions' => 
-      array (
-      ),
+      'suggestions' => NULL,
+      'dependencies' => NULL,
     ),
     'view' => 
     array (
@@ -832,9 +803,8 @@ return array (
       'state' => 'inactive',
       'packagePath' => 'typo3conf/ext/view/',
       'classesPath' => 'Classes/',
-      'suggestions' => 
-      array (
-      ),
+      'suggestions' => NULL,
+      'dependencies' => NULL,
     ),
     'openid' => 
     array (
@@ -843,9 +813,8 @@ return array (
       'state' => 'inactive',
       'packagePath' => 'typo3/sysext/openid/',
       'classesPath' => 'Classes/',
-      'suggestions' => 
-      array (
-      ),
+      'suggestions' => NULL,
+      'dependencies' => NULL,
     ),
     'adodb' => 
     array (
@@ -854,9 +823,8 @@ return array (
       'state' => 'inactive',
       'packagePath' => 'typo3/sysext/adodb/',
       'classesPath' => 'Classes/',
-      'suggestions' => 
-      array (
-      ),
+      'suggestions' => NULL,
+      'dependencies' => NULL,
     ),
     'taskcenter' => 
     array (
@@ -865,9 +833,8 @@ return array (
       'state' => 'inactive',
       'packagePath' => 'typo3/sysext/taskcenter/',
       'classesPath' => 'Classes/',
-      'suggestions' => 
-      array (
-      ),
+      'suggestions' => NULL,
+      'dependencies' => NULL,
     ),
     'dbal' => 
     array (
@@ -876,9 +843,8 @@ return array (
       'state' => 'inactive',
       'packagePath' => 'typo3/sysext/dbal/',
       'classesPath' => 'Classes/',
-      'suggestions' => 
-      array (
-      ),
+      'suggestions' => NULL,
+      'dependencies' => NULL,
     ),
     'uncache' => 
     array (
@@ -887,9 +853,8 @@ return array (
       'state' => 'inactive',
       'packagePath' => 'typo3conf/ext/uncache/',
       'classesPath' => 'Classes/',
-      'suggestions' => 
-      array (
-      ),
+      'suggestions' => NULL,
+      'dependencies' => NULL,
     ),
     'documentation' => 
     array (
@@ -898,101 +863,88 @@ return array (
       'state' => 'inactive',
       'packagePath' => 'typo3/sysext/documentation/',
       'classesPath' => 'Classes/',
-      'suggestions' => 
-      array (
-      ),
+      'suggestions' => NULL,
+      'dependencies' => NULL,
     ),
     'themes_distribution' => 
     array (
       'state' => 'inactive',
       'packagePath' => 'typo3conf/ext/themes_distribution/',
       'classesPath' => 'Classes/',
-      'suggestions' => 
-      array (
-      ),
+      'suggestions' => NULL,
+      'dependencies' => NULL,
     ),
     'bootstrap_package' => 
     array (
       'state' => 'inactive',
       'packagePath' => 'typo3conf/ext/bootstrap_package/',
       'classesPath' => 'Classes/',
-      'suggestions' => 
-      array (
-      ),
+      'suggestions' => NULL,
+      'dependencies' => NULL,
     ),
     'realurl' => 
     array (
       'state' => 'inactive',
       'packagePath' => 'typo3conf/ext/realurl/',
       'classesPath' => 'Classes/',
-      'suggestions' => 
-      array (
-        0 => 'static_info_tables',
-      ),
+      'suggestions' => NULL,
+      'dependencies' => NULL,
     ),
     'news' => 
     array (
       'state' => 'inactive',
       'packagePath' => 'typo3conf/ext/news/',
       'classesPath' => 'Classes/',
-      'suggestions' => 
-      array (
-      ),
+      'suggestions' => NULL,
+      'dependencies' => NULL,
     ),
     'extdeveval' => 
     array (
       'state' => 'inactive',
       'packagePath' => 'typo3conf/ext/extdeveval/',
       'classesPath' => 'Classes/',
-      'suggestions' => 
-      array (
-      ),
+      'suggestions' => NULL,
+      'dependencies' => NULL,
     ),
     'extension_builder' => 
     array (
       'state' => 'inactive',
       'packagePath' => 'typo3conf/ext/extension_builder/',
       'classesPath' => 'Classes/',
-      'suggestions' => 
-      array (
-        0 => 'phpunit',
-      ),
+      'suggestions' => NULL,
+      'dependencies' => NULL,
     ),
     'flat' => 
     array (
       'state' => 'inactive',
       'packagePath' => 'typo3conf/ext/flat/',
       'classesPath' => 'Classes/',
-      'suggestions' => 
-      array (
-      ),
+      'suggestions' => NULL,
+      'dependencies' => NULL,
     ),
     'kay' => 
     array (
       'state' => 'inactive',
       'packagePath' => 'typo3conf/ext/kay/',
       'classesPath' => 'Classes/',
-      'suggestions' => 
-      array (
-      ),
+      'suggestions' => NULL,
+      'dependencies' => NULL,
     ),
     'styleguide' => 
     array (
       'state' => 'inactive',
       'packagePath' => 'typo3conf/ext/styleguide/',
       'classesPath' => 'Classes/',
-      'suggestions' => 
-      array (
-      ),
+      'suggestions' => NULL,
+      'dependencies' => NULL,
     ),
     't3skin_fix' => 
     array (
       'state' => 'inactive',
       'packagePath' => 'typo3conf/ext/t3skin_fix/',
       'classesPath' => 'Classes/',
-      'suggestions' => 
-      array (
-      ),
+      'suggestions' => NULL,
+      'dependencies' => NULL,
     ),
   ),
   'version' => 4,
