@@ -7,8 +7,6 @@ Vagrant.configure("2") do |config|
   config.vm.box     = "debian-720-x32"
   config.vm.box_url = "http://puppet-vagrant-boxes.puppetlabs.com/debian-73-i386-virtualbox-puppet.box"
 
-  config.vm.synced_folder ".", "/serverdata", owner: "www-data"
-
   # Create a forwarded port mapping which allows access to a specific port
   # within the machine from a port on the host machine. In the example below,
   # accessing "localhost:8080" will access port 80 on the guest machine.
@@ -16,6 +14,21 @@ Vagrant.configure("2") do |config|
 
   config.vm.hostname = "themes.dev"
   config.vm.network :private_network, ip: "192.168.31.16"
+
+  print "\n\nBooting the " + config.vm.hostname + " system ... can take a while ... \n\n"
+
+  if (/cygwin|mswin|mingw|bccwin|wince|emx/ =~ RUBY_PLATFORM) != nil
+    print "Welcome to the MS Windows hell\n\n"
+    print "Please confirm the UAC messages, but still the network will be slow\n\n"
+    config.vm.synced_folder ".", "/serverdata", owner: "www-data", group:"www-data"
+  else
+    print "You are not running Windows ... thank god!\n\n"
+    print "You may be asked for your sudo password to use NFS shares\n"
+    print "More Information: https://docs.vagrantup.com/v2/synced-folders/nfs.html\n\n"
+    config.vm.synced_folder ".", "/serverdata", type: "nfs" #, owner: "www-data", group:"www-data"
+  end
+
+
 
   config.vm.provision :shell, :path => "serverdata/provision/prepare.sh"
 

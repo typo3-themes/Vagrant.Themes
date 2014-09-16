@@ -62,6 +62,7 @@ else
 	getTypo3FromGit
 fi
 
+
 # copy configuration
 cp /serverdata/project/typo3conf/LocalConfiguration.php /var/www/typo3conf/
 cp /serverdata/project/typo3conf/PackageStates.php /var/www/typo3conf/
@@ -90,6 +91,7 @@ bash /vagrant/serverdata/provision/install-extensions.sh
 chmod 777 -R /var/www/
 
 sudo rm -rf /serverdata/www/typo3temp/Cache
+sudo chmod -R 777 /var/www/typo3temp
 sudo service apache2 restart
 
 echo "get languages defined in the system"
