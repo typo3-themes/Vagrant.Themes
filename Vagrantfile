@@ -1,6 +1,24 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
+print "You may be asked for your sudo password to use NFS shares\n"
+print "More Information: https://docs.vagrantup.com/v2/synced-folders/nfs.html\n\n"
+
+unless Vagrant.has_plugin?("vagrant-vbguest")
+  print "please execute the following command to enable automated vbguest installation\n\n"
+  print "vagrant plugin install vagrant-vbguest"
+  exit
+end
+
+unless ((/cygwin|mswin|mingw|bccwin|wince|emx/ =~ RUBY_PLATFORM) == nil)
+  print "detected, that you run vagrant on windows ...\n"
+  unless Vagrant.has_plugin?("vagrant-winnfsd")
+    print "please execute the following command to enable nfs support in windows\n\n"
+    print "vagrant plugin install vagrant-winnfsd"
+    exit
+  end
+end
+
 Vagrant.configure("2") do |config|
 
   # Every Vagrant virtual environment requires a box to build off of.
@@ -15,19 +33,8 @@ Vagrant.configure("2") do |config|
   config.vm.hostname = "themes.dev"
   config.vm.network :private_network, ip: "192.168.31.16"
 
-  print "\n\nBooting the " + config.vm.hostname + " system ... can take a while ... \n\n"
 
-  if (/cygwin|mswin|mingw|bccwin|wince|emx/ =~ RUBY_PLATFORM) != nil
-    print "Welcome to the MS Windows hell\n\n"
-    print "Please confirm the UAC messages, but still the network will be slow\n\n"
-    config.vm.synced_folder ".", "/serverdata", owner: "www-data", group:"www-data"
-  else
-    print "You are not running Windows ... thank god!\n\n"
-    print "You may be asked for your sudo password to use NFS shares\n"
-    print "More Information: https://docs.vagrantup.com/v2/synced-folders/nfs.html\n\n"
-    config.vm.synced_folder ".", "/serverdata", type: "nfs" #, owner: "www-data", group:"www-data"
-  end
-
+  config.vm.synced_folder ".", "/serverdata", type: "nfs"
 
 
   config.vm.provision :shell, :path => "serverdata/provision/prepare.sh"
