@@ -8,7 +8,7 @@ Needed Software
 
 Please download and install the following software
 - virtualbox https://www.virtualbox.org/
-- vagrant http://downloads.vagrantup.com/ (pick the latest version for your operating system)
+- vagrant http://vagrantup.com/ (pick the latest version for your operating system)
 - git (windows: https://code.google.com/p/msysgit/)
 
 As visual git Desktop client i think sourcetree is the best choice, but you may also use tortoisegit on winows.
