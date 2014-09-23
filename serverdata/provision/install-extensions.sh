@@ -65,6 +65,7 @@ getExtensionFromGitHub dyncss_less                      kaystrobach    TYPO3.dyn
 getExtensionFromGitHub dyncss_scss                      kaystrobach    TYPO3.dyncss_scss
 getExtensionFromGitHub dyncss_test                      kaystrobach    TYPO3.dyncss_test
 getExtensionFromGitHub easylogin                        kaystrobach    TYPO3.easylogin
+getExtensionFromGitHub yaml_parser                      kaystrobach    TYPO3.yaml_parser
 getExtensionFromGitHub bootstrap_package                benjaminkott   bootstrap_package
 
 # get svn extensions from forge :D
