@@ -610,6 +610,15 @@ return array (
       array (
       ),
     ),
+    'yaml_parser' => 
+    array (
+      'state' => 'active',
+      'packagePath' => 'typo3conf/ext/yaml_parser/',
+      'classesPath' => 'Classes/',
+      'suggestions' => 
+      array (
+      ),
+    ),
     'themes' => 
     array (
       'state' => 'active',
@@ -700,28 +709,29 @@ return array (
       array (
       ),
     ),
-    'dyncss_scss' => 
-    array (
-      'state' => 'active',
-      'packagePath' => 'typo3conf/ext/dyncss_scss/',
-      'classesPath' => 'Classes/',
-      'suggestions' => 
-      array (
-      ),
-    ),
-    'dyncss_phpsass' => 
-    array (
-      'state' => 'active',
-      'packagePath' => 'typo3conf/ext/dyncss_phpsass/',
-      'classesPath' => 'Classes/',
-      'suggestions' => 
-      array (
-      ),
-    ),
     'dyncss_less' => 
     array (
       'state' => 'active',
       'packagePath' => 'typo3conf/ext/dyncss_less/',
+      'classesPath' => 'Classes/',
+      'suggestions' => 
+      array (
+      ),
+    ),
+    'realurl' => 
+    array (
+      'state' => 'active',
+      'packagePath' => 'typo3conf/ext/realurl/',
+      'classesPath' => 'Classes/',
+      'suggestions' => 
+      array (
+        0 => 'static_info_tables',
+      ),
+    ),
+    'bootstrap_package' => 
+    array (
+      'state' => 'active',
+      'packagePath' => 'typo3conf/ext/bootstrap_package/',
       'classesPath' => 'Classes/',
       'suggestions' => 
       array (
@@ -740,6 +750,24 @@ return array (
     array (
       'state' => 'active',
       'packagePath' => 'typo3conf/ext/basictemplate/',
+      'classesPath' => 'Classes/',
+      'suggestions' => 
+      array (
+      ),
+    ),
+    'dyncss_scss' => 
+    array (
+      'state' => 'inactive',
+      'packagePath' => 'typo3conf/ext/dyncss_scss/',
+      'classesPath' => 'Classes/',
+      'suggestions' => 
+      array (
+      ),
+    ),
+    'dyncss_phpsass' => 
+    array (
+      'state' => 'inactive',
+      'packagePath' => 'typo3conf/ext/dyncss_phpsass/',
       'classesPath' => 'Classes/',
       'suggestions' => 
       array (
@@ -794,6 +822,7 @@ return array (
       'composerName' => 'fluidtypo3/flux',
       'suggestions' => 
       array (
+        0 => 'vhs',
       ),
     ),
     'themes_adapter_tvframework' => 
@@ -898,25 +927,6 @@ return array (
       'classesPath' => 'Classes/',
       'suggestions' => 
       array (
-      ),
-    ),
-    'bootstrap_package' => 
-    array (
-      'state' => 'inactive',
-      'packagePath' => 'typo3conf/ext/bootstrap_package/',
-      'classesPath' => 'Classes/',
-      'suggestions' => 
-      array (
-      ),
-    ),
-    'realurl' => 
-    array (
-      'state' => 'inactive',
-      'packagePath' => 'typo3conf/ext/realurl/',
-      'classesPath' => 'Classes/',
-      'suggestions' => 
-      array (
-        0 => 'static_info_tables',
       ),
     ),
     'news' => 
