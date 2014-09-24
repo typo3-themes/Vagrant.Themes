@@ -718,25 +718,6 @@ return array (
       array (
       ),
     ),
-    'realurl' => 
-    array (
-      'state' => 'active',
-      'packagePath' => 'typo3conf/ext/realurl/',
-      'classesPath' => 'Classes/',
-      'suggestions' => 
-      array (
-        0 => 'static_info_tables',
-      ),
-    ),
-    'bootstrap_package' => 
-    array (
-      'state' => 'active',
-      'packagePath' => 'typo3conf/ext/bootstrap_package/',
-      'classesPath' => 'Classes/',
-      'suggestions' => 
-      array (
-      ),
-    ),
     'beskin' => 
     array (
       'state' => 'active',
@@ -750,6 +731,25 @@ return array (
     array (
       'state' => 'active',
       'packagePath' => 'typo3conf/ext/basictemplate/',
+      'classesPath' => 'Classes/',
+      'suggestions' => 
+      array (
+      ),
+    ),
+    'realurl' => 
+    array (
+      'state' => 'inactive',
+      'packagePath' => 'typo3conf/ext/realurl/',
+      'classesPath' => 'Classes/',
+      'suggestions' => 
+      array (
+        0 => 'static_info_tables',
+      ),
+    ),
+    'bootstrap_package' => 
+    array (
+      'state' => 'inactive',
+      'packagePath' => 'typo3conf/ext/bootstrap_package/',
       'classesPath' => 'Classes/',
       'suggestions' => 
       array (
