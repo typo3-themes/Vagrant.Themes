@@ -1,7 +1,7 @@
 Themes.Vagrant
 ===========
 
-To use this vagrant maschine you need to install vagrant and virtualbox.
+To use this vagrant machine you need to install vagrant and virtualbox.
 
 Needed Software
 ---------------
@@ -11,14 +11,14 @@ Please download and install the following software
 - vagrant http://vagrantup.com/ (pick the latest version for your operating system)
 - git (windows: https://code.google.com/p/msysgit/)
 
-As visual git Desktop client i think sourcetree is the best choice, but you may also use tortoisegit on winows.
+As visual git Desktop client I think sourcetree is the best choice, but you may also use tortoisegit on windows.
 - http://www.sourcetreeapp.com/
 - https://code.google.com/p/tortoisegit/
 
 First Startup
 --------
 
-To power on the virtual maschines you need to switch to the commandline.
+To power on the virtual machines you need to switch to the commandline.
 Go into the git repository and run:
 
 ```bash
@@ -28,7 +28,7 @@ vagrant up
 ```
 
 This will download and initialise the basic image
-(lateron this command will be blazing fast, as the base vm is already available on your system).
+(later on this command will be blazing fast, as the base vm is already available on your system).
 
 Other important commands
 ```bash
