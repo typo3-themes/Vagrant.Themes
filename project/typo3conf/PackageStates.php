@@ -736,6 +736,15 @@ return array (
       array (
       ),
     ),
+    'ftm_theme_upaio' => 
+    array (
+      'state' => 'inactive',
+      'packagePath' => 'typo3conf/ext/ftm_theme_upaio/',
+      'classesPath' => 'Classes/',
+      'suggestions' => 
+      array (
+      ),
+    ),
     'realurl' => 
     array (
       'state' => 'inactive',
@@ -746,6 +755,15 @@ return array (
         0 => 'static_info_tables',
       ),
     ),
+    'ftm_theme_upaio_nmh' => 
+    array (
+      'state' => 'inactive',
+      'packagePath' => 'typo3conf/ext/ftm_theme_upaio_nmh/',
+      'classesPath' => 'Classes/',
+      'suggestions' => 
+      array (
+      ),
+    ),
     'bootstrap_package' => 
     array (
       'state' => 'inactive',
@@ -754,6 +772,8 @@ return array (
       'suggestions' => 
       array (
       ),
+      'manifestPath' => '',
+      'composerName' => 'typo3-ter/bootstrap_package',
     ),
     'dyncss_scss' => 
     array (
@@ -938,56 +958,39 @@ return array (
       array (
       ),
     ),
-    'extdeveval' => 
+    'belayout_fileprovider' => 
     array (
       'state' => 'inactive',
-      'packagePath' => 'typo3conf/ext/extdeveval/',
+      'packagePath' => 'typo3conf/ext/belayout_fileprovider/',
       'classesPath' => 'Classes/',
       'suggestions' => 
       array (
       ),
     ),
-    'extension_builder' => 
+    'themes_settings' => 
     array (
       'state' => 'inactive',
-      'packagePath' => 'typo3conf/ext/extension_builder/',
-      'classesPath' => 'Classes/',
-      'suggestions' => 
-      array (
-        0 => 'phpunit',
-      ),
-    ),
-    'flat' => 
-    array (
-      'state' => 'inactive',
-      'packagePath' => 'typo3conf/ext/flat/',
+      'packagePath' => 'typo3conf/ext/themes_settings/',
       'classesPath' => 'Classes/',
       'suggestions' => 
       array (
       ),
     ),
-    'kay' => 
+    't3_less' => 
     array (
       'state' => 'inactive',
-      'packagePath' => 'typo3conf/ext/kay/',
+      'packagePath' => 'typo3conf/ext/t3_less/',
       'classesPath' => 'Classes/',
       'suggestions' => 
       array (
       ),
     ),
-    'styleguide' => 
+    'coreapi' => 
     array (
+      'manifestPath' => '',
+      'composerName' => 'etobi/coreapi',
       'state' => 'inactive',
-      'packagePath' => 'typo3conf/ext/styleguide/',
-      'classesPath' => 'Classes/',
-      'suggestions' => 
-      array (
-      ),
-    ),
-    't3skin_fix' => 
-    array (
-      'state' => 'inactive',
-      'packagePath' => 'typo3conf/ext/t3skin_fix/',
+      'packagePath' => 'typo3conf/ext/coreapi/',
       'classesPath' => 'Classes/',
       'suggestions' => 
       array (
