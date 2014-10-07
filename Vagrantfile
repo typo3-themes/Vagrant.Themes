@@ -10,14 +10,6 @@ unless Vagrant.has_plugin?("vagrant-vbguest")
   exit
 end
 
-unless ((/cygwin|mswin|mingw|bccwin|wince|emx/ =~ RUBY_PLATFORM) == nil)
-  print "detected, that you run vagrant on windows ...\n"
-  unless Vagrant.has_plugin?("vagrant-winnfsd")
-    print "please execute the following command to enable nfs support in windows\n\n"
-    print "vagrant plugin install vagrant-winnfsd"
-    exit
-  end
-end
 
 Vagrant.configure("2") do |config|
 
@@ -34,8 +26,21 @@ Vagrant.configure("2") do |config|
   config.vm.network :private_network, ip: "192.168.31.16"
 
 
-  config.vm.synced_folder ".", "/serverdata", type: "nfs"
 
+  unless ((/cygwin|mswin|mingw|bccwin|wince|emx/ =~ RUBY_PLATFORM) == nil) then
+    print "detected, that you run vagrant on windows ...\n"
+    unless Vagrant.has_plugin?("vagrant-winnfsd") then
+      print "falling back to smb share \n"
+      print "more speed possible with vagrant-winnfsd plugin\n"
+      config.vm.synced_folder ".", "/serverdata", owner: "www-data", group:"www-data"
+    else
+      print "vagrant-winnfsd plugin found, using nfs\n"
+      print "if this doesn´t work uninstall the plugin\n"
+      config.vm.synced_folder ".", "/serverdata", type: "nfs"
+    end
+  else
+    config.vm.synced_folder ".", "/serverdata", type: "nfs"
+  end
 
   config.vm.provision :shell, :path => "serverdata/provision/prepare.sh"
 
