@@ -79,7 +79,8 @@ fi
 
 cd /var/www/typo3conf/ext/
 
-bash GITTYPE=HTTP /vagrant/serverdata/provision/install-extensions.sh
+export GITTYPE=HTTP
+bash /vagrant/serverdata/provision/install-extensions.sh
 
 # import database
 
