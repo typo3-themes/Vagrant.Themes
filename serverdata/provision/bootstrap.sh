@@ -91,17 +91,20 @@ bash /vagrant/serverdata/provision/install-extensions.sh
 
 chmod 777 -R /var/www/
 
-sudo rm -rf /serverdata/www/typo3temp/Cache
-sudo chmod -R 777 /var/www/typo3temp
+echo "clear FS caches"
+sudo rm -rf /var/www/typo3temp/Cache/*
+sudo rm -rf /var/www/typo3temp/DynCss/*
+sudo chmod -R 777 /var/www/
+
+echo "restart apache to clear php opcode cache"
 sudo service apache2 restart
 
-echo "clear FS caches"
-rm -rf /var/www/typo3temp/Cache/*
-rm -rf /var/www/typo3temp/DynCss/*
-
 echo "run scheduler once"
-cd /var/www
-php typo3/cli_dispatch.phpsh scheduler
+sudo php typo3/cli_dispatch.phpsh scheduler
+sudo chmod 777 -R /var/www
+
+echo "fill caches and messure time of first hit"
+curl -L http://192.168.31.16 > /dev/null
 
 echo "======================================================================="
 echo "  Access the vm in your Browser via:"
