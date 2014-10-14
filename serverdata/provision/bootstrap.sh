@@ -95,11 +95,12 @@ sudo rm -rf /serverdata/www/typo3temp/Cache
 sudo chmod -R 777 /var/www/typo3temp
 sudo service apache2 restart
 
-echo "get languages defined in the system"
-cd /var/www
-php typo3/cli_dispatch.phpsh extbase language:update
+echo "clear FS caches"
+rm -rf /var/www/typo3temp/Cache/*
+rm -rf /var/www/typo3temp/DynCss/*
 
 echo "run scheduler once"
+cd /var/www
 php typo3/cli_dispatch.phpsh scheduler
 
 echo "======================================================================="
