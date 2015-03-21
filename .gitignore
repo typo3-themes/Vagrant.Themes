@@ -33,3 +33,4 @@ doc/
 # TYPO3
 typo3temp
 typo3_src
+project/uploads/*
