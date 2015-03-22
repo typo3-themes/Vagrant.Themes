@@ -33,13 +33,16 @@ Vagrant.configure("2") do |config|
       print "falling back to smb share \n"
       print "more speed possible with vagrant-winnfsd plugin\n"
       config.vm.synced_folder ".", "/serverdata", owner: "www-data", group:"www-data"
+      config.vm.synced_folder ".", "/vagrant", owner: "www-data", group:"www-data"
     else
       print "vagrant-winnfsd plugin found, using nfs\n"
       print "if this doesn´t work uninstall the plugin\n"
       config.vm.synced_folder ".", "/serverdata", type: "nfs"
+      config.vm.synced_folder ".", "/vagrant", type: "nfs"
     end
   else
     config.vm.synced_folder ".", "/serverdata", type: "nfs"
+    config.vm.synced_folder ".", "/vagrant", type: "nfs"
   end
 
   config.vm.provision :shell, :path => "serverdata/provision/prepare.sh"
