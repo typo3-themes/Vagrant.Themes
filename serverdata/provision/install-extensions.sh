@@ -34,28 +34,19 @@ getExtensionFromGit    phpunit                          git://git.typo3.org/TYPO
 getExtensionFromGit    realurl                          git://git.typo3.org/TYPO3CMS/Extensions/realurl.git
 getExtensionFromGit    news                             git://git.typo3.org/TYPO3CMS/Extensions/news.git
 
-getExtensionFromGitHub belayout_tsprovider              kaystrobach    TYPO3.belayout_tsprovider
-
 # typo3-themes repositories
 getExtensionFromGitHub themes_distribution              typo3-themes   themes_distribution
 getExtensionFromGitHub themes                           typo3-themes   themes
 getExtensionFromGitHub themes_gridelements              typo3-themes   themes_gridelements
 getExtensionFromGitHub themes_builder                   typo3-themes   themes_builder
-getExtensionFromGitHub themes_library                   typo3-themes   themes_library
-getExtensionFromGitHub themes_manager                   typo3-themes   themes_manager
 
 getExtensionFromGitHub themes_adapter_directory	        typo3-themes   themes_adapter_directory
 getExtensionFromGitHub themes_adapter_tvframework       typo3-themes   themes_adapter_tvframework
-getExtensionFromGitHub themes_adapter_wordpress         typo3-themes   themes_adapter_wordpress
 
 getExtensionFromGitHub theme_bootstrap                  typo3-themes   theme_bootstrap
 getExtensionFromGitHub theme_bootstrap_slate            typo3-themes   theme_bootstrap_slate
 
 getExtensionFromGitHub basictemplate                    kaystrobach    TYPO3.basictemplate
-
-# independent repositories  fedext
-getExtensionFromGitHub flux                             FluidTYPO3     flux
-getExtensionFromGitHub vhs                              FluidTYPO3     vhs
 
 # other usefull tools, not all needed until now, but interesting
 getExtensionFromGitHub beskin                           kaystrobach    TYPO3.beskin
@@ -66,7 +57,6 @@ getExtensionFromGitHub dyncss_scss                      kaystrobach    TYPO3.dyn
 getExtensionFromGitHub dyncss_test                      kaystrobach    TYPO3.dyncss_test
 getExtensionFromGitHub easylogin                        kaystrobach    TYPO3.easylogin
 getExtensionFromGitHub yaml_parser                      kaystrobach    TYPO3.yaml_parser
-getExtensionFromGitHub bootstrap_package                benjaminkott   bootstrap_package
 
 # get svn extensions from forge :D
 getExtensionFromGitHub t3jquery                         TYPO3-svn-archive t3jquery
