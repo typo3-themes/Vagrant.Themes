@@ -46,6 +46,10 @@ getExtensionFromGitHub themes_adapter_tvframework       typo3-themes   themes_ad
 getExtensionFromGitHub theme_bootstrap                  typo3-themes   theme_bootstrap
 getExtensionFromGitHub theme_bootstrap_slate            typo3-themes   theme_bootstrap_slate
 
+getExtensionFromGitHub theme_bootstrap_highland         typo3-themes   theme_bootstrap_highland
+getExtensionFromGitHub theme_bootstrap_mosaic           typo3-themes   theme_bootstrap_mosaic
+getExtensionFromGitHub theme_zurbink                    typo3-themes   theme_zurbink
+
 getExtensionFromGitHub basictemplate                    kaystrobach    TYPO3.basictemplate
 
 # other usefull tools, not all needed until now, but interesting
