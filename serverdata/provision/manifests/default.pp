@@ -28,6 +28,7 @@ package { "php5-gd":                    ensure  => "latest", require  => Package
 package { "php5-curl":                  ensure  => "latest", require  => Package['php5']}
 package { "php5-mysql":                 ensure  => "latest", require  => Package['php5']}
 package { "php5-xdebug":                ensure  => "purged", require  => Package['php5']}
+package { "php5-apcu":                  ensure  => "purged", require  => Package['php5']}
 package { "phpmyadmin":                 ensure  => "latest", require  => Package['php5']}
 
 
