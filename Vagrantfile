@@ -75,6 +75,8 @@ Vagrant.configure("2") do |config|
     vm.name = "themes.dev"
     vm.customize ["modifyvm", :id, "--memory",          "1024"]
     vm.customize ["modifyvm", :id, "--cpuexecutioncap",   "80"]
+    vm.customize ["modifyvm", :id, "--nictype1",         "Am79C973"]
+    vm.customize ["modifyvm", :id, "--nictype2",         "Am79C973"]
   end
   config.vm.provider :vmware_fusion do |vm, override|
     override.vm.box     = "precise64_fusion"
