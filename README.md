@@ -15,6 +15,10 @@ As visual git Desktop client I think sourcetree is the best choice, but you may 
 - http://www.sourcetreeapp.com/
 - https://code.google.com/p/tortoisegit/
 
+Even if you`re not familiar with a command line like bash, you sometimes might need a command line tool to fix problems or run tasks on the virtual machine. On windows you can use Putty: http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html 
+Mac users can use the built in Terminal tool 
+Linux distributions also have a built in command line tool.
+
 First Startup
 --------
 
@@ -37,6 +41,16 @@ vagrant status  - show status of the virtual maschine
 vagrant halt    - shutdown the virtual maschine
 vagrant destroy - destroy the virtual maschine (drop virtual drives, ...)
 ```
+The TYPO3 installation inside of the vagrant box is located in /var/www/. After starting the virtual machine you should use the command line tool to enter the virtual machine with the command:
+vagrant ssh
+Then switch to the TYPO3 temp folder:
+cd /var/www/typo3temp
+And delete all files inside the temp folder:
+sudo rm -rf *
+
+Now you should be able to enter the TYPO3 backend by opening the following URL in your browser:
+http://192.168.31.16/typo3/
+
 
 You can get more information about vagrant from the vagrant documentation:
 http://docs.vagrantup.com/v2/
